@@ -1,0 +1,21 @@
+<div id="wrapperItem">
+  <div id="commonWrapperItem">
+      <div class="routeWrapperItem">
+            <div class="routeItem">
+              <h5>Categories &nbsp;/</h5>
+              <h5> &nbsp; {{par1ToShow}} &nbsp;/</h5>
+              <h5> &nbsp; {{par2ToShow}} </h5>
+            </div>
+      </div>
+      <div class="itemDisplay">
+        <app-item-photo-header [itemHeader]="itemHeader" [itemPhotos]="itemPhotos" class="photoHeader"></app-item-photo-header>
+        <app-item-options class="optItem" [options]="options" [itemOBJ]="itemOBJ" [price]="price" [quantity]="quantity"></app-item-options>
+      </div>
+  </div>
+
+  <app-features id="wrapperFeat" [features]="features"></app-features>
+
+  <app-description class="wrapperDescription" [description]="description" [descriptionIMG]="descriptionIMG"></app-description>
+
+  <app-item-actions id="actions"></app-item-actions>
+</div>

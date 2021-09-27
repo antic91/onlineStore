@@ -1,0 +1,249 @@
+
+    <form id="formSignUp" [formGroup]="form" (ngSubmit)="sendData()">
+
+      <span class="optionSignUp">
+        <h2>Create an account</h2>
+      </span>
+
+      <span class="optionSignUp">
+        <span class="label">
+          <h4><label for="FirstName">First name</label></h4>
+        </span>
+        <input
+        formControlName="firstName"
+        type="text"
+        id="FirstName"
+        class="inputSignUp">
+
+        <span class="InvalidInput" *ngIf="firstName?.touched && !firstName?.valid">
+          <span class="errorChildWrapper">
+              <h6 *ngIf="firstName?.errors?.required">* First name is required!</h6>
+          </span>
+          <span class="errorChildWrapper">
+              <h6 *ngIf="firstName?.errors?.minlength">* Minimum length s {{firstName?.errors?.minlength.requiredLength}}!</h6>
+          </span>
+          <span class="errorChildWrapper">
+              <h6 *ngIf="firstName?.errors?.cannotContainSpace">First name cannot contain space!</h6>
+          </span>
+        </span>
+
+      </span>
+
+
+      <span class="optionSignUp">
+        <span class="label">
+          <h4><label for="LastName">Last name</label></h4>
+        </span>
+        <input
+        formControlName="lastName"
+        type="text"
+        id="LastName"
+        class="inputSignUp">
+
+        <span class="InvalidInput" *ngIf="lastName?.touched && !lastName?.valid">
+          <span class="errorChildWrapper">
+            <h6 *ngIf="lastName?.errors?.required">* Last name is required!</h6>
+          </span>
+          <span class="errorChildWrapper">
+            <h6 *ngIf="lastName?.errors?.minlength">* Minimum length s {{lastName?.errors?.minlength.requiredLength}}!</h6>
+          </span>
+          <span class="errorChildWrapper">
+            <h6 *ngIf="lastName?.errors?.cannotContainSpace">Last name cannot contain space!</h6>
+          </span>
+
+        </span>
+      </span>
+
+
+      <span class="optionSignUp">
+        <span class="label">
+          <h4><label for="username">Username</label></h4>
+        </span>
+        <input
+        formControlName="username"
+        (change)="checkUsername()"
+        type="text"
+        id="username"
+        class="inputSignUp">
+
+        <span class="InvalidInput" *ngIf="username?.touched">
+          <span class="errorChildWrapper">
+            <h6 *ngIf="username?.errors?.required">* Username is required!</h6>
+          </span>
+          <span class="errorChildWrapper">
+            <h6 *ngIf="username?.errors?.minlength">* Minimum length s {{username?.errors?.minlength.requiredLength}}!</h6>
+          </span>
+          <span class="errorChildWrapper">
+            <h6 *ngIf="username?.errors?.cannotContainSpace">Username name cannot contain space!</h6>
+          </span>
+          <span class="errorChildWrapper" *ngIf="!userNameOccupated">
+            <h6>Username is already taken!</h6>
+          </span>
+        </span>
+      </span>
+
+      <span class="optionSignUp">
+        <span class="label">
+          <h4><label for="pass">Password</label></h4>
+        </span>
+        <input
+        formControlName="password"
+        type="password"
+        id="pass"
+        class="inputSignUp">
+
+        <span class="InvalidInput" *ngIf="password?.touched && !password?.valid">
+          <span class="errorChildWrapper">
+            <h6 *ngIf="password?.errors?.required">* Password is required!</h6>
+          </span>
+          <span class="errorChildWrapper">
+            <h6 *ngIf="password?.errors?.minlength">* Minimum length s {{password?.errors?.minlength.requiredLength}}!</h6>
+          </span>
+          <span class="errorChildWrapper">
+            <h6 *ngIf="password?.errors?.cannotContainSpace">Password name cannot contain space!</h6>
+          </span>
+        </span>
+
+      </span>
+
+      <span class="optionSignUp">
+        <span class="label">
+          <h4><label for="passRep">Repeat Password</label></h4>
+        </span>
+        <input
+        formControlName="repeatedPassword"
+        type="password"
+        id="passRep"
+        class="inputSignUp">
+
+        <span class="InvalidInput" *ngIf="repeatedPassword?.touched">
+          <span class="errorChildWrapper">
+            <h6 *ngIf="repeatedPassword?.errors?.required">* Password repeat is required!</h6>
+          </span>
+          <span class="errorChildWrapper">
+            <h6 *ngIf="repeatedPassword?.errors?.minlength">* Minimum length s {{repeatedPassword?.errors?.minlength.requiredLength}}!</h6>
+          </span>
+          <span class="errorChildWrapper">
+            <h6 *ngIf="repeatedPassword?.errors?.cannotContainSpace">Password name cannot contain space!</h6>
+          </span>
+          <span class="errorChildWrapper">
+            <h6 *ngIf="repeatedPassword?.value !== password?.value">Passwords do not match!</h6>
+          </span>
+        </span>
+
+      </span>
+
+      <span class="optionSignUp">
+        <span class="label">
+          <h4><label for="email">Email</label></h4>
+        </span>
+        <input
+        formControlName="email"
+        (change)="checkEmail()"
+        type="text"
+        id="email"
+        class="inputSignUp">
+
+        <span class="InvalidInput" *ngIf="email?.touched">
+          <span class="errorChildWrapper">
+            <h6 *ngIf="email?.errors?.required">* Email is required!</h6>
+          </span>
+          <span class="errorChildWrapper">
+            <h6 *ngIf="!email?.valid">* Email address is not valid!</h6>
+          </span>
+          <span class="errorChildWrapper">
+            <h6 *ngIf="email?.errors?.cannotContainSpace">Email name cannot contain space!</h6>
+          </span>
+          <span class="errorChildWrapper" *ngIf="!emailOccupated">
+            <h6>Email is already taken!</h6>
+          </span>
+        </span>
+
+      </span>
+
+      <!--ADDING ADDRESS FORM GROUP-->
+      <span class="formGroupWraper" formGroupName="address">
+        <span class="optionSignUp">
+                  <span class="label">
+                    <h4><label for="streetAddress">Town</label></h4>
+                  </span>
+                  <input
+                  formControlName="town"
+                  type="text"
+                  id="streetAddress"
+                  class="inputSignUp">
+            </span>
+            <span class="optionSignUp">
+                  <span class="label">
+                    <h4><label for="streetAddress">Street</label></h4>
+                  </span>
+                  <input
+                  formControlName="street"
+                  type="text"
+                  id="streetAddress"
+                  class="inputSignUp">
+            </span>
+
+            <span class="addressOptions">
+                  <span class="label">
+                    <h4><label for="streetNumber">Street Number</label></h4>
+                  </span>
+                  <input
+                  formControlName="streetNum"
+                  type="text"
+                  id="streetNumber"
+                  class="inputSignUp">
+            </span>
+
+
+            <span class="addressOptions">
+                  <span class="label">
+                    <h4><label for="zipCode">Zip Code</label></h4>
+                  </span>
+                  <input
+                  formControlName="zipCode"
+                  type="text"
+                  id="zipCode"
+                  class="inputSignUp">
+            </span>
+
+
+            <span class="optionSignUp">
+                  <span class="label">
+                    <h4><label for="country">Country</label></h4>
+                  </span>
+                  <input
+                  formControlName="country"
+                  type="text"
+                  id="country"
+                  class="inputSignUp">
+            </span>
+      </span>
+      <!--ADDING ADDRESS FORM GROUP ENDS-->
+      <span class="optionSignUp">
+        <span class="label">
+          <h4><label for="mobileNum">Mobile number</label></h4>
+        </span>
+        <input
+        formControlName="mobileNumber"
+        type="text"
+        id="mobileNum"
+        class="inputSignUp">
+
+        <span class="InvalidInput" *ngIf="mobileNumber?.touched && !mobileNumber?.valid">
+          <span class="errorChildWrapper">
+            <h6 *ngIf="mobileNumber?.errors?.required">* Mobile number is required!</h6>
+          </span>
+          <span class="errorChildWrapper">
+            <h6 *ngIf="mobileNumber?.errors?.minlength">* Minimum length s {{mobileNumber?.errors?.minlength.requiredLength}}!</h6>
+          </span>
+          <span class="errorChildWrapper">
+            <h6 *ngIf="mobileNumber?.errors?.cannotContainSpace">Mobile number name cannot contain space!</h6>
+          </span>
+        </span>
+
+      </span>
+
+      <button class="logInBtnSignUp" [disabled]="!form.valid || !userNameOccupated || !emailOccupated">Register</button>
+
+    </form>

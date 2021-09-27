@@ -1,0 +1,46 @@
+#priceWrapper{
+  position: relative;
+  width: 264px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+#commonOptions{
+  position: relative;
+  width: 264px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+
+
+/*----------BUTTON WRAPPER-------------*/
+
+.btnWrapper{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.btnWrapper button{
+  position: relative;
+  width: 40%;
+  text-align: center;
+  padding: 5px;
+  background-color: #52AB98;
+  outline: none;
+  border: 1.5px solid rgba(40, 62, 73, 0.35);
+  border-radius: 5px;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1.4px;
+}

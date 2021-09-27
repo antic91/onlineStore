@@ -1,0 +1,14 @@
+<div id="allWrapper">
+  <div class="allcategories">
+    <div class="allitemCat" *ngFor="let item of objectCat" [routerLink]="['/categories', item.cat_slug]">
+      <div class="allimgSection">
+      <img [src]="item.cat_image" alt="Used Laptops">
+    </div>
+    <h5>{{item.cat_title}}</h5>
+    </div>
+  </div>
+
+<div class="alloptionsItemsWrapper">
+    <app-op-component (filter)="filterClicked($event)" class="alloptions"></app-op-component>
+    <app-item-show [clicked]="clicked" class="allitems"></app-item-show>
+</div>

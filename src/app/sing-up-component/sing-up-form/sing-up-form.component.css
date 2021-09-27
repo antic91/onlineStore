@@ -1,0 +1,126 @@
+
+/*FORM STYLE*/
+#formSignUp {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+}
+/*FORM STYLE END*/
+
+/*OPTION FORM LOG IN*/
+.optionSignUp {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+/*INPUT STYLE*/
+.inputSignUp {
+  position: relative;
+  width: 100%;
+  padding: 10px 5px;
+  font-size: 18px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #c8d8e4;
+}
+.inputSignUp:focus {
+  box-shadow: 0px 0px 7px 1px rgb(82 171 152 / 73%);
+}
+
+.logInBtnSignUp {
+  position: relative;
+  width: 100%;
+  margin-top: 45px;
+  padding: 10px 5px;
+  font-size: 18px;
+  border-radius: 5px;
+  outline: none;
+  font-weight: 600;
+  border: 1px solid #c8d8e4;
+  background-color: #e6b8b8;
+}
+
+/*OPTION FORM LOG IN END*/
+/*LABEL WRAPPER LOG IN END*/
+.label{
+  position: relative;
+  width: 100%;
+  margin-bottom: 3px;
+  margin-left: 2px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+/*LABEL WRAPPER LOG IN END*/
+
+/* Sing up and forgot password*/
+.signUpERR {
+  position: relative;
+  width: 100%;
+  margin-top: 2px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-content: flex-start;
+}
+.signUpERR h6 {
+  text-decoration: underline;
+}
+/* Sing up and forgot password END*/
+
+
+/*SMALLER OPTION ZIPCODE --- */
+.formGroupWraper{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+}
+.addressOptions{
+  position: relative;
+  width: 252px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+/*INVALID INPUT */
+.InvalidInput {
+  position: relative;
+  width: 100%;
+  margin-top: 2px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-content: flex-start;
+  color: red;
+}
+.errorChildWrapper{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-content: flex-start;
+}

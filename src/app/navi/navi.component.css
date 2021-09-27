@@ -1,0 +1,40 @@
+#upperWrapper{
+  position: relative;
+  width: 1124px;
+  height: 62.5px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 7.5px;
+}
+#lowerWrapper{
+  position: relative;
+  width: 1124px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  padding-top: 7.5px;
+  padding-bottom: 5px;
+}
+
+
+#dropDownWrapper{
+  position: absolute;
+  top: 115px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  align-content: flex-start;
+  background-color: rgba(34, 56, 67,.3);
+  z-index: 99;
+}

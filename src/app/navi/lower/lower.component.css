@@ -1,0 +1,101 @@
+#allButton {
+  position: relative;
+  height: 40px;
+  width: 180px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.h3Wrapper{
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 15px;
+}
+.h3Wrapper h4{
+  font-weight: 600;
+}
+.h3Wrapper h4:hover{
+  color: #ffffff;
+  cursor: pointer;
+}
+
+
+/*NAVIGATION SECTION */
+
+#navBar {
+  position: relative;
+  height: 40px;
+  width: 664px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+.navLink h4{
+  font-weight: 500;
+}
+.navLink :hover{
+  color: #ffffff;
+  cursor: pointer;
+}
+
+
+/*ICONS WRAPPER WITH ACCOUNT AND SHOPING CART*/
+#lastButtons {
+  position: relative;
+  height: 40px;
+  width: 230px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+
+.iconsWrapper {
+  position: relative;
+  width: 60px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.iconsWrapper h4{
+  font-weight: 600;
+}
+.iconsWrapper h4:hover {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+
+.iconsWrapper1 {
+  position: relative;
+  width: 120px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  margin-left: 25px;
+}
+
+.iconsWrapper1 h4 {
+  font-weight: 600;
+}
+.iconsWrapper1 h4:hover {
+  color: #ffffff;
+  cursor: pointer;
+}

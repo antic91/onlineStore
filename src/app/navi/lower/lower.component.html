@@ -1,0 +1,22 @@
+<div id="allButton">
+  <span class="h3Wrapper" (mouseover)="changing()" (mouseleave)="changingFalse()">
+    <h4 [routerLink]="['/allProducts']" (click)="changingFalse()">All Products</h4>
+  </span>
+</div>
+
+<div id="navBar">
+  <div class="navLink animate__slideInLeft" *ngFor="let item of objects">
+    <h4 [routerLink]="['/categories', item.cat_slug]" routerLinkActive="router-link-active" >
+      {{item!.cat_title}}
+    </h4>
+  </div>
+</div>
+
+<div id="lastButtons">
+  <div class="iconsWrapper">
+    <h4>About</h4>
+  </div>
+  <div class="iconsWrapper1">
+    <h4>Contact</h4>
+  </div>
+</div>

@@ -1,0 +1,80 @@
+/*-----PRICE HEADER--------------*/
+.priceHeader{
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+}
+/*-----PRICE TO SHOW--------------*/
+.wrapperPriceToShow {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.wrapperPriceToShow span{
+  min-width: 70px;
+  padding: 5px;
+  border: 1.5px solid rgba(40, 62, 73, 0.35);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/*-------------------STYLE FOR FILTER-------------------*/
+.wrapperDiv{
+  position: relative;
+  width: 92%;
+  height: 5px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start
+}
+.upperDiv{
+  position: relative;
+  height: 100%;
+  z-index: 1;
+  background-color: #52AB98;
+  opacity: 0.9;
+}
+.start{
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background-color: black;
+  border-radius: 50px;
+  top: -8.5px;
+  background-color: #EFF1F3;
+  border: 1px solid #2B6777;
+  left: -11px;
+}
+.end{
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background-color: #EFF1F3;
+  border: 1px solid #2B6777;
+  border-radius: 50px;
+  z-index: 0;
+  top: -8.5px;
+  right: -11px;
+}
+
+
+/*UNDER DIV STYLE*/
+.underDiv{
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: rgba(	219,	211,	216, 0.45);
+  border-radius: 15px;
+  z-index: 0;
+}

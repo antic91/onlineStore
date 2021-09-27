@@ -1,0 +1,13 @@
+<div class="wrapperFeatures">
+  <div class="featureHeader">
+    <h2>Features</h2>
+  </div>
+  <div class="features" *ngFor="let item of features" [class.hidden]="item.spec == null">
+    <span class="spanHeaderFeatures">
+    <h3> {{item.name}}</h3>
+    </span>
+    <span class="spanDescFeatures">
+      <h4>{{item.spec}}</h4>
+    </span>
+  </div>
+</div>

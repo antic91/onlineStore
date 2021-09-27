@@ -1,0 +1,16 @@
+.optionResult{
+  position: relative;
+  width: 100%;
+  padding: 10px .75rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  background-color: #F2F2F2;
+}
+.optionResult:hover{
+  background-color: #C8D8E4;
+}
+.optionResult h4{
+  color: #000000;
+}

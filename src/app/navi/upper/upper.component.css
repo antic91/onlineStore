@@ -1,0 +1,170 @@
+#logoWrapper{
+  position: relative;
+  height: 40px;
+  width: 180px;
+}
+#logoWrapper img{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #56A3A6;
+}
+#logoWrapper img:hover{
+  cursor: pointer;
+}
+
+/*INPUT*/
+
+#inputWrapper {
+  position: relative;
+  height: 35px;
+  width: 664px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+#inputWrapper input{
+  position: relative;
+  width: 624px;
+  height: 100%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  outline: none;
+  border: none;
+  padding-left: .75rem;
+  padding-right: 2.5rem;
+  background-color: #ffffff;
+  border-right: none;
+}
+
+.button{
+  position: relative;
+  width: 40px;
+  height: 35px;
+  background-color: #ffffff;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding-right: 0.75rem;
+}
+.btn {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background-color: #ffffff;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-left: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.searchImg{
+  position: relative;
+  height: 70%;
+}
+
+
+/*ICONS WRAPPER WITH ACCOUNT AND SHOPING CART*/
+#iconsWrapper {
+  position: relative;
+  height: 51px;
+  width: 230px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+
+/*FIRST CHILD ICONS ////ACCOUNT*/
+.iconsWrapper{
+  position: relative;
+  width: 65px;
+  height: 51px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+.iconsWrapper h5 {
+  font-weight: 600;
+}
+
+/*SECOND CHILD ICONS ////SHOPING CART*/
+.iconsWrapper1 {
+  position: relative;
+  width: 120px;
+  height: 51px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  margin-left: 25px;
+}
+.iconsWrapper1 h5{
+  font-weight: 600;
+
+}
+/* SPAN WITH IMAGES ACCOUNT ANDSHOPING CART*/
+.spanImg{
+  position: relative;
+  margin-bottom: 5px;
+  height: 30px;
+  width: 30px;
+
+}
+.spanImg img{
+  position: relative;
+  height: 100%;
+}
+
+
+
+/*SEARCH OPTIONS WRAPPER*/
+.searchOptions{
+  position: absolute;
+  left: 0;
+  top: 32px;
+  width: 664px;
+  max-height: 600px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  z-index: 999;
+  overflow-y: auto;
+  border: 1px solid #F2F2F2;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+
+
+/*LOGIN WRAPPER*/
+
+#logInWrapp{
+  position: absolute;
+  top: 45px;
+  padding-top: 3px;
+  width: 210px;
+  left: 0;
+  z-index: 999;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  background-color: #C8D8E4;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 15px;
+  border-radius: 5px;
+  margin-top: 8px;
+}

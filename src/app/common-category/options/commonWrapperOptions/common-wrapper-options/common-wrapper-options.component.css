@@ -1,0 +1,15 @@
+.commonHeader{
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.spanItem{
+  position: relative;
+  padding: 5px;
+  width: 127px;
+  margin-bottom: 10px;
+  border: 1.5px solid rgba(40, 62, 73, 0.35);
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 500;
+}

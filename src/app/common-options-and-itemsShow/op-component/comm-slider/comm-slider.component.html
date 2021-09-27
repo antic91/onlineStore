@@ -1,0 +1,24 @@
+<div class="priceHeader1">
+  <h4>{{headerCommon}}</h4>
+</div>
+<div class="wrapperPriceToShow1">
+  <span>
+    <h4>{{minToShow | roundingNumbers : headerCommon}}</h4>
+    <h4 *ngIf="headerCommon == 'Display size'"> &nbsp;'</h4>
+    <h4 *ngIf="headerCommon == 'Storage space'">&nbsp;GB</h4>
+    <h4 *ngIf="headerCommon == 'RAM size'">&nbsp;GB</h4>
+  </span>
+  <span>
+    <h4>{{maxToShow | roundingNumbers : headerCommon}}</h4>
+    <h4 *ngIf="headerCommon == 'Display size'"> &nbsp;'</h4>
+    <h4 *ngIf="headerCommon == 'Storage space'">&nbsp;GB</h4>
+    <h4 *ngIf="headerCommon == 'RAM size'">&nbsp;GB</h4>
+  </span>
+</div>
+<div class="wrapperDiv1">
+  <div class="upperDiv1" style="width: 100%;">
+    <div class="start1" (newValueMStatus)="setStartStatus($event)" [ngStyle]="{'zIndex': statusStart ? '1' : '0'}" (newValueMin)="setMIn($event)" [max]="max" [maxShow]="maxToShow" [min]="min" mousemoving></div>
+    <div class="end1" (ValueStatusMax)="setEndStatus($event)" [ngStyle]="{'zIndex': statusEnd ? '0' : '1'}" (newValueMax)="setMax($event)" [maxx]="max" [minShow]="minToShow" [minn]="min" appmousetoleft></div>
+  </div>
+  <div class="underDiv1"></div>
+</div>

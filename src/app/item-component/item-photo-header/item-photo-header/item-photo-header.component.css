@@ -1,0 +1,65 @@
+/*HEADER*/
+.itemHeader{
+  position: relative;
+  width: 100%;
+
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: center;
+}
+
+/*WRAPPER PHOTOS*/
+.wrapperPhotos{
+  position: relative;
+  width: 100%;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+/*Openede Photo*/
+.onePhoto{
+  position: relative;
+  width: 80%;
+  background-color: aqua;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.onePhoto img{
+  width: 100%;
+
+}
+/*OPTIONAL PHOTOS*/
+.optionPhotos{
+  position: relative;
+  width: 10%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-right: 25.6px;
+}
+.options{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  border:1px solid #C8D8E4;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  padding: 5px;
+
+}
+.options img{
+  position: relative;
+  width: 100%;
+}

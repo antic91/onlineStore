@@ -1,0 +1,26 @@
+#introWrapper{
+  position: relative;
+  width: 1124px;
+  margin-top: 75px;
+  margin-bottom: 75px;
+  border-radius: 5px;
+}
+
+.videoImg{
+  float: left;
+  width: 300px;
+
+  margin-bottom: 20px;
+  margin-right: 20px;
+  border: 2px solid #223843;
+}
+.h3Intro{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 57px;
+}
+.pIntro{
+  font-size: 16px!important;
+  font-weight: 500!important;
+  letter-spacing: 1px!important;
+}

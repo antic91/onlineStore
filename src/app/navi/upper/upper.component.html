@@ -1,0 +1,31 @@
+<div id="logoWrapper">
+  <img routerLink="/home" src="../../../assets/photos/logo.svg" alt="Muster_Logo">
+</div>
+
+<div id="inputWrapper">
+  <input type="text" placeholder="Search for your Item here!" #inp (keyup)="pressed($event)" >
+  <div class="button">
+    <button class="btn" (click)="navigate()" [disabled]="!object || inp.value.trim() == ''">
+      <img src="../../../assets/photos/search-solid.svg" class="searchImg" alt="">
+    </button>
+  </div>
+  <app-search-options *ngIf="object" class="searchOptions" (setValue)="setNeValue($event)" [object]="object"></app-search-options>
+</div>
+
+<div id="iconsWrapper">
+  <div class="iconsWrapper" (mouseover)="onMouseOver()" (mouseleave)="onMouseLeave()">
+    <span class="spanImg">
+      <img src="../../../assets/photos/user-circle-solid.svg" alt="User">
+    </span>
+    <h5>Account</h5>
+    <app-log-in [userLogged]="userLogged" (mouseover)="onMouseOver()" (mouseleave)="onMouseLeave()" id="logInWrapp" *ngIf="showLogIn"></app-log-in>
+  </div>
+
+  <div class="iconsWrapper1" [routerLink]="['/shoping-cart']">
+    <span class="spanImg">
+      <img src="../../../assets/photos/shopping-cart-solid.svg" alt="User">
+    </span>
+    <h5>Shoping Cart</h5>
+  </div>
+
+</div>

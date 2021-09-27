@@ -1,0 +1,73 @@
+<div id="shopingCartWrapper">
+  <div class="routeItem">
+      <h5> &nbsp; {{param1}} &nbsp;/</h5>
+      <h5> &nbsp; {{param2}} </h5>
+  </div>
+
+  <div class="noItems" *ngIf="!data.length">
+    <h3>You have no Products in your Shopping Cart!</h3>
+  </div>
+
+  <div class="itemShoppingCartWrapper"*ngIf="data.length">
+
+    <div class="itemShoppingCart" *ngFor="let item of data, let i = index">
+
+      <div class="imgWrapper">
+        <img [src]="item.spec_photo_item" alt="">
+      </div>
+
+      <div class="desctiptionShopingCart">
+
+          <div class="title">
+            <h3>{{item.prod_title}}</h3>
+          </div>
+          <app-descripion-comp id="descriptions" [data]="item"></app-descripion-comp>
+      </div>
+
+      <div class="buttAndPriceShopingCart">
+
+        <span class="wrapperChildrens">
+          <h4 class="total">Total price: {{item.prod_price * orderQuantity[i]}} €</h4>
+        </span>
+
+        <span class="wrapperChildrens">
+          <h6 class="smallDesc">Price pre item: {{item.prod_price}} €</h6>
+        </span>
+
+        <span class="wrapperChildrens">
+          <h6 class="smallDesc">Free delivery</h6>
+        </span>
+
+        <span class="wrapperChildrens">
+          <h6 class="smallDesc">Product will be sent next working day!</h6>
+        </span>
+
+        <span class="wrapperChildrensOrder">
+          <h5>Order quantity: {{orderQuantity[i]}}</h5>
+        </span>
+
+        <span class="wrapperChildrensOrder">
+          <button class="btn" (click)="addOneItem(item,i)">Add one Item</button>
+        </span>
+
+        <span class="wrapperChildrensOrder">
+          <button class="btn" (click)="removeOneItem(item,i)">Remove one item</button>
+        </span>
+
+      </div>
+
+    </div>
+    <div class="btnTotalWrapper">
+
+      <h4 class="total">Total price:{{totalPrice}}</h4>
+
+    </div>
+    <div class="btnTotalWrapper">
+
+      <button class="btn1">Buy</button>
+
+    </div>
+
+  </div>
+
+</div>

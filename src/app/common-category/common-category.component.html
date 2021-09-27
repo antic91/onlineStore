@@ -1,0 +1,12 @@
+<div id="commonWrapper">
+  <div class="routeWrapper">
+        <div class="route">
+          <h5>Categories &nbsp;/</h5>
+          <h5> &nbsp; {{param}} </h5>
+        </div>
+  </div>
+  <div class="optionsItemsWrapper">
+    <app-options (filter)="getStatus($event)" class="options"></app-options>
+    <app-items [filter]="filterStatus" class="items" (changingRoute)="gettinRoute($event)"></app-items>
+  </div>
+</div>

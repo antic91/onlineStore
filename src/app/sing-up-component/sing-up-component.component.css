@@ -1,0 +1,47 @@
+#singUpWrapper{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+.formsWrapper{
+  position: relative;
+  width: 1124px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: flex-start;
+}
+
+/*SING UP FORM*/
+.singUpWrapper {
+  position: relative;
+  width: 554px;
+  margin-top: 75px;
+  margin-bottom: 75px;
+  padding: 15px 15px 20px 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  border-radius: 5px;
+}
+
+/*SING UP FORM END*/
+/*LOG IN WRAPPER FORM*/
+.logInWrapper {
+  position: relative;
+  width: 420px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+/*LOG IN WRAPPER FORM END*/

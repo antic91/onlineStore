@@ -1,0 +1,44 @@
+<div class="itemGarantie">
+  <img src="../../../../assets/photos/guarantee.svg" alt="">
+  <h3> 6 Month Guarantee </h3>
+</div>
+
+
+<div class="optionsItemWrapper">
+
+  <div class="itemSpec">
+
+    <div class="description" *ngFor="let item of optionsArr" [class.hidden]="item.spec == null">
+
+      <h4>{{item.name}}</h4>
+
+      <span class="spanDescription">
+        <h4>{{item.spec}}</h4>
+      </span>
+
+    </div>
+
+  </div>
+
+  <div class="itemButton">
+    <span class="priceShipping">
+      <h1>{{price}}&nbsp;€</h1>
+    </span>
+    <span class="priceShipping">
+      <h5>Free Shipping</h5>
+    </span>
+    <span class="priceShipping">
+      <h5>Shipping from: Austria</h5>
+    </span>
+    <span class="priceShipping">
+      <h5>In stock: &nbsp;{{quantity}}</h5>
+    </span>
+    <span class="priceShipping">
+      <span class="minus" (click)="minus()">-</span>
+      <span class="orderQuant">{{orderQuantity}}</span>
+      <span class="plus" (click)="plus()">+</span>
+    </span>
+    <button class="addToCart" (click)="addToCart()" [disabled]="titleAdded!='Add to Cart'">{{titleAdded}}</button>
+    <button class="buy"> Buy now</button>
+  </div>
+</div>

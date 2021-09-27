@@ -1,0 +1,14 @@
+<div id="resultWrapper">
+  <div class="categories">
+    <div class="itemCat" *ngFor="let item of objectCat" [routerLink]="['/categories', item.cat_slug]">
+      <div class="imgSection">
+      <img [src]="item.cat_image" alt="Used Laptops">
+    </div>
+    <h5>{{item.cat_title}}</h5>
+    </div>
+  </div>
+
+<div class="optionsItemsWrapper">
+    <app-op-component class="options"></app-op-component>
+    <app-item-show class="items"></app-item-show>
+</div>

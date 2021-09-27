@@ -1,0 +1,61 @@
+<div id="wrapperLogIn">
+    <form id="formLogIn" #loginForm="ngForm" (ngSubmit)="submit(loginForm)">
+
+      <span class="option">
+        <h2>Log In</h2>
+      </span>
+
+      <span class="option">
+        <input
+        required
+        minlength="3"
+        ngModel
+        name="username"
+        #usernameInput="ngModel"
+        (change)="changed(usernameInput)"
+        type="text"
+        class="input"
+        placeholder="Username">
+
+        <span *ngIf="url != 'sing-up'" class="signUpAndPassword">
+          <h6>You don't have account? Sign up here!</h6>
+        </span>
+
+        <span class="InvalidInput" *ngIf="usernameInput.touched && !usernameInput.valid">
+          <h6 *ngIf="usernameInput.errors?.required">* Username is required!</h6>
+          <h6 *ngIf="usernameInput.errors?.minlength">* Minimum length s {{usernameInput.errors?.minlength.requiredLength}}!</h6>
+        </span>
+
+      </span>
+
+      <span class="option">
+        <input
+        ngModel
+        required
+        minlength="6"
+        #Password="ngModel"
+        (change)="changed(Password)"
+        name="password"
+        type="password"
+        class="input"
+        placeholder="Password">
+
+        <span class="signUpAndPassword">
+          <h6>Forgot your password? Click here</h6>
+        </span>
+
+        <span class="InvalidInput" *ngIf="Password.touched && !Password.valid">
+          <h6 *ngIf="Password.errors?.required">* Username is required!</h6>
+          <h6 *ngIf="Password.errors?.minlength">* Minimum length s {{Password.errors?.minlength.requiredLength}}!</h6>
+        </span>
+        <span class="InvalidInput" *ngIf="InvalidLogin">
+          <h6>* Invalid credentials!</h6>
+        </span>
+
+
+      </span>
+
+      <button class="logInBtn" [disabled]="!loginForm.valid">Confirm</button>
+
+    </form>
+</div>

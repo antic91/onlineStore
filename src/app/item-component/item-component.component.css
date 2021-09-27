@@ -1,0 +1,111 @@
+#wrapperItem{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+#commonWrapperItem {
+  position: relative;
+  width: 1124px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+.routeWrapperItem {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.routeItem {
+  position: relative;
+  width: 1124px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+/*ITEM AND DETAILS*/
+.itemDisplay{
+  position: relative;
+  width: 1124px;
+  margin-top: 75px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/*WRAPPER FOR OPTIONS AND ITEM PHOTO */
+.photoHeader{
+  position: relative;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.optItem{
+  position: relative;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+/*WRAPPER FOR OPTIONS AND ITEM PHOTO END*/
+#wrapperFeat{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 55px;
+  padding: 75px 0;
+  justify-content: center;
+  align-content: flex-start;
+  background-color: #c8d8e4;
+}
+
+.wrapperDescription{
+  position: relative;
+  width: 1124px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  margin: 75px 0;
+  border: 2px solid #F2F2F2;
+  border-radius: 5px;
+  padding: 75px;
+
+}
+
+
+/*ACTIONS*/
+
+#actions{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0 0  75px 0;
+  justify-content: center;
+  align-content: flex-start;
+  margin-bottom: 75px;
+}

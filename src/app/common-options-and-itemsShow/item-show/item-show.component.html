@@ -1,0 +1,47 @@
+<div class="itemWrapper1" *ngFor="let item of objectsToShow">
+  <div class="itemHeader1">
+    <h3>{{item.prod_title}}</h3>
+  </div>
+  <div class="itemImage1">
+    <img [src]="item.prod_images" alt="">
+  </div>
+  <div class="itemDesc1">
+        <div class="desc1">
+          <h5>
+              {{item.spec_color}}
+          </h5>
+        </div>
+        <div class="desc1">
+          <h5>
+              {{item.spec_ram}} &nbsp;GB &nbsp;RAM
+          </h5>
+        </div>
+        <div class="desc1">
+          <h5>
+              {{item.spec_hdd}} &nbsp;GB &nbsp; {{item.spec_hddType}}
+          </h5>
+        </div>
+        <div class="desc1">
+          <h5>
+              {{item.spec_screen_size}}'
+          </h5>
+        </div>
+        <div class="desc1">
+          <h5>
+              Guarantee &nbsp;{{item.spec_guarantee}}
+          </h5>
+        </div>
+  </div>
+  <div class="priceButtonWrapper1">
+      <div class="price1">
+            <h3>
+                {{item.prod_price}}&nbsp;€
+            </h3>
+      </div>
+      <button [routerLink]="['/categories', item.cat_slug, item.prod_slug, item.prod_id]" class="btnDetail1">Details</button>
+  </div>
+</div>
+
+<div class="showMorebtnWrapper1">
+  <button class="btn1" (click)="showMore()" *ngIf="objects.length">Show More</button>
+</div>

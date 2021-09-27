@@ -1,0 +1,16 @@
+<div id="actionsWrapper">
+  <div class="headerActions">
+    <h2>You can find our top Products here!</h2>
+  </div>
+  <div class="itemsWrapper">
+    <div class="itemsAction" *ngFor="let item of saleObjects" [routerLink]="['/categories', item.cat_slug, item.prod_slug, item.prod_id]">
+      <div class="image">
+        <img [src]="item.prod_images" alt="">
+      </div>
+      <div class="headerImage">
+        <div class="h4"><h4>{{item.prod_title}}</h4></div>
+        <div class="h4"><h4>{{item.prod_price}} €</h4></div>
+      </div>
+    </div>
+  </div>
+</div>

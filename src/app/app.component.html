@@ -1,0 +1,19 @@
+
+  <div id="appearanceWrapper" *ngIf="!loaded1">
+    <div class="appearanceChild">
+      <h2>This is just a sample website which i still developing</h2>
+      <h3>Technology i used:</h3>
+      <ul>
+        <li>NodeJs</li>
+        <li>Angular</li>
+        <li>Mysql</li>
+        <li>Heroku</li>
+    </ul>
+    </div>
+  </div>
+
+  <div id="parrent">
+    <app-navi id="wrapper"></app-navi>
+        <router-outlet></router-outlet>
+    <app-footer id="wrapperFooter"></app-footer>
+  </div>
