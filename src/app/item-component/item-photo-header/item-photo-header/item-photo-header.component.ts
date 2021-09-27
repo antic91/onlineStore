@@ -25,7 +25,8 @@ export class ItemPhotoHeaderComponent implements OnInit {
   }
   setActivePhoto() {
     if(this.dataPhotos != undefined)
-    this.photo = this.dataPhotos[this.active]
+      this.photo = this.dataPhotos[this.active]
+    console.log(this.dataPhotos)
   }
 
   ngOnChanges(changes: SimpleChanges): void {

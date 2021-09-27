@@ -10,7 +10,7 @@
 
   <div class="optionPhotos">
     <div class="options" *ngFor="let item of dataPhotos; let i = index" (mouseenter)="onMouseEnter(i)" [ngStyle]="{'boxShadow': active!=i ? 'none' : '0px 0px 7px 1px rgb(82 171 152 / 73%)'}">
-      <img [src]="item.prod_images" alt="">
+      <img [src]="item" alt="">
     </div>
   </div>
 
