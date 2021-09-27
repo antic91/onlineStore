@@ -6,7 +6,7 @@
   <input type="text" placeholder="Search for your Item here!" #inp (keyup)="pressed($event)" >
   <div class="button">
     <button class="btn" (click)="navigate()" [disabled]="!object || inp.value.trim() == ''">
-      <img src="../assets/photos/search-solid.svg" class="searchImg" alt="">
+      <img src="assets/photos/search-solid.svg" class="searchImg" alt="">
     </button>
   </div>
   <app-search-options *ngIf="object" class="searchOptions" (setValue)="setNeValue($event)" [object]="object"></app-search-options>
