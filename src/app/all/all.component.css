@@ -16,7 +16,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: flex-start;
   margin-top: 75px;
   padding: 37.4px 0;
@@ -69,7 +69,7 @@
 .allitem {
   position: relative;
   width: 334.66px;
-  height: 255px;
+  height: 275px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -80,6 +80,12 @@
   margin-bottom: 3px;
   margin-bottom: 60px;
 }
+
+.allitemCat h5 {
+  text-align: center;
+}
+
+
 .allimage {
   position: relative;
   width: 100%;
@@ -150,4 +156,82 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: flex-start;
+}
+
+
+/*RESPONSIVE MEDIA QUERIES*/
+
+@media (max-width: 320px) {
+}
+
+@media only screen and (max-width: 414px) and (min-width: 320.001px) {
+}
+
+/* X-Small devices (portrait phones, less than 576px)*/
+@media only screen and (max-width: 576px) and (min-width: 414.001px) {
+}
+
+/* Small devices (landscape phones, less than 768px)*/
+@media only screen and (max-width: 768px) and (min-width: 576.001px) {
+}
+@media only screen and (max-width: 920px) and (min-width: 768.001px) {
+
+  .allcategories {
+    width: 720px;
+  }
+
+  .allitemCat {
+    width: 124px;
+    height: 180px;
+  }
+  .allitemCat:hover{
+    box-shadow: 0px 0px 7px 1px rgb(82 171 152 / 99%);
+  }
+
+  .imgSection {
+    height: 90px;
+  }
+  .alloptionsItemsWrapper {
+    width: 720px;
+  }
+
+}
+@media only screen and (max-width: 1025px) and (min-width: 920.001px) {
+  .allcategories {
+    width: 820px;
+  }
+  /*WRAPPER FOR IMAGE LINKS*/
+
+  .allitemCat {
+    width: 124px;
+    height: 180px;
+  }
+
+  .alloptionsItemsWrapper {
+    width: 820px;
+  }
+
+}
+
+/* Large devices (desktops, less than 1200px)*/
+@media only screen and (max-width: 1200px) and (min-width: 1025.001px) {
+  .allcategories {
+    width: 980px;
+  }
+  /*WRAPPER FOR IMAGE LINKS*/
+
+  .allitemCat {
+    width: 136px;
+    height: 180px;
+  }
+
+  .alloptionsItemsWrapper {
+    width: 980px;
+  }
+
+
+}
+
+/* X-Large devices (large desktops, less than 1400px)*/
+@media only screen and (max-width: 1400px) and (min-width: 1200.001px) {
 }

@@ -38,3 +38,55 @@
   background-color: rgba(34, 56, 67,.3);
   z-index: 99;
 }
+
+
+
+
+/*RESPONSIVE MEDIA QUERIES*/
+
+@media (max-width: 320px) {
+}
+
+@media only screen and (max-width: 414px) and (min-width: 320.001px) {
+}
+
+/* X-Small devices (portrait phones, less than 576px)*/
+@media only screen and (max-width: 576px) and (min-width: 414.001px) {
+}
+
+/* Small devices (landscape phones, less than 768px)*/
+@media only screen and (max-width: 768px) and (min-width: 576.001px) {
+}
+@media only screen and (max-width: 920px) and (min-width: 768.001px) {
+  #upperWrapper {
+    width: 720px;
+  }
+  #lowerWrapper {
+    width: 720px;
+  }
+
+}
+@media only screen and (max-width: 1025px) and (min-width: 920.001px) {
+  #upperWrapper {
+    width: 820px;
+  }
+  #lowerWrapper {
+    width: 820px;
+  }
+
+}
+
+/* Large devices (desktops, less than 1200px)*/
+@media only screen and (max-width: 1200px) and (min-width: 1025.001px) {
+  #upperWrapper {
+    width: 980px;
+  }
+  #lowerWrapper {
+    width: 980px;
+  }
+
+}
+
+/* X-Large devices (large desktops, less than 1400px)*/
+@media only screen and (max-width: 1400px) and (min-width: 1200.001px) {
+}
