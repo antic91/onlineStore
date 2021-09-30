@@ -10,6 +10,8 @@
   justify-content: flex-start;
   align-content: center;
   align-items: center;
+  padding-left: 26.1px;
+
 }
 
 .itemGarantie img{
@@ -124,6 +126,9 @@
   border: 1px solid #c8d8e4;
   font-weight: 600;
 }
+.addToCart:hover{
+  cursor: pointer;
+}
 .buy{
   position: relative;
   width: 100%;
@@ -141,7 +146,9 @@
   border: 1px solid #c8d8e4;
   font-weight: 600;
 }
-
+.buy:hover{
+  cursor: pointer;
+}
 /*ADDING AND Subtract order quantity*/
 .minus{
   position: relative;

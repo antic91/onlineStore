@@ -12,5 +12,5 @@
 <app-slider id="priceWrapper" [max]="maxRAM" [min]="minRAM" [headerCommon]="'RAM size'"></app-slider>
 
 <div class="btnWrapper">
-  <button *ngIf="storage.data.length > 0"(mousedown)="buttonClicked()" (mouseup)="buttonRelased()">Filter</button>
+  <button class="clickedBTN" *ngIf="storage.data.length > 0"(mousedown)="buttonClicked()" (mouseup)="buttonRelased()">Filter</button>
 </div>

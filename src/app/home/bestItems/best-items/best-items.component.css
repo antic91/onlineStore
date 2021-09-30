@@ -36,6 +36,7 @@
 .itemAct:hover {
   border-bottom: 1.5px solid #52ab98;
   margin-bottom: 0;
+  cursor: pointer;
 }
 /*SPAN IMAGE*/
 .img {

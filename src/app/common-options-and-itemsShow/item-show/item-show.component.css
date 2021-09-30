@@ -3,7 +3,7 @@
   position: relative;
   width: 248px;
   background-color: #ffffff;
-  border-radius: 15px;
+  border-radius: 10px;
   margin-bottom: 30px;
   margin-left: 30px;
   border: 0.1px solid #52ab98;
@@ -13,7 +13,10 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  box-shadow: 0px 0px 7px 1px rgb(82 171 152 / 73%);
+  box-shadow: 0px 0px 7px 1px rgb(82 171 152 / 58%);
+}
+.itemWrapper1:hover {
+  box-shadow: 0px 0px 7px 1px rgb(82 171 152 / 99%);
 }
 
 /*ITEM HEADER*/
@@ -85,14 +88,16 @@
 }
 /*PRICE*/
 .price1 {
+  width: 100%;
   position: relative;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   color: #2b6777;
   border-radius: 10px;
+  margin-bottom: 10px;
 }
 .price1 h3 {
   font-weight: 700;
@@ -100,8 +105,8 @@
 /*BUTTOn FOR DETAILS REDIRECT TO ITEM*/
 .btnDetail1 {
   position: relative;
-  width: 130px;
-  height: 32px;
+  width: 100%;
+  padding: 6px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -112,12 +117,16 @@
   background-color: #e6b8b8;
   border: 0.1px solid #52ab98;
   outline: none;
-  border-radius: 15px;
+  border-radius: 5px;
+}
+.btnDetail1:hover{
+  cursor: pointer;
 }
 /*BUTTON FOR SHOWINGMORE ITEMS AND WRAPPER*/
 .showMorebtnWrapper1 {
   position: relative;
   width: 100%;
+  margin-bottom: 75px;
   margin-top: 30px;
   display: flex;
   flex-direction: row;
@@ -128,11 +137,149 @@
 .btn1 {
   position: relative;
   width: 250px;
-  height: 40px;
-
+  padding: 7px;
   font-size: 19px;
   text-align: center;
-  border-radius: 15px;
+  border-radius: 5px;
   border: none;
   background-color: #c8d8e4;
+}
+.btn1:hover{
+  cursor: pointer;
+}
+
+/*RESPONSIVE MEDIA QUERIES*/
+
+@media (max-width: 320px) {
+}
+
+@media only screen and (max-width: 414px) and (min-width: 320.001px) {
+}
+
+/* X-Small devices (portrait phones, less than 576px)*/
+@media only screen and (max-width: 576px) and (min-width: 414.001px) {
+}
+
+/* Small devices (landscape phones, less than 768px)*/
+@media only screen and (max-width: 768px) and (min-width: 576.001px) {
+}
+@media only screen and (max-width: 920px) and (min-width: 768.001px) {
+  /*ITEM  WRAPPER*/
+  .itemWrapper1 {
+    width: 456px;
+    justify-content: space-between;
+  }
+  /*ITEM HEADER*/
+  .itemHeader1 {
+    width: 100%;
+    min-height: 0px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  /*ITEM IMAGE*/
+  .itemImage1 {
+    width: 160px;
+    margin-bottom: 10px;
+  }
+  .itemDesc1 {
+    width: 204px;
+    margin-bottom: 10px;
+    justify-content: flex-start;
+  }
+  .priceButtonWrapper1 {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  /*PRICE*/
+  .price1 {
+    width: 100%;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+  }
+  /*BUTTON*/
+  .btnDetail1 {
+    width: 204px;
+  }
+}
+@media only screen and (max-width: 1025px) and (min-width: 920.001px) {
+  /*ITEM  WRAPPER*/
+  .itemWrapper1 {
+    width: 556px;
+    justify-content: space-between;
+  }
+  /*ITEM HEADER*/
+  .itemHeader1 {
+    width: 100%;
+    min-height: 0px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  /*ITEM IMAGE*/
+  .itemImage1 {
+    width: 200px;
+    margin-bottom: 10px;
+  }
+  .itemDesc1 {
+    width: 264px;
+    margin-bottom: 10px;
+    justify-content: flex-start;
+  }
+  .priceButtonWrapper1 {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  /*PRICE*/
+  .price1 {
+    width: 100%;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+  }
+  /*BUTTON*/
+  .btnDetail1 {
+    width: 264px;
+  }
+}
+
+/* Large devices (desktops, less than 1200px)*/
+@media only screen and (max-width: 1200px) and (min-width: 1025.001px) {
+  /*ITEM  WRAPPER*/
+  .itemWrapper1 {
+    width: 716px;
+    justify-content: space-between;
+  }
+  /*ITEM HEADER*/
+  .itemHeader1 {
+    width: 100%;
+    min-height: 0px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  /*ITEM IMAGE*/
+  .itemImage1 {
+    width: 240px;
+    margin-bottom: 10px;
+  }
+  .itemDesc1 {
+    width: 384px;
+    margin-bottom: 10px;
+    justify-content: flex-start;
+  }
+  .priceButtonWrapper1 {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  /*PRICE*/
+  .price1 {
+    width: 100%;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+  }
+  /*BUTTON*/
+  .btnDetail1 {
+    width: 270px;
+  }
+}
+
+/* X-Large devices (large desktops, less than 1400px)*/
+@media only screen and (max-width: 1400px) and (min-width: 1200.001px) {
 }

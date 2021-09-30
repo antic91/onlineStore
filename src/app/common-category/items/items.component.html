@@ -5,7 +5,7 @@
   <div class="itemImage">
     <img [src]="item.prod_images" alt="">
   </div>
-  <div class="itemDesc">
+<div class="itemDesc">
         <div class="desc">
           <h5>
               {{item.spec_color}}
@@ -35,7 +35,7 @@
   <div class="priceButtonWrapper">
       <div class="price">
             <h3>
-                {{item.prod_price}}&nbsp;€
+               Price: {{item.prod_price}}&nbsp;€
             </h3>
       </div>
       <button [routerLink]="['/categories', item.cat_slug, item.prod_slug, item.prod_id]" class="btnDetail">Details</button>

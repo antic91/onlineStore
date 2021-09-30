@@ -66,3 +66,41 @@
   color: #ffffff;
   font-size: 18px;
 }
+
+
+/*APP DOWNLOAD FOR SMALLER DEVICES*/
+#AppDownloadWrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.downloadHover{
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.downloadHover:hover{
+  cursor: pointer;
+}
+
+/*RESPONSIVE MEDIA QUERIES*/
+
+@media (max-width: 768px) {
+  #appearanceWrapper{
+    display: none;
+  }
+  #parrent{
+    display: none;
+  }
+}
+@media (min-width: 768.001px) {
+  #AppDownloadWrapper {
+    display: none;
+  }
+}

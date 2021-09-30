@@ -2,15 +2,15 @@
   <div class="MoreProd">
     <h2>More products for you:</h2>
   </div>
-  <div class="itemAct animate__animated animate__backOutUp animate__fadeIn" *ngFor="let item of objectToShow">
+  <div class="itemAct animate__animated animate__backOutUp animate__fadeIn" *ngFor="let item of objectToShow" [routerLink]="['/categories', item.cat_slug, item.prod_slug, item.prod_id]">
     <span class="img">
       <img [src]="item.prod_images" alt="">
     </span>
     <span class="prodTitle">
-      <h3>{{item.prod_title}}</h3>
+      <h4>{{item.prod_title}}</h4>
     </span>
     <span class="price">
-      <h3>{{item.prod_price}} €</h3>
+      <h4>{{item.prod_price}} €</h4>
     </span>
   </div>
 </div>

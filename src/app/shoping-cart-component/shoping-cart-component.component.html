@@ -19,7 +19,7 @@
       <div class="desctiptionShopingCart">
 
           <div class="title">
-            <h3>{{item.prod_title}}</h3>
+            <h3 [routerLink]="['/categories', item.cat_slug, item.prod_slug, item.prod_id]">{{item.prod_title}}</h3>
           </div>
           <app-descripion-comp id="descriptions" [data]="item"></app-descripion-comp>
       </div>
