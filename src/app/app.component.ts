@@ -1,5 +1,5 @@
 import { LogedInService } from 'src/app/services/loged-in.service';
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   loaded1: boolean = false;
-  title: string ="onlineStore"
+  title: string = "onlineStore";
+
   constructor(private loaded: LogedInService) {
 
   }
+
   ngOnInit(): void {
     this.loaded.statusLoaded.subscribe((x: any) => {
       setTimeout(() => {
@@ -19,4 +21,5 @@ export class AppComponent {
       }, 2000);
     })
   }
+
 }
