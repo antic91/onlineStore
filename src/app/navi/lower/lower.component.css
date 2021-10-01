@@ -62,7 +62,7 @@
 
 .iconsWrapper {
   position: relative;
-  width: 60px;
+  width: 65px;
   height: 40px;
   display: flex;
   flex-direction: row;
@@ -82,7 +82,7 @@
 
 .iconsWrapper1 {
   position: relative;
-  width: 120px;
+  width: 123px;
   height: 40px;
   display: flex;
   flex-direction: row;
@@ -121,13 +121,13 @@
     display: none;
   }
   #lastButtons {
-    width: 200px;
+    width: 211px;
   }
   .iconsWrapper {
-    width: 55px;
+    width: 65px;
   }
   .iconsWrapper1 {
-    width: 110px;
+    width: 121px;
   }
 
 }
@@ -136,13 +136,13 @@
     display: none;
   }
   #lastButtons {
-    width: 200px;
+    width: 210px;
   }
   .iconsWrapper {
-    width: 55px;
+    width: 65px;
   }
   .iconsWrapper1 {
-    width: 110px;
+    width: 120px;
   }
 
 

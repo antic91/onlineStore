@@ -5,8 +5,7 @@ import { Observable } from 'rxjs';
 import { AppError } from '../commonErrors/app-error';
 import { NotFoundError } from '../commonErrors/not-found-error';
 import { ErrorError } from '../commonErrors/error-error';
-import { map } from 'rxjs/operators';
-
+import {throwError} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -59,6 +58,7 @@ export class DataService {
   }
 
   /*GET ONE ITEM END */
+
   /*GET ALL OR SEARCH FILTER ITEMS */
 
   searchFilterItems(url:string, resource:{title:any[], value: string }): any{
@@ -138,12 +138,12 @@ export class DataService {
 
   private handleError(_error: Response): any{
     if (_error.status === 400) {
-          return Observable.throw(new ErrorError())
+          return throwError(new ErrorError())
         }
     if (_error.status === 404) {
-          return Observable.throw(new NotFoundError());
+          return throwError(new NotFoundError());
 
         }
-        return Observable.throw(new AppError());
+        return throwError(new AppError());
   }
 }

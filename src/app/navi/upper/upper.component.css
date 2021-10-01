@@ -97,7 +97,7 @@
 /*SECOND CHILD ICONS ////SHOPING CART*/
 .iconsWrapper1 {
   position: relative;
-  width: 120px;
+  width: 123px;
   height: 51px;
   display: flex;
   flex-direction: row;
@@ -192,20 +192,20 @@
 
   /*INPUT WRAPPER AND INPUT EL*/
   #inputWrapper {
-    width: 340px;
+    width: 329px;
   }
   #inputWrapper input {
-    width: 300px;
+    width: 289px;
   }
 
   /*ICONS WRAPPER WITH ACCOUNT AND SHOPING CART*/
   #iconsWrapper {
-    width: 200px;
+    width: 211px;
   }
 
   /*FIRST CHILD ICONS ////ACCOUNT*/
   .iconsW {
-    width: 55px;
+    width: 65px;
   }
   .iconsW h5 {
     font-weight: 500;
@@ -216,14 +216,14 @@
     font-weight: 500;
   }
   .iconsWrapper1 {
-    width: 110px;
+    width: 121px;
   }
   .spanImg {
     width: 25px;
   }
 
   .searchOptions {
-    width: 340px;
+    width: 329px;
   }
   #logInWrapp {
     width: 190px;
@@ -246,12 +246,12 @@
 
   /*ICONS WRAPPER WITH ACCOUNT AND SHOPING CART*/
   #iconsWrapper {
-    width: 200px;
+    width: 210px;
   }
 
   /*FIRST CHILD ICONS ////ACCOUNT*/
   .iconsW {
-    width: 55px;
+    width: 65px;
   }
   .iconsW h5 {
     font-weight: 500;
@@ -259,10 +259,10 @@
 
   /*SECOND CHILD ICONS ////SHOPING CART*/
   .iconsWrapper1 h5{
-    font-weight: 500;
+    font-weight: 400;
   }
   .iconsWrapper1 {
-    width: 110px;
+    width: 120px;
   }
   .spanImg {
     width: 25px;

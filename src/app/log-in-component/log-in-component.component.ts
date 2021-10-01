@@ -33,8 +33,9 @@ export class LogInComponentComponent implements OnInit {
           this.logged.setID(x.id)
           this.router.navigate(['/'])
           this.logged.statusId.subscribe((x: any) => {
-
-          })
+          }), (error: Response) => {
+            console.log(error)
+          }
         }
 
     })
