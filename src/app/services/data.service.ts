@@ -144,6 +144,6 @@ export class DataService {
           return throwError(new NotFoundError());
 
         }
-        return throwError(new AppError());
+        return throwError(new AppError(_error));
   }
 }
