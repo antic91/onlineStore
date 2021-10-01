@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { signUpValidators } from 'src/app/validators/sign-up';
 import { map } from 'rxjs/operators';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-sing-up-form',
   templateUrl: './sing-up-form.component.html',
@@ -12,7 +13,7 @@ export class SingUpFormComponent implements OnInit {
   userNameOccupated!: boolean;
   emailOccupated!: boolean;
   form: FormGroup;
-  constructor(private sendForm: PostService) {
+  constructor(private sendForm: PostService, private router: Router) {
     this.form = new FormGroup({
       firstName: new FormControl('', [Validators.required, Validators.minLength(3), signUpValidators.cannotContainSpace]),
       lastName: new FormControl('', [Validators.required, Validators.minLength(3), signUpValidators.cannotContainSpace]),
@@ -87,6 +88,7 @@ export class SingUpFormComponent implements OnInit {
           })
           this.form.markAsUntouched();
           this.form.setErrors(null);
+          this.router.navigate(['/'])
       })
     }
   }

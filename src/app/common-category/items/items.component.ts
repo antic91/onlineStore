@@ -84,6 +84,7 @@ export class ItemsComponent implements OnInit {
   /*Detecting filter changes */
   ngOnChanges(changes: SimpleChanges): void {
     if (changes.filter.currentValue == true) {
+      console.log(this.filter)
       this.getNewData()
     }
   }
