@@ -14,17 +14,17 @@ export class ResultServiceService {
     }
     });*/
   }
-  private result = new BehaviorSubject<number| any[]>([]);
+  private result = new BehaviorSubject<string| any[]>([]);
   statusResult = this.result.asObservable();
 
 
-  private resultAll = new BehaviorSubject<number| any[]>([]);
+  private resultAll = new BehaviorSubject<string| any[]>([]);
   statusResultAll = this.resultAll.asObservable();
 
-  private stringVal = new BehaviorSubject<number| string>("");
+  private stringVal = new BehaviorSubject<string| any>("");
   statusStringVal = this.stringVal.asObservable();
 
-  private categories = new BehaviorSubject<number| any[]>([]);
+  private categories = new BehaviorSubject<string| any[]>([]);
   categoriesResult = this.categories.asObservable();
 
   changeValue(value:any[]): void{
