@@ -1,8 +1,10 @@
+import { AppError } from './../commonErrors/app-error';
 import { DataService } from './../services/data.service';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { getLocaleDateFormat } from '@angular/common';
+import { NotFoundError } from '../commonErrors/not-found-error';
 
 @Component({
   selector: 'app-item-component',
@@ -101,6 +103,10 @@ export class ItemComponentComponent implements OnInit {
         }
         this.itemHeader = x.prod_title;
         this.itemPhotos = x.spec_photo_item.split(",");
-      })
+      }, (error: AppError) => {
+        if (error instanceof NotFoundError) {
+          console.log("NotFoundError")
+        }else throw error
+    })
   }
 }

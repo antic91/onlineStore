@@ -47,7 +47,6 @@ export class ShopingCartComponentComponent implements OnInit {
       id: y
     };
     this.postSer.getFromCart("https://online-shop-node1.herokuapp.com/getFromCart", data)
-
       .subscribe((res: any) => {
         this.data = res.result;
         res.result.forEach((a: any) => {

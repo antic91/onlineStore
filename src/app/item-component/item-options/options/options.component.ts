@@ -1,6 +1,8 @@
+import { AppError } from './../../../commonErrors/app-error';
 import { PostService } from 'src/app/services/post.service';
 import { LogedInService } from 'src/app/services/loged-in.service';
 import { Component, Input, OnInit } from '@angular/core';
+import { ErrorError } from 'src/app/commonErrors/error-error';
 
 @Component({
   selector: 'app-item-options',
@@ -52,6 +54,11 @@ export class ItemOptionsComponent implements OnInit {
         if (x.status == "OK") {
           this.titleAdded = "Add to Cart";
         }
+      }, (error: AppError) => {
+        if (error instanceof ErrorError) {
+          console.log("ErrorError")
+        }
+        else throw error
       })
   }
 

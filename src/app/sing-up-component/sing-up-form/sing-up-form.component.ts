@@ -1,9 +1,11 @@
+import { AppError } from './../../commonErrors/app-error';
 import { PostService } from './../../services/post.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { signUpValidators } from 'src/app/validators/sign-up';
 import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
+import { ErrorError } from 'src/app/commonErrors/error-error';
 @Component({
   selector: 'app-sing-up-form',
   templateUrl: './sing-up-form.component.html',
@@ -66,7 +68,6 @@ export class SingUpFormComponent implements OnInit {
 
 
   sendData(): void{
-    console.log(this.form.value)
     if (this.userNameOccupated && this.emailOccupated) {
       this.sendForm.signUp("https://online-shop-node1.herokuapp.com/signUp", this.form.value)
         .subscribe((x: any) => {
@@ -89,6 +90,10 @@ export class SingUpFormComponent implements OnInit {
           this.form.markAsUntouched();
           this.form.setErrors(null);
           this.router.navigate(['/'])
+        }, (error: AppError) => {
+          if (error instanceof ErrorError) {
+            console.log("ErrorError")
+          } else throw error
       })
     }
   }

@@ -24,6 +24,7 @@ export class BestItemsComponent implements OnInit {
     }
     this.getData()
   }
+
   getData(): void{
     this.service.getAll("https://online-shop-node1.herokuapp.com/" + this.Param)
       .pipe(
@@ -34,6 +35,7 @@ export class BestItemsComponent implements OnInit {
         this.setDataToShow()
         });
   }
+
   setDataToShow(): void{
     this.objectToShow = this.object.splice(0, 4);
     setInterval(() => {

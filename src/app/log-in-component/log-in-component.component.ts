@@ -1,7 +1,9 @@
+import { AppError } from './../commonErrors/app-error';
 import { PostService } from './../services/post.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { LogedInService } from '../services/loged-in.service';
+import { NotFoundError } from '../commonErrors/not-found-error';
 
 @Component({
   selector: 'app-log-in-component',
@@ -33,8 +35,10 @@ export class LogInComponentComponent implements OnInit {
           this.logged.setID(x.id)
           this.router.navigate(['/'])
           this.logged.statusId.subscribe((x: any) => {
-          }), (error: Response) => {
-            console.log(error)
+          }),(error: AppError) => {
+            if (error instanceof NotFoundError) {
+              console.log("not found error")
+            }else throw error
           }
         }
 

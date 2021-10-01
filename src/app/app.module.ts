@@ -1,3 +1,4 @@
+import { ErrorHandler } from '@angular/core';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -48,6 +49,7 @@ import { SingUpFormComponent } from './sing-up-component/sing-up-form/sing-up-fo
 import { DescripionCompComponent } from './shoping-cart-component/descripion-comp/descripion-comp.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AppErrorHandler } from './commonErrors/use-class';
 
 @NgModule({
   declarations: [
@@ -102,7 +104,8 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   providers: [
     PostService,
-    FollowersService
+    FollowersService,
+    { provide: ErrorHandler, useClass: AppErrorHandler}
   ],
   bootstrap: [AppComponent]
 })
