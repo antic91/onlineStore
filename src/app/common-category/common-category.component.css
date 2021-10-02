@@ -2,6 +2,7 @@
 #commonWrapper{
   position: relative;
   width: 100%;
+  margin-bottom: 75px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
