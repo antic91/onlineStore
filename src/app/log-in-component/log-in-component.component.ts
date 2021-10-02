@@ -24,7 +24,6 @@ export class LogInComponentComponent implements OnInit {
   }
 
   submit(loginForm: any): void{
-    console.log(loginForm.value)
     this.loginService.logIn("https://online-shop-node1.herokuapp.com/login",loginForm.value)
       .subscribe((x: any) => {
         if (x.result == false) this.InvalidLogin = true;

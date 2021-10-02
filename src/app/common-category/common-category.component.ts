@@ -15,7 +15,6 @@ export class CommonCategoryComponent implements OnInit {
   }
   gettinRoute(event: any) {
     this.param = event;
-    console.log(event)
   }
   getStatus(event: any) {
     this.filterStatus = event;

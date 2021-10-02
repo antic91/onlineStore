@@ -64,8 +64,8 @@ export class ItemOptionsComponent implements OnInit {
 
   setLocalStorage(): void{
       let item = {
-          item: this.itemOBJ,
-          orderQuantity: this.orderQuantity
+        item: this.itemOBJ,
+        orderQuantity: this.orderQuantity
       };
     var localSt = localStorage.getItem("itemCart");
       if (!localSt) {

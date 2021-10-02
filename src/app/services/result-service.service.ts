@@ -8,11 +8,6 @@ import { BehaviorSubject } from 'rxjs';
 export class ResultServiceService {
 
   constructor(private router: Router) {
-    /*this.router.events.subscribe((event:any) => {
-    if(event.url) {
-        this.routeChangeDetection()
-    }
-    });*/
   }
   private result = new BehaviorSubject<string| any[]>([]);
   statusResult = this.result.asObservable();
@@ -43,8 +38,4 @@ export class ResultServiceService {
     this.categories.next(value)
   }
 
- /* routeChangeDetection() {
-    this.stringVal.next("");
-    this.result.next([]);
-  } */
 }

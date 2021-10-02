@@ -33,8 +33,8 @@ export class ItemComponentComponent implements OnInit {
     this.route.params.subscribe((params: Params) => {
         this.par1 = params.cat_name;
         this.par2 = params.prod_slug;
-      this.id = parseInt(params.id);
-      this.getData()
+        this.id = parseInt(params.id);
+        this.getData()
       });
   }
   getData(): void{
