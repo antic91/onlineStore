@@ -33,11 +33,13 @@ export class ShopingCartComponentComponent implements OnInit {
       }
       if(!x){
         const localStData = JSON.parse(localStorage.getItem('itemCart') || '{}');
-        localStData.forEach((element: any) => {
-          this.totalPrice = this.totalPrice + (element.orderQuantity*element.item.prod_price)
-          this.orderQuantity.push(element.orderQuantity);
-          this.data.push(element.item);
-        });
+        if (localStData.length > 0) {
+          localStData.forEach((element: any) => {
+            this.totalPrice = this.totalPrice + (element.orderQuantity*element.item.prod_price)
+            this.orderQuantity.push(element.orderQuantity);
+            this.data.push(element.item);
+          });
+        }
       }
     })
   }
@@ -48,11 +50,13 @@ export class ShopingCartComponentComponent implements OnInit {
     };
     this.postSer.getFromCart("https://online-shop-node1.herokuapp.com/getFromCart", data)
       .subscribe((res: any) => {
-        this.data = res.result;
-        res.result.forEach((a: any) => {
-          this.totalPrice = this.totalPrice + (a.item_quantity*a.prod_price)
-          this.orderQuantity.push(a.item_quantity)
-        })
+        if (res.length > 0) {
+          this.data = res.result;
+          res.result.forEach((a: any) => {
+            this.totalPrice = this.totalPrice + (a.item_quantity*a.prod_price)
+            this.orderQuantity.push(a.item_quantity)
+          })
+        }
       });
   }
 

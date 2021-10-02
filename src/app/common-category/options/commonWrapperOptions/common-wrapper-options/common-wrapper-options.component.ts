@@ -31,7 +31,7 @@ export class CommonWrapperOptionsComponent implements OnInit {
       this.storage.data.push(data);
       return
     }
-    if (this.storage.data != 0) {
+    if (this.storage.data.length != 0) {
       var index = this.storage.data.map((item: any) => item.name).indexOf(this.optionsHeader);
       if (index == -1) {
         this.storage.data.push(data);
