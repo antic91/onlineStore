@@ -34,8 +34,8 @@ export class AllComponent implements OnInit {
   }
   filterClicked(event:any) {
     if (event == "clicked") this.clicked = true;
-    setTimeout(() => {
-      this.clicked = false;
-    }, 500);
-  }
+      setTimeout(() => {
+        this.clicked = false;
+      }, 500);
+    }
 }
