@@ -79,7 +79,7 @@ export class ShopingCartComponentComponent implements OnInit {
       localStorage.setItem("itemCart", JSON.stringify(localST));
     } else {
       this.postSer.changeValues("https://online-shop-node1.herokuapp.com/changeValues", data1)
-      .subscribe((b:any)=> console.log(b))
+      .subscribe((b:any)=> console.log("Added"))
     }
   }
   removeOneItem(item: any, i: number): void{
@@ -109,7 +109,7 @@ export class ShopingCartComponentComponent implements OnInit {
       if (this.UserLoggedIn) {
 
       this.postSer.changeValues("https://online-shop-node1.herokuapp.com/changeValues", data2)
-      .subscribe((b:any)=> console.log(b))
+      .subscribe((b:any)=> console.log("Removed"))
       }
       return
     };
