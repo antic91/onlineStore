@@ -50,7 +50,7 @@ export class ShopingCartComponentComponent implements OnInit {
     };
     this.postSer.getFromCart("https://online-shop-node1.herokuapp.com/getFromCart", data)
       .subscribe((res: any) => {
-        if (res.length > 0) {
+        if (res.result.length > 0) {
           this.data = res.result;
           res.result.forEach((a: any) => {
             this.totalPrice = this.totalPrice + (a.item_quantity*a.prod_price)
