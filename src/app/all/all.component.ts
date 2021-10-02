@@ -26,8 +26,10 @@ export class AllComponent implements OnInit {
         map((x:any)=> x = x.result)
       )
       .subscribe((x: any) => {
-      this.result.changeValueAll(x)
-        this.result.categoriesResult.subscribe((x:any)=> this.objectCat = x)
+        if (x.length > 0) {
+          this.result.changeValueAll(x)
+          this.result.categoriesResult.subscribe((x:any)=> this.objectCat = x)
+        }
     })
   }
   filterClicked(event:any) {

@@ -1,6 +1,8 @@
 import { Component, OnInit, Output, EventEmitter, Input, SimpleChanges } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { map } from 'rxjs/operators';
+import { AppError } from 'src/app/commonErrors/app-error';
+import { NotFoundError } from 'src/app/commonErrors/not-found-error';
 import { PostService } from 'src/app/services/post.service';
 import { StorageServiceService } from 'src/app/services/storage-service.service';
 
@@ -74,9 +76,18 @@ export class ItemsComponent implements OnInit {
         map((res:any)=>res.data)
       )
       .subscribe((x: any) => {
-        this.objects = x;
-        this.objectsToShow = this.objects.splice(0, 9)
-        this.parameterRoute = this.objectsToShow[0].cat_metaTitle;
+          if (x.length > 0) {
+          this.objects = x;
+          this.objectsToShow = this.objects.splice(0, 9)
+          this.parameterRoute = this.objectsToShow[0].cat_metaTitle;
+          } else {
+            this.objects = [];
+            this.objectsToShow = [];
+          }
+      }, (error: AppError) => {
+        if (error instanceof NotFoundError) {
+          console.log("NotFoundError")
+        }else throw error
       })
   }
 

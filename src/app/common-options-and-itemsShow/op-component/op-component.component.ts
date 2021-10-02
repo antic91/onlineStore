@@ -1,9 +1,11 @@
+import { AppError } from './../../commonErrors/app-error';
 import { PostService } from './../../services/post.service';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ResultServiceService } from 'src/app/services/result-service.service';
 import { StorageServiceService } from 'src/app/services/storage-service.service';
 import { map } from 'rxjs/operators';
+import { NotFoundError } from 'src/app/commonErrors/not-found-error';
 
 @Component({
   selector: 'app-op-component',
@@ -44,18 +46,10 @@ export class OpComponentComponent implements OnInit {
 
   }
 
-
-  /*Catching button event*/
   buttonClicked() {
-    /*if (this.value == "allComponentAngularItems") {
-      this.valueService.changeValueAll([]);
-    } else {
-      this.valueService.changeValue([])
-    }*/
 
     this.valueService.statusStringVal.subscribe((x: any) => {
       this.value = x;
-      console.log(x)
       this.getData()
     })
 
@@ -68,21 +62,27 @@ export class OpComponentComponent implements OnInit {
 
       .subscribe((x: any) => {
         setTimeout(() => {
-          console.log(x.result, "ALLLLLL");
           this.valueService.changeValueAll(x.result);
           this.filter.emit("clicked")
         }, 500);
 
+      }, (error: AppError) => {
+        if (error instanceof NotFoundError) {
+          console.log("NotFoundError")
+        }else throw error
       })
     } else {
       this.getDataService.searchFilterItems("https://online-shop-node1.herokuapp.com/filterSearch", { title: this.storage.data, value: this.value })
 
         .subscribe((x: any) => {
         setTimeout(() => {
-          console.log(x.result, "SADASDSADSDGGGGGGGGGGGGGGGGGGGG");
           this.valueService.changeValue(x.result);
           this.filter.emit("clicked")
         }, 500);
+      }, (error: AppError) => {
+        if (error instanceof NotFoundError) {
+          console.log("NotFoundError")
+        }else throw error
       })
     }
   }

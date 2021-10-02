@@ -27,10 +27,6 @@ export class ItemShowComponent implements OnInit {
   showData(): void{
     if (this.value == "allProducts") {
         this.result.statusResultAll.subscribe((x: any) => {
-          /*if (!x) {
-            this.router.navigate(["home"]);
-            return
-          }*/
           this.objects = x;
           this.objectsToShow = this.objects.splice(0, 9)
         })
@@ -38,11 +34,6 @@ export class ItemShowComponent implements OnInit {
     }
     else {
         this.result.statusResult.subscribe((x: any) => {
-
-          /*if (!x) {
-            this.router.navigate(["home"]);
-            return
-          }*/
           this.objects = x;
           this.objectsToShow = this.objects.splice(0, 9)
         })
