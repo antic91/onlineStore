@@ -1,8 +1,11 @@
+/*Wrapper LOGO*/
 #logoWrapper{
   position: relative;
   height: 40px;
-  width: 180px;
+  width: 140px;
 }
+
+/*Image logo*/
 #logoWrapper img{
   position: relative;
   width: 100%;
@@ -12,9 +15,10 @@
 #logoWrapper img:hover{
   cursor: pointer;
 }
+/************************************************************/
+
 
 /*INPUT*/
-
 #inputWrapper {
   position: relative;
   height: 35px;
@@ -22,10 +26,12 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  z-index: 999;
+  overflow: visible;
 }
 #inputWrapper input{
   position: relative;
-  width: 624px;
+  width: 629px;
   height: 100%;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -46,6 +52,7 @@
   border-bottom-right-radius: 5px;
   padding-right: 0.75rem;
 }
+/*Button by Input*/
 .btn {
   position: relative;
   width: 100%;
@@ -62,43 +69,49 @@
   justify-content: center;
   align-items: center;
 }
+/*Search image button*/
 .searchImg{
   position: relative;
   height: 70%;
 }
 
+/************************************************************/
+
 
 /*ICONS WRAPPER WITH ACCOUNT AND SHOPING CART*/
 #iconsWrapper {
   position: relative;
-  height: 51px;
-  width: 230px;
+  height: 56px;
+  width: 229px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-end;
+  align-content: flex-end;
+  overflow: visible;
 }
 
 /*FIRST CHILD ICONS ////ACCOUNT*/
 .iconsW{
   position: relative;
-  width: 65px;
-  height: 51px;
+  width: 72px;
+  height: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
+  overflow: visible;
 }
 .iconsW h5 {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 /*SECOND CHILD ICONS ////SHOPING CART*/
 .iconsWrapper1 {
   position: relative;
-  width: 123px;
-  height: 51px;
+  width: 127px;
+  height: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -107,24 +120,48 @@
   margin-left: 25px;
 }
 .iconsWrapper1 h5{
-  font-weight: 600;
+  font-weight: 500;
 }
-/* SPAN WITH IMAGES ACCOUNT ANDSHOPING CART*/
+/* SPAN WITH IMAGES ACCOUNT AND SHOPING CART*/
 .spanImg{
   position: relative;
   margin-bottom: 5px;
   height: 30px;
   width: 30px;
-
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-content: space-between;
 }
 .spanImg img{
   position: relative;
   height: 100%;
 }
 
+/* X lines */
+.line {
+  position: relative;
+  width: 30px;
+  height: 1px;
+  background-color: #ffffff;
+  transform-origin: top left;
+
+  transform: rotate(45deg);
+}
+.line1 {
+  position: relative;
+  width: 30px;
+  height: 1px;
+  background-color: #ffffff;
+  transform-origin: top left;
+  transform: rotate(-45deg);
+}
 
 
-/*SEARCH OPTIONS WRAPPER*/
+/************************************************************/
+
+
+/*SEARCH OPTIONS WRAPPER ABSOLUTE*/
 .searchOptions{
   position: absolute;
   left: 0;
@@ -137,35 +174,40 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: flex-start;
-  z-index: 999;
+  z-index: 99;
   overflow-y: auto;
-  border: 1px solid #F2F2F2;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 
+/************************************************************/
 
 
-/*LOGIN WRAPPER*/
-
+/*LOGIN WRAPPER Absolute*/
 #logInWrapp{
   position: absolute;
   top: 45px;
-  padding-top: 3px;
-  width: 210px;
-  left: 0;
+  width: 242px;
+  left: -15px;
   z-index: 999;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: flex-start;
-  background-color: #C8D8E4;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 15px;
-  border-radius: 5px;
+  background-color: #001925;
+  padding: 20px 20px 5px 20px;
   margin-top: 8px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+
+
+/**************************************************************************/
+
+/*Icons menu*/
+.iconsMenu{
+  display: none;
 }
 
 
@@ -173,134 +215,552 @@
 /*RESPONSIVE MEDIA QUERIES*/
 
 @media (max-width: 320px) {
+  /*INPUT*/
+    #inputWrapper {
+      display: none;
+    }
+  /*Wrapper LOGO*/
+    #logoWrapper {
+      position: relative;
+      height: 40px;
+      width: 80px;
+    }
+
+
+  /*Display None text under icons*/
+    .displayNone {
+      display: none;
+    }
+
+    /*Both icons wrapper*/
+    #iconsWrapper {
+      width: 120px;
+      height: 51px;
+    }
+
+  /*Icons wrapper width*/
+    .iconsWrapper1 {
+      width: auto;
+      margin-left: 15px;
+      height: 51px;
+    }
+    .iconsW {
+      width: auto;
+      margin-left: 15px;
+    }
+
+  /*Icons menu*/
+    .iconsMenu {
+      position: relative;
+      height: 51px;
+      width: 30px;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-content: center;
+    }
+  /*App Menu wrapper*/
+    .appMenuWrapper {
+      position: relative;
+      width: 30px;
+      height: 23px;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-content: space-between;
+    }
+  /*LOGIN WRAPPER Absolute*/
+    #logInWrapp {
+      display: none;
+    }
+  /*span image icons wrapper margin 0*/
+    .spanImg {
+      margin-bottom: 0;
+    }
+
 }
 
-@media only screen and (max-width: 414px) and (min-width: 320.001px) {
+@media only screen and (max-width: 414px) and (min-width: 321px) {
+  /*INPUT*/
+    #inputWrapper {
+      display: none;
+    }
+
+  /*Wrapper LOGO*/
+    #logoWrapper {
+      position: relative;
+      height: 40px;
+      width: 80px;
+    }
+
+  /*Display None text under icons*/
+    .displayNone {
+      display: none;
+    }
+
+    /*Both icons wrapper*/
+    #iconsWrapper {
+      width: 120px;
+      height: 51px;
+    }
+
+  /*Icons wrapper width*/
+    .iconsWrapper1 {
+      width: auto;
+      margin-left: 15px;
+      height: 51px;
+    }
+    .iconsW {
+      width: auto;
+      margin-left: 15px;
+    }
+
+  /*Icons menu*/
+    .iconsMenu {
+      position: relative;
+      height: 51px;
+      width: 30px;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-content: center;
+    }
+  /*App Menu wrapper*/
+    .appMenuWrapper {
+      position: relative;
+      width: 30px;
+      height: 23px;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-content: space-between;
+    }
+  /*LOGIN WRAPPER Absolute*/
+    #logInWrapp {
+      display: none;
+    }
+  /*span image icons wrapper margin 0*/
+    .spanImg {
+      margin-bottom: 0;
+    }
+
 }
 
 /* X-Small devices (portrait phones, less than 576px)*/
-@media only screen and (max-width: 576px) and (min-width: 414.001px) {
+@media only screen and (max-width: 576px) and (min-width: 415px) {
+
+  /*Display None text under icons*/
+    .displayNone {
+      display: none;
+    }
+
+  /*Both icons wrapper*/
+    #iconsWrapper {
+      width: 110px;
+    }
+
+  /*Icons wrapper width*/
+    .iconsWrapper1 {
+      width: auto;
+    }
+    .iconsW {
+      width: auto;
+    }
+
+  /*Wrapper LOGO*/
+    #logoWrapper {
+      position: relative;
+      height: 40px;
+      width: 80px;
+    }
+
+
+  /*Display None text under icons*/
+    .displayNone {
+      display: none;
+    }
+
+  /*Both icons wrapper*/
+    #iconsWrapper {
+      width: 120px;
+      height: 51px;
+    }
+
+  /*Icons wrapper width*/
+    .iconsWrapper1 {
+      width: auto;
+      margin-left: 15px;
+      height: 51px;
+    }
+    .iconsW {
+      width: auto;
+      margin-left: 15px;
+    }
+
+  /*Wrapper LOGO*/
+    #logoWrapper {
+      position: relative;
+      height: 40px;
+      width: 100px;
+    }
+
+  /*INPUT*/
+    #inputWrapper {
+      display: none;
+    }
+
+    /*Icons menu*/
+    .iconsMenu {
+      position: relative;
+      height: 51px;
+      width: 30px;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-content: center;
+    }
+  /*App Menu wrapper*/
+    .appMenuWrapper {
+      position: relative;
+      width: 30px;
+      height: 23px;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-content: space-between;
+    }
+  /*LOGIN WRAPPER Absolute*/
+    #logInWrapp {
+      display: none;
+    }
+  /*span image icons wrapper margin 0*/
+    .spanImg {
+      margin-bottom: 0;
+    }
+
 }
 
 /* Small devices (landscape phones, less than 768px)*/
-@media only screen and (max-width: 768px) and (min-width: 576.001px) {
+@media only screen and (max-width: 768px) and (min-width: 577px) {
+  /*Display None text under icons*/
+    .displayNone {
+      display: none;
+    }
+
+  /*Both icons wrapper*/
+    #iconsWrapper {
+      width: 110px;
+    }
+
+  /*Icons wrapper width*/
+    .iconsWrapper1 {
+      width: auto;
+    }
+    .iconsW {
+      width: auto;
+    }
+
+  /*Wrapper LOGO*/
+    #logoWrapper {
+      position: relative;
+      height: 40px;
+      width: 100px;
+    }
+
+  /*INPUT*/
+  /*Display None text under icons*/
+    .displayNone {
+      display: none;
+    }
+
+  /*Both icons wrapper*/
+    #iconsWrapper {
+      width: 120px;
+      height: 51px;
+    }
+
+  /*Icons wrapper width*/
+    .iconsWrapper1 {
+      width: auto;
+      margin-left: 15px;
+      height: 51px;
+    }
+    .iconsW {
+      width: auto;
+      margin-left: 15px;
+    }
+
+  /*Wrapper LOGO*/
+    #logoWrapper {
+      position: relative;
+      height: 40px;
+      width: 100px;
+    }
+
+  /*INPUT*/
+      #inputWrapper {
+        width: 268px;
+      }
+      #inputWrapper input {
+        width: 273px;
+      }
+  /*Icons menu*/
+    .iconsMenu {
+      position: relative;
+      height: 51px;
+      width: 30px;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-content: center;
+    }
+  /*App Menu wrapper*/
+    .appMenuWrapper {
+      position: relative;
+      width: 30px;
+      height: 23px;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-content: space-between;
+    }
+  /*LOGIN WRAPPER Absolute*/
+    #logInWrapp {
+      display: none;
+    }
+  /*span image icons wrapper margin 0*/
+    .spanImg {
+      margin-bottom: 0;
+    }
+  /*SEARCH OPTIONS WRAPPER ABSOLUTE*/
+    .searchOptions {
+      width: 268px;
+    }
+
+  /************************************************************/
+
 }
-@media only screen and (max-width: 920px) and (min-width: 768.001px) {
-  #logoWrapper {
-    width: 130px;
-  }
+@media only screen and (max-width: 920px) and (min-width: 769px) {
 
-  /*INPUT WRAPPER AND INPUT EL*/
-  #inputWrapper {
-    width: 329px;
-  }
-  #inputWrapper input {
-    width: 289px;
-  }
+  /*Display None text under icons*/
+    .displayNone {
+      display: none;
+    }
 
-  /*ICONS WRAPPER WITH ACCOUNT AND SHOPING CART*/
-  #iconsWrapper {
-    width: 211px;
-  }
+  /*Both icons wrapper*/
+    #iconsWrapper {
+      width: 110px;
+    }
 
-  /*FIRST CHILD ICONS ////ACCOUNT*/
-  .iconsW {
-    width: 65px;
-  }
-  .iconsW h5 {
-    font-weight: 500;
-  }
+  /*Icons wrapper width*/
+    .iconsWrapper1 {
+      width: auto;
+    }
+    .iconsW {
+      width: auto;
+    }
 
-  /*SECOND CHILD ICONS ////SHOPING CART*/
-  .iconsWrapper1 h5 {
-    font-weight: 500;
-  }
-  .iconsWrapper1 {
-    width: 121px;
-  }
-  .spanImg {
-    width: 25px;
-  }
+  /*Wrapper LOGO*/
+    #logoWrapper {
+      position: relative;
+      height: 40px;
+      width: 100px;
+    }
 
-  .searchOptions {
-    width: 329px;
-  }
-  #logInWrapp {
-    width: 190px;
-    left: -5px;
-  }
+  /*INPUT*/
+    /*Display None text under icons*/
+    .displayNone{
+      display: none;
+    }
+
+  /*Both icons wrapper*/
+    #iconsWrapper{
+      width: 120px;
+      height: 51px;
+    }
+
+  /*Icons wrapper width*/
+    .iconsWrapper1{
+      width: auto;
+      margin-left: 15px;
+      height: 51px;
+    }
+    .iconsW{
+      width: auto;
+      margin-left: 15px;
+    }
+
+  /*Wrapper LOGO*/
+    #logoWrapper {
+      position: relative;
+      height: 40px;
+      width: 100px;
+    }
+
+  /*INPUT*/
+    #inputWrapper {
+      width: 337px;
+    }
+    #inputWrapper input {
+      width: 342px;
+    }
+
+    /*Icons menu*/
+    .iconsMenu {
+      position: relative;
+      height: 51px;
+      width: 30px;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-content: center;
+    }
+  /*App Menu wrapper*/
+    .appMenuWrapper {
+      position: relative;
+      width: 30px;
+      height: 23px;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-content: space-between;
+    }
+
+  /*LOGIN WRAPPER Absolute*/
+    #logInWrapp {
+      display: none;
+    }
+  /*span image icons wrapper margin 0*/
+    .spanImg {
+      margin-bottom: 0;
+    }
+  /*SEARCH OPTIONS WRAPPER ABSOLUTE*/
+    .searchOptions {
+      width: 337px;
+    }
+
+  /************************************************************/
 
 }
-@media only screen and (max-width: 1025px) and (min-width: 920.001px) {
-  #logoWrapper {
-    width: 130px;
-  }
 
-  /*INPUT WRAPPER AND INPUT EL*/
-  #inputWrapper {
-    width: 440px;
-  }
-  #inputWrapper input {
-    width: 400px;
-  }
+@media only screen and (max-width: 1025px) and (min-width: 921px) {
+  /*Display None text under icons*/
+    .displayNone{
+      display: none;
+    }
 
-  /*ICONS WRAPPER WITH ACCOUNT AND SHOPING CART*/
-  #iconsWrapper {
-    width: 210px;
-  }
+  /*Both icons wrapper*/
+    #iconsWrapper{
+      width: 120px;
+      height: 51px;
+    }
 
-  /*FIRST CHILD ICONS ////ACCOUNT*/
-  .iconsW {
-    width: 65px;
-  }
-  .iconsW h5 {
-    font-weight: 500;
-  }
+  /*Icons wrapper width*/
+    .iconsWrapper1{
+      width: auto;
+      margin-left: 15px;
+      height: 51px;
+    }
+    .iconsW{
+      width: auto;
+      margin-left: 15px;
+    }
 
-  /*SECOND CHILD ICONS ////SHOPING CART*/
-  .iconsWrapper1 h5{
-    font-weight: 400;
-  }
-  .iconsWrapper1 {
-    width: 120px;
-  }
-  .spanImg {
-    width: 25px;
-  }
+  /*Wrapper LOGO*/
+    #logoWrapper {
+      position: relative;
+      height: 40px;
+      width: 100px;
+    }
 
-  .searchOptions {
-    width: 440px;
-  }
-  #logInWrapp {
-    width: 190px;
-    left: -5px;
-  }
+  /*INPUT*/
+    #inputWrapper {
+      width: 500px;
+    }
+    #inputWrapper input {
+      width: 505px;
+    }
+
+  /*Icons menu*/
+    .iconsMenu {
+      position: relative;
+      height: 51px;
+      width: 30px;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-content: center;
+    }
+  /*App Menu wrapper*/
+    .appMenuWrapper {
+      position: relative;
+      width: 30px;
+      height: 23px;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-content: space-between;
+    }
+
+
+  /*LOGIN WRAPPER Absolute*/
+    #logInWrapp {
+      display: none;
+    }
+
+  /*span image icons wrapper margin 0*/
+    .spanImg{
+      margin: 0;
+    }
+  /*SEARCH OPTIONS WRAPPER ABSOLUTE*/
+    .searchOptions {
+      width: 500px;
+    }
+
+  /************************************************************/
 
 }
 
 /* Large devices (desktops, less than 1200px)*/
-@media only screen and (max-width: 1200px) and (min-width: 1025.001px) {
-  #logoWrapper {
-    width: 160px;
-  }
+@media only screen and (max-width: 1200px) and (min-width: 1026px) {
 
-  /*INPUT WRAPPER AND INPUT EL*/
-  #inputWrapper {
-    width: 540px;
-  }
-  #inputWrapper input {
-    width: 500px;
-  }
+  /*Wrapper LOGO*/
+    #logoWrapper {
+      position: relative;
+      height: 40px;
+      width: 100px;
+    }
 
-  .searchOptions {
-    position: absolute;
-    left: 0;
-    top: 32px;
-    width: 540px;
-  }
+  /*INPUT*/
+    #inputWrapper {
+      width: 492px;
+    }
+    #inputWrapper input {
+      width: 497px;
+    }
+  /*SEARCH OPTIONS WRAPPER ABSOLUTE*/
+    .searchOptions {
+      width: 492px;
+    }
+
+  /************************************************************/
 
 }
 
 /* X-Large devices (large desktops, less than 1400px)*/
-@media only screen and (max-width: 1400px) and (min-width: 1200.001px) {
+@media only screen and (max-width: 1400px) and (min-width: 1201px) {
+  /*INPUT*/
+    #inputWrapper {
+      width: 558px;
+    }
+    #inputWrapper input {
+      width: 563px;
+    }
+
+  /*SEARCH OPTIONS WRAPPER ABSOLUTE*/
+    .searchOptions {
+      width: 558px;
+    }
+
+  /************************************************************/
 }

@@ -8,6 +8,7 @@ import { ResultServiceService } from 'src/app/services/result-service.service';
   styleUrls: ['./drop-down.component.css']
 })
 export class DropDownComponent implements OnInit {
+
   @Input("object") objects: any;
   @Input("show") show: any;
   @Output("status-change") status = new EventEmitter();
@@ -15,6 +16,7 @@ export class DropDownComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  /*Catching hover and emiting the value*/
   changeStatus(event:any) {
     this.status.emit(event)
   }

@@ -36,7 +36,14 @@
               "src/assets/photos/search-solid.svg",
               "src/assets/photos/shopping-cart-solid.svg",
               "src/assets/photos/user-circle-solid.svg",
-              "src/assets/photos/video-play.png"
+              "src/assets/photos/video-play.png",
+              "src/assets/photos/x-symbol-svgrepo-com.svg",
+              "src/assets/photos/studentThinking.png",
+
+              "src/assets/icons-follow",
+              "src/assets/icons-follow/facebook-follow.svg",
+              "src/assets/icons-follow/instagram_icon.svg",
+              "src/assets/icons-follow/twitter_bird_icon.svg"
             ],
             "styles": [
               "src/styles.css"

@@ -1,8 +1,20 @@
 <div id="homeWrapper">
-  <app-banner></app-banner>
-  <app-actions-home></app-actions-home>
-  <app-guarantee-section style="width: 100%;"></app-guarantee-section>
-  <app-best-items [Param]="'usedLaptops'"></app-best-items>
-  <app-best-items [Param]="'smartphones'"></app-best-items>
-  <app-intro></app-intro>
+
+
+  <app-banner id="bannerWrapper" *ngIf="displayBanner" [@fadeIn]></app-banner>
+
+
+  <app-actions-home id="actionsWrapper"></app-actions-home>
+
+
+  <app-guarantee-section id="guaranteeSection" style="width: 100%;"></app-guarantee-section>
+
+
+  <app-best-items [Param]="'usedLaptops'" class="BestItemsWrapper"></app-best-items>
+
+  <app-subscribe id="subscribe"></app-subscribe>
+
+  <app-best-items [Param]="'smartphones'" class="BestItemsWrapper"></app-best-items>
+
+  <app-folow id="follow"></app-folow>
 </div>

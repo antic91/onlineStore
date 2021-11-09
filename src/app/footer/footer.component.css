@@ -1,158 +1,380 @@
-/*---------------- HOTLINE WRAPPER AND CHILD ELEMENT*/
-#hotlinewrapper {
-  position: relative;
-  width: 100%;
-  height: 70px;
-  border-bottom: 2px solid #f8f8ff;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-content: center;
-}
-.childHotline {
-  position: relative;
-  width: 1124px;
-  height: 100%;
-  color: #F2F2F2;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: flex-end;
-  line-height: 1.35;
-}
 
-
-#numWrapper{
-  position: relative;
-  width: 300px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  align-items: center;
-}
-#numWrapper h5{
-  position: relative;
-  margin-right: 15px;
-  color: #F2F2F2;
-}
-#numWrapper a{
-  letter-spacing: 1.5px;
-  font-size: 22px;
-  text-decoration: none;
-  color: #F2F2F2;
-}
-#timeWrapper {
-  position: relative;
-  width: 300px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-#timeWrapper h6{
-  margin-left: 25px;
-  letter-spacing: 1.5px;
-  color: #F2F2F2;
-
-}
-/*-----------------------HOTLINE WRAPPER AND CHILD ELEMENT*/
-
+/**************************Wrapper for all elements*****************/
 #footerWrapper {
   position: relative;
   width: 1124px;
   color: #F2F2F2;
   letter-spacing: 1.5px;
   padding-top: 25px;
-  padding-bottom: 25px;
+  padding-bottom: 23px;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
+
+
+
+/****************One sections**************************/
 .footerSections{
   position: relative;
-  width: 243.5px;
+  width: 219.5px;
   height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
 }
+/*First div with hotline wrapper width*/
+.firstHotline{
+  width: 223.5px;
+}
+/*second div About wrapper width*/
+.smallerAbout{
+  width: 135px;
+}
+/*Last div Payment wrapper width*/
+.smallerPayment{
+  width: 200px;
+}
+
+
+/*************************************************************************************************/
+
+/*h2 header in one section*********************/
+
+.footerSections h2{
+  position: relative;
+  letter-spacing: 1.3px;
+  color: #F2F2F2;
+  margin-bottom: 12px;
+  width: 100%;
+  line-height: 1.1;
+  font-weight: 700;
+}
+/********************************************************************/
+
+/******************Telephone a tag***********************************/
+.tel{
+  text-decoration: none!important;
+  font-size: 1.5rem!important;
+  font-weight: 500!important;
+  width: 100%!important;
+  text-align: end!important;
+  line-height: 1.1!important;
+  margin-bottom: 5px!important;
+  border: none !important;
+
+}
+.tel:hover{
+  border: none!important;
+  margin-bottom: 5px !important;
+}
+/********************************************************************/
+
+/*h6 header in one section*********************/
+.footerSections h6 {
+  position: relative;
+  letter-spacing: 1.3px;
+  line-height: 1.1;
+  color: #f2f2f2;
+  width: 100%;
+  text-align: end;
+  margin-bottom: 5px;
+}
+
+/********************************************************************/
+
+
+
+/*h4 header in one section*********************/
 .footerSections h4{
   position: relative;
   letter-spacing: 1.3px;
   color: #F2F2F2;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
+  width: 100%;
+  line-height: 1.1;
 }
+/********************************************************************/
+/******************Link tag a ***************************************/
 .footerSections a{
   position: relative;
   color: #F2F2F2;
+  font-size: 1rem;
   text-decoration: none;
   line-height: 1.4;
+  width: 100%;
+  margin-bottom: 2px;
 }
 .footerSections a:hover{
   color: #F2F2F2;
   border-bottom: 2px solid rgb(248, 248, 255);
+  margin-bottom: 0;
 }
+/********************************************************************/
 
 
 /*RESPONSIVE MEDIA QUERIES*/
 
 @media (max-width: 320px) {
+  /**************************Wrapper for all elements*****************/
+    #footerWrapper {
+      width: 238px;
+      justify-content: space-evenly;
+      padding-bottom: 0;
+    }
+
+  /*First div with hotline wrapper width*/
+    .firstHotline {
+      width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+      border-bottom: 3px solid #ffffff;
+      padding-bottom: 5px;
+    }
+  /*h2 header in one section*********************/
+
+    .footerSections h2 {
+      text-align: start;
+    }
+  /*telephone nummer header in one section*********************/
+    .tel{
+      text-align: start!important;
+    }
+
+  /*h6 time header in one section*********************/
+
+    .footerSections h6 {
+      text-align: start!important;
+    }
+
+  /*Width 100%for every section*/
+    .footerSections{
+      width: 100%;
+      height: auto;
+      margin-bottom:25px;
+    }
+  /*Width of headersand links*/
+
+    .footerSections h4 {
+      width: 100%;
+    }
+
+    .footerSections a {
+      width: 100%;
+    }
 }
 
-@media only screen and (max-width: 414px) and (min-width: 320.001px) {
+@media only screen and (max-width: 414px) and (min-width: 321px) {
+  /**************************Wrapper for all elements*****************/
+    #footerWrapper {
+      width: 300px;
+      justify-content: space-evenly;
+      padding-bottom: 0;
+    }
+
+  /*First div with hotline wrapper width*/
+    .firstHotline {
+      width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+      border-bottom: 3px solid #ffffff;
+      padding-bottom: 5px;
+    }
+  /*h2 header in one section*********************/
+
+    .footerSections h2 {
+      text-align: start;
+    }
+  /*telephone nummer header in one section*********************/
+    .tel{
+      text-align: start!important;
+    }
+
+  /*h6 time header in one section*********************/
+
+    .footerSections h6 {
+      text-align: start!important;
+    }
+
+  /*Width 100%for every section*/
+    .footerSections{
+      width: 100%;
+      height: auto;
+      margin-bottom:25px;
+    }
+  /*Width of headersand links*/
+
+    .footerSections h4 {
+      width: 100%;
+    }
+
+    .footerSections a {
+      width: 100%;
+    }
 }
 
 /* X-Small devices (portrait phones, less than 576px)*/
-@media only screen and (max-width: 576px) and (min-width: 414.001px) {
+@media only screen and (max-width: 576px) and (min-width: 415px) {
+  /**************************Wrapper for all elements*****************/
+    #footerWrapper {
+      width: 380px;
+      justify-content: space-evenly;
+      padding-bottom: 0;
+    }
+
+  /*First div with hotline wrapper width*/
+    .firstHotline {
+      width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+      border-bottom: 3px solid #ffffff;
+      padding-bottom: 5px;
+    }
+  /*h2 header in one section*********************/
+
+    .footerSections h2 {
+      text-align: start;
+    }
+  /*telephone nummer header in one section*********************/
+    .tel{
+      text-align: start!important;
+    }
+
+  /*h6 time header in one section*********************/
+
+    .footerSections h6 {
+      text-align: start!important;
+    }
+
+  /*Width 100%for every section*/
+    .footerSections{
+      width: 100%;
+      height: auto;
+      margin-bottom:25px;
+    }
+  /*Width of headersand links*/
+
+    .footerSections h4 {
+      width: 100%;
+    }
+
+    .footerSections a {
+      width: 100%;
+    }
 }
 
 /* Small devices (landscape phones, less than 768px)*/
-@media only screen and (max-width: 768px) and (min-width: 576.001px) {
-}
-@media only screen and (max-width: 920px) and (min-width: 768.001px) {
-  .childHotline {
-    width: 720px;
-  }
-  #footerWrapper {
-    width: 720px;
-  }
-  .footerSections {
-    width: 142.5px;
-  }
+@media only screen and (max-width: 768px) and (min-width: 577px) {
+  /**************************Wrapper for all elements*****************/
+    #footerWrapper {
+      width: 538px;
+      justify-content: space-evenly;
+      padding-bottom: 0;
+    }
+
+  /*First div with hotline wrapper width*/
+    .firstHotline {
+      width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+      border-bottom: 3px solid #ffffff;
+      padding-bottom: 5px;
+    }
+  /*h2 header in one section*********************/
+
+    .footerSections h2 {
+      text-align: start;
+    }
+  /*telephone nummer header in one section*********************/
+    .tel{
+      text-align: start!important;
+    }
+
+  /*h6 time header in one section*********************/
+
+    .footerSections h6 {
+      text-align: start!important;
+    }
+
+  /*Width 100%for every section*/
+    .footerSections{
+      width: 100%;
+      height: auto;
+      margin-bottom:25px;
+    }
+  /*Width of headersand links*/
+
+    .footerSections h4 {
+      width: 100%;
+    }
+
+    .footerSections a {
+      width: 100%;
+    }
 
 }
-@media only screen and (max-width: 1025px) and (min-width: 920.001px) {
-  .childHotline {
-    width: 820px;
-  }
-  #footerWrapper {
-    width: 820px;
-  }
-  .footerSections {
-    width: 167.5px;
-  }
+@media only screen and (max-width: 920px) and (min-width: 769px) {
+  /**************************Wrapper for all elements*****************/
+    #footerWrapper {
+      width: 657px;
+      justify-content: space-evenly;
+    }
+
+  /*First div with hotline wrapper width*/
+    .firstHotline {
+      width: 100%;
+      height: auto;
+      margin-bottom: 25px;
+      border-bottom: 3px solid #ffffff;
+      padding-bottom: 5px;
+    }
+  /*h2 header in one section*********************/
+
+    .footerSections h2 {
+      text-align: end;
+      margin-bottom: 10px;
+    }
+
+}
+@media only screen and (max-width: 1025px) and (min-width: 921px) {
+  /**************************Wrapper for all elements*****************/
+    #footerWrapper {
+      width: 820px;
+      justify-content: space-evenly;
+    }
+
+  /*First div with hotline wrapper width*/
+    .firstHotline {
+      width: 100%;
+      height: auto;
+      margin-bottom: 25px;
+      border-bottom: 3px solid #ffffff;
+      padding-bottom: 5px;
+    }
+  /*h2 header in one section*********************/
+
+    .footerSections h2{
+      text-align: end;
+      margin-bottom: 10px;
+    }
 
 }
 
 /* Large devices (desktops, less than 1200px)*/
-@media only screen and (max-width: 1200px) and (min-width: 1025.001px) {
-  .childHotline {
-    width: 980px;
-  }
-
-  #footerWrapper {
-    width: 980px;
-  }
-  .footerSections {
-    width: 192px;
-  }
-
+@media only screen and (max-width: 1200px) and (min-width: 1026px) {
+  /**************************Wrapper for all elements*****************/
+    #footerWrapper {
+      width: 914px;
+    }
 }
 
 /* X-Large devices (large desktops, less than 1400px)*/
-@media only screen and (max-width: 1400px) and (min-width: 1200.001px) {
+@media only screen and (max-width: 1400px) and (min-width: 1201px) {
+  /**************************Wrapper for all elements*****************/
+    #footerWrapper {
+      width: 1020px;
+    }
 }

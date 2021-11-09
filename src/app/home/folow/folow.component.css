@@ -1,0 +1,264 @@
+/*Wrapper follow*/
+
+.followWrapper{
+  position: relative;
+  width: 1124px;
+  padding: 55px 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+}
+
+
+/**************************************************************************/
+
+/*Wrapper one section*/
+
+.OneWrapper{
+  position: relative;
+  width: 25%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+.HeaderJustify {
+  justify-content: flex-start !important;
+  align-content: center;
+}
+
+/**************************************************************************/
+
+/*Follow us text Header*/
+.OneWrapper h3{
+  font-weight: 600;
+  color: #ffffff;
+}
+
+
+
+/**************************************************************************/
+
+/********************Span  wrapper for icon and link*************************/
+.iconLinkWrapper{
+  position: relative;
+  display: flex;
+  width: 240px;
+  height: 80px;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+}
+/**************************************************************************/
+/*Span with icon*/
+.spanIcon{
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+/*Image icon*/
+.spanIcon img{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.spanIcon img:hover{
+  cursor: pointer;
+}
+
+
+/**************************************************************************/
+/*Right side wrapper*/
+.rightSide{
+  position: relative;
+  width: 105px;
+  height: 40px;
+  padding-left: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-content: space-evenly;
+}
+/*Text wrapper*/
+.text{
+  position: relative;
+  width: 100px;
+  line-height: normal;
+}
+
+.text h6{
+  font-size: .95rem;
+  line-height: normal;
+  color: #ffffff;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.text a{
+  line-height: normal;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+
+
+
+/*RESPONSIVE MEDIA QUERIES*/
+
+@media (max-width: 320px) {
+  /*Wrapper follow*/
+    .followWrapper {
+      width: 238px;
+      padding: 50px 0 50px 0;
+    }
+  /*Wrapper one section*/
+    .OneWrapper {
+      width: 380px;
+      margin-bottom: 20px;
+    }
+  /*Left header*/
+    .HeaderJustify {
+      justify-content: flex-start !important;
+      align-content: center;
+      width: 100%;
+      margin-bottom: 25px;
+    }
+}
+
+@media only screen and (max-width: 414px) and (min-width: 321px) {
+  /*Wrapper follow*/
+    .followWrapper {
+      width: 300px;
+      padding: 50px 0 50px 0;
+    }
+  /*Wrapper one section*/
+    .OneWrapper {
+      width: 380px;
+      margin-bottom: 20px;
+    }
+  /*Left header*/
+    .HeaderJustify {
+      justify-content: flex-start !important;
+      align-content: center;
+      width: 100%;
+      margin-bottom: 25px;
+    }
+  }
+
+/* X-Small devices (portrait phones, less than 576px)*/
+@media only screen and (max-width: 576px) and (min-width: 415px) {
+  /*Wrapper follow*/
+    .followWrapper {
+      width: 380px;
+      padding: 55px 0;
+    }
+  /*Wrapper one section*/
+    .OneWrapper {
+      width: 380px;
+      margin-bottom: 20px;
+    }
+  /*Left header*/
+    .HeaderJustify {
+      justify-content: flex-start !important;
+      align-content: center;
+      width: 100%;
+      margin-bottom: 25px;
+    }
+
+}
+
+/* Small devices (landscape phones, less than 768px)*/
+@media only screen and (max-width: 768px) and (min-width: 577px) {
+  /*Wrapper follow*/
+    .followWrapper {
+      width: 538px;
+      padding: 55px 0;
+    }
+  /*Wrapper one section*/
+    .OneWrapper {
+      width: 166px;
+    }
+  /*Left header*/
+    .HeaderJustify {
+      justify-content: flex-start !important;
+      align-content: center;
+      width: 100%;
+      margin-bottom: 25px;
+    }
+
+}
+@media only screen and (max-width: 920px) and (min-width: 769px) {
+  /*Wrapper follow*/
+    .followWrapper {
+      width: 657px;
+      padding: 55px 0;
+    }
+  /*Wrapper one section*/
+    .OneWrapper {
+      width: 205.66px;
+    }
+  /*Left header*/
+    .HeaderJustify {
+      justify-content: flex-start !important;
+      align-content: center;
+      width: 100%;
+      margin-bottom: 25px;
+    }
+
+}
+@media only screen and (max-width: 1025px) and (min-width: 921px) {
+  /*Wrapper follow*/
+    .followWrapper {
+      width: 820px;
+      padding: 55px 0;
+    }
+  /*Wrapper one section*/
+    .OneWrapper {
+      width: 23%;
+    }
+  /*Left header*/
+    .HeaderJustify {
+      justify-content: flex-start !important;
+      align-content: center;
+      width: 17%;
+    }
+
+
+}
+
+/* Large devices (desktops, less than 1200px)*/
+@media only screen and (max-width: 1200px) and (min-width: 1026px) {
+  /*Wrapper follow*/
+    .followWrapper {
+      width: 914px;
+      padding: 55px 0;
+    }
+  /*Wrapper one section*/
+
+    .OneWrapper {
+      width: 23%;
+    }
+}
+
+/* X-Large devices (large desktops, less than 1400px)*/
+@media only screen and (max-width: 1400px) and (min-width: 1201px) {
+  /*Wrapper follow*/
+    .followWrapper {
+      width: 1020px;
+      padding: 55px 0;
+    }
+  /*Wrapper one section*/
+
+    .OneWrapper {
+      width: 23%;
+    }
+
+}

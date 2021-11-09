@@ -1,22 +1,28 @@
+<!--All products link-->
 <div id="allButton">
-  <span class="h3Wrapper" (mouseover)="changing()" (mouseleave)="changingFalse()">
-    <h4 [routerLink]="['/allProducts']" (click)="changingFalse()">All Products</h4>
+  <span class="TextWrapper" (mouseover)="changing()" (mouseleave)="changingFalse()">
+    <h5 [routerLink]="['/allProducts']" (click)="changingFalse()">All Products</h5>
   </span>
 </div>
 
+
+<!--Navigation bar -->
 <div id="navBar">
-  <div class="navLink animate__slideInLeft" *ngFor="let item of objects">
-    <h4 [routerLink]="['/categories', item.cat_slug]" routerLinkActive="router-link-active" >
+  <span class="navLink animate__slideInLeft" *ngFor="let item of objects">
+    <h5 [routerLink]="['/categories', item.cat_slug]" routerLinkActive="router-link-active" >
       {{item!.cat_title}}
-    </h4>
-  </div>
+    </h5>
+  </span>
 </div>
 
-<div id="lastButtons">
+
+
+<!--About and contact links-->
+<div id="lastLinks">
   <div class="iconsWrapper">
-    <h4>About</h4>
+    <h5>About</h5>
   </div>
   <div class="iconsWrapper1">
-    <h4>Contact</h4>
+    <h5>Contact</h5>
   </div>
 </div>

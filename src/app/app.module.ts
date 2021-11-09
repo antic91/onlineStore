@@ -2,6 +2,7 @@ import { ErrorHandler } from '@angular/core';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -16,7 +17,6 @@ import { FooterComponent } from './footer/footer.component';
 import { BannerComponent } from './home/banner/banner.component';
 import { ActionsHomeComponent } from './home/actions-home/actions-home.component';
 import { GuaranteeSectionComponent } from './home/guarantee-section/guarantee-section.component';
-import { IntroComponent } from './home/intro/intro.component';
 import { CommonCategoryComponent } from './common-category/common-category.component';
 import { OptionsComponent } from './common-category/options/options.component';
 import { ItemsComponent } from './common-category/items/items.component';
@@ -50,6 +50,10 @@ import { DescripionCompComponent } from './shoping-cart-component/descripion-com
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppErrorHandler } from './commonErrors/use-class';
+import { MenuIconComponent } from './navi/upper/menu-icon/menu-icon.component';
+import { SmallerDropDownComponent } from './navi/smaller-drop-down/smaller-drop-down.component';
+import { SubscribeComponent } from './home/subscribe/subscribe.component';
+import { FolowComponent } from './home/folow/folow.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +67,6 @@ import { AppErrorHandler } from './commonErrors/use-class';
     BannerComponent,
     ActionsHomeComponent,
     GuaranteeSectionComponent,
-    IntroComponent,
     CommonCategoryComponent,
     OptionsComponent,
     ItemsComponent,
@@ -92,7 +95,11 @@ import { AppErrorHandler } from './commonErrors/use-class';
     SingUpComponentComponent,
     ShopingCartComponentComponent,
     SingUpFormComponent,
-    DescripionCompComponent
+    DescripionCompComponent,
+    MenuIconComponent,
+    SmallerDropDownComponent,
+    SubscribeComponent,
+    FolowComponent
   ],
   imports: [
     BrowserModule,
@@ -100,7 +107,9 @@ import { AppErrorHandler } from './commonErrors/use-class';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
+
   ],
   providers: [
     PostService,

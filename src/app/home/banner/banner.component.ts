@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,11 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BannerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
-  redirecting() {
-    alert("This button redirects you to item from banner!")
+
+  /*Navigate to special offer category--- now laptops*/
+  navigate() {
+    this.router.navigate(['/categories', 'newLaptops'])
   }
+
+
 }

@@ -1,25 +1,39 @@
-<div class="logIn" *ngIf="!userLogged">
+<!--If not logged in-->
+<div class="logIn" *ngIf="!userLogged" [@fadeIn]>
+
   <span class="option">
     <h5><a [routerLink]="['/log-in']" routerLinkActive="router-link-active"  href="">Log In</a></h5>
   </span>
+
   <span class="option">
     <h5><a [routerLink]="['/sing-up']" href="">Sign Up</a></h5>
   </span>
+
 </div>
-<div class="logIn" *ngIf="userLogged">
-  <span class="option" style="border-bottom: 1px solid #ffffff; padding-bottom: 5px;">
-    <h5><a href="">Hello {{nameOfUser}}</a></h5>
-  </span>
-  <span class="option">
-    <h5><a href="">My account</a></h5>
-  </span>
-  <span class="option">
-    <h5><a href="">My Orders</a></h5>
-  </span>
-  <span class="option">
-    <h5><a href="">My Returns</a></h5>
-  </span>
-  <span class="option">
-    <h5 (click)="logOUT()"><a href="">Log Out</a></h5>
-  </span>
+
+
+
+<!--If logged in-->
+<div class="logIn" *ngIf="userLogged" [@fadeIn]>
+
+      <span class="option" style="border-bottom: 1px solid #ffffff; padding-bottom: 5px;">
+        <h5><a href="">Hello {{nameOfUser}}</a></h5>
+      </span>
+
+      <span class="option">
+        <h5><a href="">My account</a></h5>
+      </span>
+
+      <span class="option">
+        <h5><a href="">My Orders</a></h5>
+      </span>
+
+      <span class="option">
+        <h5><a href="">My Returns</a></h5>
+      </span>
+
+      <span class="option">
+        <h5 (click)="logOUT()"><a href="">Log Out</a></h5>
+      </span>
+
 </div>

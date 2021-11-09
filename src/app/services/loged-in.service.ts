@@ -11,7 +11,7 @@ export class LogedInService {
   private loaded = new BehaviorSubject<number| boolean>(false);
   statusLoaded = this.loaded.asObservable();
 
-  private logged = new BehaviorSubject<number| boolean>(false);
+  private logged = new BehaviorSubject<boolean>(false);
   statusLogged = this.logged.asObservable();
 
   private user = new BehaviorSubject<string| null>("");

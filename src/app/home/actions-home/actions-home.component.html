@@ -1,16 +1,52 @@
-<div id="actionsWrapper">
-  <div class="headerActions">
-    <h2>You can find our top Products here!</h2>
-  </div>
-  <div class="itemsWrapper">
-    <div class="itemsAction" *ngFor="let item of saleObjects" [routerLink]="['/categories', item.cat_slug, item.prod_slug, item.prod_id]">
-      <div class="image">
-        <img [src]="item.prod_images" alt="">
-      </div>
-      <div class="headerImage">
-        <div class="h4"><h4>{{item.prod_title}}</h4></div>
-        <div class="h4"><h4>{{item.prod_price}} €</h4></div>
-      </div>
-    </div>
-  </div>
+<!--Header actions home-->
+<div class="headerActions">
+    <h2>Our top Products</h2>
 </div>
+
+<!------------------------------------------------------------------->
+
+
+<!--Items!!-->
+<div class="itemsWrapper">
+
+
+  <div class="itemsAction"
+  *ngFor="let item of saleObjects; let i = index"
+  (mouseover)="mouseOver(i)"
+  (mouseleave)="mouseLeave(i)">
+
+    <!--Items header-->
+    <header class="headerItems"
+    [routerLink]="['/categories', item.cat_slug, item.prod_slug, item.prod_id]">
+
+      <div class="h3"><h3>{{item.prod_title}}</h3></div>
+
+    </header>
+
+    <!--Image actions home-->
+    <div class="image"
+    [routerLink]="['/categories', item.cat_slug, item.prod_slug, item.prod_id]">
+
+        <img [src]="item.prod_images" alt="">
+
+    </div>
+
+    <!--add to cart button-->
+    <section class="itemsData">
+        <button class="addTo" (click)="addToBag()">Add to cart</button>
+    </section>
+
+    <!--Price and button go to item data actions home-->
+    <section class="itemsData itemsDataEnd"
+    [routerLink]="['/categories', item.cat_slug, item.prod_slug, item.prod_id]">
+
+        <h4 class="h4" *ngIf="details != i" [@fadeIn]>{{item.prod_price}} €</h4>
+        <h4 class="h4 details" *ngIf="details == i" [@slideIn]>See Details</h4>
+
+    </section>
+
+  </div>
+
+</div>
+
+

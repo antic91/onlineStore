@@ -43,4 +43,10 @@ export class BestItemsComponent implements OnInit {
       this.objectToShow = this.object.splice(0, 4);
     }, 10000);
   }
+
+
+  /*Add to bag function*/
+  addToBag(): void{
+
+  }
 }

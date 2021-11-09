@@ -1,6 +1,30 @@
-<app-upper id="upperWrapper"></app-upper>
+<app-upper
+id="upperWrapper"
+(loginDrop)="checkLoginDrop($event)"
+(menuDrop)="checkMenuDrop($event)"
+[displayX]="showMenu"
+[LogInClicked]="showLogin"></app-upper>
 
-<app-lower id="lowerWrapper" [object]="objects" (changing)="changeTrue($event)"></app-lower>
+<app-lower
+id="lowerWrapper"
+[object]="objects"
+(changing)="changeTrue($event)"></app-lower>
 
-<app-drop-down id="dropDownWrapper" *ngIf="show" class= "animate__animated animate__bounceInLeft"
-[object]="objects" (status-change)="closeDropDown($event)" [show]="show"></app-drop-down>
+<!--Drop down categories for bigger screens-->
+<app-drop-down
+id="dropDownWrapper"
+*ngIf="show"
+[@fadeIn]
+[object]="objects"
+(status-change)="closeDropDown($event)"
+[show]="show"></app-drop-down>
+
+
+
+<!--Drop down menu for smaller devices-->
+<app-smaller-drop-down
+id="smallerDropDown"
+(statusMenu)="changeStatusMenu($event)"
+[showLogin]="showLogin"
+[showMenu]="showMenu"
+*ngIf="showMenu || showLogin"></app-smaller-drop-down>

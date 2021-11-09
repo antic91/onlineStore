@@ -1,31 +1,73 @@
+<!--LOGO-->
 <div id="logoWrapper">
   <img routerLink="/home" src="assets/photos/logo.svg" alt="Muster_Logo">
 </div>
 
+
+<!--Search input-->
 <div id="inputWrapper">
+
   <input type="text" placeholder="Search for your Item here!" #inp (keyup)="pressed($event)">
+
   <div class="button">
-    <button class="btn" (click)="navigate()" [disabled]="!object || inp.value.trim() == ''">
+
+    <button class="btn" (click)="navigate()" title="button" [disabled]="!object || inp.value.trim() == ''">
       <img src="assets/photos/search-solid.svg" class="searchImg" alt="">
+
     </button>
   </div>
+
   <app-search-options *ngIf="object" class="searchOptions" (setValue)="setNewValue($event)" [object]="object"></app-search-options>
+
 </div>
 
-<div id="iconsWrapper">
-  <div class="iconsW" (mouseover)="onMouseOver()" (mouseleave)="onMouseLeave()">
-    <span class="spanImg">
-      <img src="assets/photos/user-circle-solid.svg" alt="User">
-    </span>
-    <h5>Account</h5>
-    <app-log-in [userLogged]="userLogged" (mouseover)="onMouseOver()" (mouseleave)="onMouseLeave()" id="logInWrapp" *ngIf="showLogIn"></app-log-in>
+
+<!--Icons right-->
+<div id="iconsWrapper" #iconsWrapper>
+
+  <!--Drop down menu for smaller sizes-->
+  <div class="iconsMenu">
+    <app-menu-icon
+    class="appMenuWrapper"
+    (click)="menuClicked()"
+    [displayX]="displayX"></app-menu-icon>
   </div>
 
+
+  <div class="iconsW" (mouseover)="onMouseOver()" (mouseleave)="onMouseLeave()">
+    <!--user-->
+    <span class="spanImg" *ngIf="!LogInClicked" (click)="changeDropDown(true)">
+      <img src="assets/photos/user-circle-solid.svg" alt="User">
+    </span>
+
+    <!--Close drop down logIn-->
+    <span class="appMenuWrapper" *ngIf="LogInClicked" (click)="changeDropDown(false)">
+      <span class="line"></span>
+      <span class="line1"></span>
+    </span>
+
+    <h5 class="displayNone">Account</h5>
+
+    <app-log-in
+    [userLogged]="userLogged"
+    (mouseover)="onMouseOver()"
+    (mouseleave)="onMouseLeave()"
+    id="logInWrapp"
+    *ngIf="showLogIn"></app-log-in>
+
+  </div>
+
+
   <div class="iconsWrapper1" [routerLink]="['/shoping-cart']">
+
     <span class="spanImg">
       <img src="assets/photos/shopping-cart-solid.svg" alt="User">
     </span>
-    <h5>Shopping Cart</h5>
+
+    <h5 class="displayNone">Shopping Cart</h5>
+
   </div>
 
 </div>
+
+

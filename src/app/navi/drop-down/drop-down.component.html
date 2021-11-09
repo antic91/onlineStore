@@ -1,9 +1,20 @@
+<!--Wrapper-->
 <div class="drop-wrapper"
-(mouseover)="changeStatus('true')" (mouseleave)="changeStatus('false')">
-  <div class="itemsWrapper" *ngFor="let item of objects" [routerLink]="['/categories', item.cat_slug]">
+(mouseover)="changeStatus('true')"
+(mouseleave)="changeStatus('false')">
+
+
+  <div class="itemsWrapper"
+  *ngFor="let item of objects"
+  [routerLink]="['/categories', item.cat_slug]">
+
     <div class="imgSection">
       <img [src]="item.cat_image" alt="Used Laptops">
     </div>
+
     <h5>{{item.cat_title}}</h5>
+
+
   </div>
+
 </div>

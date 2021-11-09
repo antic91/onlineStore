@@ -1,43 +1,42 @@
-.actWrapper {
-  position: relative;
-  width: 1124px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-top: 75px;
-}
-/*MORE PRODUCTS HEAD*/
-.MoreProd {
+
+/*MORE PRODUCTS HEADer*/
+.MoreProdHeader {
   position: relative;
   width: 100%;
-  padding-bottom: 40px;
+  height: 62px;
+  padding-bottom: 25px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
 }
-/*STYLING ITEMS*/
+.MoreProdHeader h2{
+  font-weight: 600;
+}
+
+
+/*Wrapper for one item*************************************************/
 .itemAct {
   position: relative;
-  padding: 10px 5px;
-  width: 242px;
+  width: 269.75px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-content: flex-start;
-  margin-bottom: 1.5px;
-  box-shadow: 0px 0px 7px 1px rgb(82 171 152 / 73%);
-  border-radius: 5px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 1px 9px 0 rgb(0 0 0 / 2%), 0 2px 6px 0 rgb(0 0 0 / 1%),
+  0 10px 34px 0 rgb(0 0 0 / 3%);
+  overflow: visible;
 }
 .itemAct:hover {
-  border-bottom: 1.5px solid #52ab98;
-  margin-bottom: 0;
   cursor: pointer;
 }
+
+/***********************************************************************/
 /*SPAN IMAGE*/
 .img {
   position: relative;
@@ -47,103 +46,165 @@
   flex-wrap: nowrap;
   justify-content: center;
   align-items: flex-start;
-  margin-bottom: 15px;
+  margin-bottom: 23px;
 }
 .img img {
   position: relative;
-  height: 150px;
+  height: 200px;
   width: 100%;
+  object-fit:contain;
 }
-
+/*****************************************************/
 /*PRODUCT TITLE*/
 
 .prodTitle {
   position: relative;
   width: 100%;
-  height: 30px;
+  height: 52px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 15px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 5px;
 }
 .prodTitle h4 {
-  text-align: center;
+  font-size: 1.4rem!important;
+  font-weight: 500;
 }
-/*PRODCT PRICE*/
+
+/*****************************************************/
+
+/*PRODUCT PRICE*/
 .price {
   position: relative;
+  height: 40px;
   width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
 }
-.price h4 {
-  text-align: center;
+.price h4{
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+/*Button add to cart*/
+
+.addTo {
+  padding: 7.5px 10px;
+  background-color: #ff4f11;
+  color: #ffffff;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 
 /*RESPONSIVE MEDIA QUERIES*/
 
 @media (max-width: 320px) {
+  .MoreProdHeader h2 {
+    font-size: 27px;
+    height: 60px;
+  }
+
+  /*Wrapper for one item*************************************************/
+    .itemAct {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+  /*Image size*******************************************/
+    .img img {
+      height: 140px;
+    }
 }
 
-@media only screen and (max-width: 414px) and (min-width: 320.001px) {
+@media only screen and (max-width: 414px) and (min-width: 321px) {
+  /*Wrapper for one item*************************************************/
+    .itemAct {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+  /*Image size*******************************************/
+    .img img {
+      height: 160px;
+    }
 }
 
 /* X-Small devices (portrait phones, less than 576px)*/
-@media only screen and (max-width: 576px) and (min-width: 414.001px) {
+@media only screen and (max-width: 576px) and (min-width: 415px) {
+  /*Wrapper for one item*************************************************/
+    .itemAct {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+  /*Image size*******************************************/
+    .img img {
+      height: 200px;
+    }
 }
 
 /* Small devices (landscape phones, less than 768px)*/
-@media only screen and (max-width: 768px) and (min-width: 576.001px) {
-}
-@media only screen and (max-width: 920px) and (min-width: 768.001px) {
-  .actWrapper {
-    width: 720px;
-  }
-  .itemAct {
-    width: 142.5px;
-  }
-  .prodTitle {
-    height: 75px;
-  }
+@media only screen and (max-width: 768px) and (min-width: 577px) {
+  /*Wrapper for one item*************************************************/
+    .itemAct {
+      width: 100%;
+      margin-bottom: 20px;
+    }
 
-  .img img{
-    height: 130px;
-  }
+  /*Image size*******************************************/
+    .img img {
+      height: 230px;
+    }
 
 }
-@media only screen and (max-width: 1025px) and (min-width: 920.001px) {
-  .actWrapper {
-    width: 820px;
-  }
-  .itemAct {
-    width: 167.5px;
-  }
-  .prodTitle {
-    height: 53px;
-  }
+@media only screen and (max-width: 920px) and (min-width: 769px) {
+  /*Wrapper for one item*************************************************/
+    .itemAct {
+      width: 318.5px;
+      margin-bottom: 20px;
+    }
+
+  /*Image size*******************************************/
+    .img img {
+      height: 250px;
+    }
+
+}
+@media only screen and (max-width: 1025px) and (min-width: 921px) {
+  /*Wrapper for one item*************************************************/
+    .itemAct {
+      width: 400px;
+      margin-bottom: 20px;
+    }
+  /*Image size*******************************************/
+    .img img {
+      height: 250px;
+    }
+
 }
 
 /* Large devices (desktops, less than 1200px)*/
-@media only screen and (max-width: 1200px) and (min-width: 1025.001px) {
-  .actWrapper {
-    width: 980px;
-  }
-  .itemAct {
-    width: 192px;
-  }
-  .prodTitle {
-    height: 53px;
-  }
-
+@media only screen and (max-width: 1200px) and (min-width: 1026px) {
+  /*Wrapper for one item*************************************************/
+    .itemAct {
+      width: 217.25px;
+    }
 
 }
 
 /* X-Large devices (large desktops, less than 1400px)*/
-@media only screen and (max-width: 1400px) and (min-width: 1200.001px) {
+@media only screen and (max-width: 1400px) and (min-width: 1201px) {
+  /*Wrapper for one item*************************************************/
+    .itemAct {
+      width: 243.75px;
+    }
+
 }

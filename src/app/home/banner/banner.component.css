@@ -1,102 +1,304 @@
-#bannerWrapper {
-  position: relative;
-  width: 1124px;
-  height: 400px;
+/*Image Student*/
+.imageStudent {
+  position: absolute;
+  width: 370px;
+  height: 560px;
+  top: 100px;
+  left: -23px;
+}
+
+
+/*IMAGE LAPTOP WRAPPER*/
+.imageLaptopWrapper{
+  position: absolute;
+  width: 800px;
+  height: 500px;
+  top: 50px;
+  bottom: 0;
+  right: 0px;
   display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-flow: row wrap;
+  justify-content: center;
   align-content: center;
-  align-items: center;
-  margin-top: 75px;
-  background: url('../../../assets/photos/bannerMuster.jpg');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  box-shadow: 0px 0px 7px 1px rgba(82, 171, 152, 0.73);
-
-  border-radius: 5px;
+  padding-bottom: 150px;
 }
 
-.button{
+/*Image style*/
+.imagelaptop{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/*Div Wrapper for text in the middle of laptop*/
+.text{
   position: relative;
-  margin-top: 250px;
-  margin-left: 680px;
-  width: 220px;
-  height: 50px;
-  background-color: #e6b8b8;
-  border: 1px solid #52AB98;
-  font-size: 22px;
-  font-weight: 700;
-  outline: none;
-  border-radius: 5px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
 }
+
+/*Headers in text div*/
+.text h1{
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 2.5px;
+}
+.text h2{
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.text h4{
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+}
+/*Color part h4 header*/
+.color{
+  color: #ff4f11;
+  font-weight: 700;
+}
+
+/*Button check out*/
+.chooseBtn{
+  margin-top: 15px;
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: #ff4f11;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+
+/*Hover button*/
+.chooseBtn{
+  cursor: pointer
+  ;
+}
+
+
+
 
 /*RESPONSIVE MEDIA QUERIES*/
 
 @media (max-width: 320px) {
+  /*IMAGE LAPTOP WRAPPER*/
+    .imageLaptopWrapper {
+      width: 100%;
+      height: 100%;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-bottom: 90px;
+    }
+
+  /*Image Student*/
+    .imageStudent {
+      width: 120px;
+      height: 160px;
+      opacity: 0.07;
+      left: 30px;
+      top: 93px;
+    }
+  /*Header h1*/
+    .text h1 {
+      margin-bottom: 7px;
+      font-size: 20px;
+    }
+  /*Header h2*/
+    .text h2 {
+      display: none;
+    }
+  /*Header h4*/
+    .text h4 {
+      font-size: 16px;
+    }
+  /*Button check out*/
+    .chooseBtn {
+      font-size: 13px;
+      margin-top: 7px;
+      font-weight: 500;
+    }
+
+
 }
 
-@media only screen and (max-width: 414px) and (min-width: 320.001px) {
+@media only screen and (max-width: 414px) and (min-width: 321px) {
+  /*IMAGE LAPTOP WRAPPER*/
+    .imageLaptopWrapper {
+      width: 100%;
+      height: 100%;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-bottom: 90px;
+    }
+
+  /*Image Student*/
+    .imageStudent {
+      width: 120px;
+      height: 160px;
+      opacity: 0.07;
+      left: 50px;
+      top: 92px;
+    }
+  /*Header h1*/
+    .text h1 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+  /*Header h2*/
+    .text h2 {
+        display: none;
+    }
+  /*Header h4*/
+    .text h4 {
+      font-size: 16px;
+    }
+  /*Button check out*/
+    .chooseBtn {
+      font-size: 16px;
+      font-weight: 500;
+    }
+
 }
 
 /* X-Small devices (portrait phones, less than 576px)*/
-@media only screen and (max-width: 576px) and (min-width: 414.001px) {
+@media only screen and (max-width: 576px) and (min-width: 415px) {
+  /*IMAGE LAPTOP WRAPPER*/
+    .imageLaptopWrapper {
+      width: 100%;
+      height: 100%;
+      padding-left: 70px;
+      padding-right: 70px;
+      padding-bottom: 125px;
+    }
+
+  /*Image Student*/
+    .imageStudent {
+      width: 205px;
+      height: 260px;
+      opacity: 0.07;
+      left: 75px;
+      top: 68px;
+    }
+  /*Header h1*/
+    .text h1 {
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+  /*Header h2*/
+    .text h2 {
+      display: none;
+    }
+
 }
 
 /* Small devices (landscape phones, less than 768px)*/
-@media only screen and (max-width: 768px) and (min-width: 576.001px) {
+@media only screen and (max-width: 768px) and (min-width: 577px) {
+  /*IMAGE LAPTOP WRAPPER*/
+    .imageLaptopWrapper {
+      width: 100%;
+      height: 100%;
+      padding-left: 60px;
+      padding-right: 60px;
+      padding-bottom: 140px;
+    }
+
+  /*Image Student*/
+    .imageStudent {
+      width: 235px;
+      height: 325px;
+      opacity: 0.07;
+      left: 80px;
+      top: 55px;
+    }
+  /*Header h1*/
+    .text h1 {
+      margin-bottom: 10px;
+      font-size: 34px;
+    }
+  /*Header h2*/
+    .text h2 {
+      display: none;
+    }
+
 }
-@media only screen and (max-width: 920px) and (min-width: 768.001px) {
-  #bannerWrapper {
-    position: relative;
-    width: 720px;
-    height: 320px;
-  }
+@media only screen and (max-width: 920px) and (min-width: 769px) {
+  /*IMAGE LAPTOP WRAPPER*/
+    .imageLaptopWrapper {
+      width: 100%;
+      height: 100%;
+      padding-bottom: 140px;
+    }
 
-  .button {
-    position: relative;
-    margin-top: 200px;
-    margin-left: 360px;
-    width: 220px;
-    height: 40px;
-  }
+  /*Image Student*/
+    .imageStudent {
+      width: 235px;
+      height: 325px;
+      opacity: 0.07;
+      left: 95px;
+      top: 55px;
+    }
 
 }
-@media only screen and (max-width: 1025px) and (min-width: 920.001px) {
-  #bannerWrapper {
-    position: relative;
-    width: 820px;
-    height: 350px;
-  }
+@media only screen and (max-width: 1025px) and (min-width: 921px) {
+  /*IMAGE LAPTOP WRAPPER*/
+    .imageLaptopWrapper {
+      width: 100%;
+      height: 100%;
+    }
 
-  .button {
-    position: relative;
-    margin-top: 220px;
-    margin-left: 440px;
-    width: 220px;
-    height: 40px;
-  }
+  /*Image Student*/
+    .imageStudent {
+      width: 235px;
+      height: 325px;
+      opacity: .07;
+      left: 120px;
+      top: 90px;
+    }
 
 }
 
 /* Large devices (desktops, less than 1200px)*/
-@media only screen and (max-width: 1200px) and (min-width: 1025.001px) {
-  #bannerWrapper {
-    position: relative;
-    width: 980px;
-    height: 350px;
-  }
+@media only screen and (max-width: 1200px) and (min-width: 1026px) {
+  /*IMAGE LAPTOP WRAPPER*/
+    .imageLaptopWrapper {
+      width: 700px;
+      height: 500px;
+    }
 
-  .button {
-    position: relative;
-    margin-top: 220px;
-    margin-left: 580px;
-    width: 220px;
-    height: 40px;
-  }
+  /*Image Student*/
+    .imageStudent {
+      width: 280px;
+      height: 460px;
+    }
 
 }
 
 /* X-Large devices (large desktops, less than 1400px)*/
-@media only screen and (max-width: 1400px) and (min-width: 1200.001px) {
+@media only screen and (max-width: 1400px) and (min-width: 1201px) {
+  /*IMAGE LAPTOP WRAPPER*/
+    .imageLaptopWrapper {
+      width: 750px;
+      height: 500px;
+    }
+
+  /*Image Student*/
+    .imageStudent {
+      position: absolute;
+      width: 320px;
+      height: 520px;
+      top: 130px;
+      left: -23px;
+    }
+
+
 }

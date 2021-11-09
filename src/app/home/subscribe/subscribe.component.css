@@ -1,0 +1,196 @@
+
+/*Header h1 Subscribe*/
+.h1Header{
+  position: relative;
+  width: 100%;
+  font-size: 55px;
+  text-align: center;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 30px;
+  line-height: 1.15;
+}
+/********************************************/
+
+/*Wrapper for input and button*/
+.inputButtonWrapper{
+  position: relative;
+  display:flex;
+  flex-flow: row column;
+  justify-content: center;
+  align-content: flex-start;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+/********************************************/
+
+/*Input*/
+.InputEmail{
+  position: relative;
+  width: 320px;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+}
+
+/********************************************/
+
+/*Button*/
+.buttonSubscribe{
+  position: relative;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  padding: 15px 30px;
+  background-color: #5340ff;
+  border-radius: 10px;
+}
+
+/********************************************/
+
+
+/*Header h5 Subscribe Wrapper*/
+.headerSmall{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-flow: row column;
+  justify-content: center;
+  align-content: flex-start;
+  margin-top: 12px;
+
+}
+/********************************************/
+/*Header h5 Subscribe*/
+.h5Header{
+  position: relative;
+  width: 488.11px;
+  text-align: start;
+  font-weight: 400;
+  color: #ffffff;
+}
+/********************************************/
+
+
+/*RESPONSIVE MEDIA QUERIES*/
+
+@media (max-width: 320px) {
+  /*Header h1 Subscribe*/
+    .h1Header {
+      font-size: 28px;
+      width: 238px;
+    }
+  /*Input and button width*/
+    .inputButtonWrapper {
+      width: 238px;
+    }
+
+  /*Input*/
+    .InputEmail {
+      position: relative;
+      width: 120px;
+      padding: 10px;
+      font-size: 14px;
+    }
+  /*Button*/
+    .buttonSubscribe {
+      font-size: 16px;
+      padding: 10px 10px;
+    }
+  /*Last header width*/
+    .h5Header {
+      width: 238px;
+      font-size: 14px;
+    }
+
+}
+
+@media only screen and (max-width: 414px) and (min-width: 321px) {
+
+  /*Header h1 Subscribe*/
+    .h1Header {
+      font-size: 36px;
+      width: 300px;
+    }
+  /*Input and button width*/
+    .inputButtonWrapper {
+      width: 300px;
+    }
+
+  /*Input*/
+    .InputEmail {
+      position: relative;
+      width: 171px;
+      padding: 10px;
+      font-size: 14px;
+    }
+  /*Button*/
+    .buttonSubscribe {
+      font-size: 16px;
+      padding: 12.5px 15px;
+    }
+  /*Last header width*/
+    .h5Header {
+      width: 300px;
+      font-size: 14px;
+    }
+
+}
+
+/* X-Small devices (portrait phones, less than 576px)*/
+@media only screen and (max-width: 576px) and (min-width: 415px) {
+
+  /*Header h1 Subscribe*/
+  .h1Header {
+    font-size: 36px;
+    width: 380px;
+  }
+  /*Input and button width*/
+  .inputButtonWrapper{
+    width: 380px;
+  }
+
+  /*Input*/
+    .InputEmail {
+      position: relative;
+      width: 240px;
+      padding: 10px;
+      font-size: 16px;
+    }
+  /*Button*/
+    .buttonSubscribe {
+      font-size: 16px;
+      padding: 12.5px 20px;
+    }
+  /*Last header width*/
+    .h5Header{
+      width: 380px;
+      font-size: 16px;
+    }
+
+}
+
+/* Small devices (landscape phones, less than 768px)*/
+@media only screen and (max-width: 768px) and (min-width: 577px) {
+  /*Header h1 Subscribe*/
+    .h1Header{
+      font-size: 42px;
+    }
+}
+@media only screen and (max-width: 920px) and (min-width: 769px) {
+}
+@media only screen and (max-width: 1025px) and (min-width: 921px) {
+}
+
+/* Large devices (desktops, less than 1200px)*/
+@media only screen and (max-width: 1200px) and (min-width: 1026px) {
+}
+
+/* X-Large devices (large desktops, less than 1400px)*/
+@media only screen and (max-width: 1400px) and (min-width: 1201px) {
+}

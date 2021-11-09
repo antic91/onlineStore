@@ -7,7 +7,9 @@
   justify-content: flex-start;
   align-content: flex-start;
 }
-#wrapper {
+
+/*Navigation wrapper*/
+#wrapperNavi {
   position: relative;
   width: 100%;
   display: flex;
@@ -17,8 +19,12 @@
   align-content: flex-start;
   background-color: #001925;
   color: #ffffff;
+  margin: 25px 25px 0 25px;
+  padding: 20px;
+  border-radius: 10px;
+  overflow: visible;
 }
-
+/*************************************************/
 #wrapperFooter {
   position: relative;
   width: 100%;
@@ -27,7 +33,10 @@
   flex-direction: row;
   justify-content: center;
   align-content: flex-start;
-  background-color: #2b6777;
+  background-color: #001925;
+  margin: 0px 25px 25px 25px;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 #appearanceWrapper {
@@ -68,39 +77,86 @@
 }
 
 
-/*APP DOWNLOAD FOR SMALLER DEVICES*/
-#AppDownloadWrapper {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  display:flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-}
-.downloadHover{
-  padding: 10px;
-  border: 1px solid black;
-  border-radius: 5px;
-}
-.downloadHover:hover{
-  cursor: pointer;
-}
 
 /*RESPONSIVE MEDIA QUERIES*/
 
-@media (max-width: 768px) {
-  #appearanceWrapper{
-    display: none;
-  }
-  #parrent{
-    display: none;
-  }
+@media (max-width: 320px) {
+  /*Navigation wrapper*/
+    #wrapperNavi {
+      margin: 0 !important;
+      padding: 20px 0 !important;
+      border-radius: 0 !important;
+    }
+    /*************************************************/
+    /**Footer wrapper*/
+    #wrapperFooter {
+      margin: 0 !important;
+      padding: 20px 0 !important;
+      border-radius: 0 !important;
+    }
+
 }
-@media (min-width: 768.001px) {
-  #AppDownloadWrapper {
-    display: none;
-  }
+
+@media only screen and (max-width: 414px) and (min-width: 321px) {
+  /*Navigation wrapper*/
+    #wrapperNavi {
+      margin: 0 !important;
+      padding: 20px 0 !important;
+      border-radius: 0 !important;
+    }
+    /*************************************************/
+    /**Footer wrapper*/
+    #wrapperFooter {
+      margin: 0 !important;
+      padding: 20px 0 !important;
+      border-radius: 0 !important;
+    }
+
+}
+
+/* X-Small devices (portrait phones, less than 576px)*/
+@media only screen and (max-width: 576px) and (min-width: 415px) {
+  /*Navigation wrapper*/
+    #wrapperNavi {
+      margin: 0 !important;
+      padding: 20px 0 !important;
+      border-radius: 0 !important;
+    }
+    /*************************************************/
+    /**Footer wrapper*/
+    #wrapperFooter {
+      margin: 0 !important;
+      padding: 20px 0 !important;
+      border-radius: 0 !important;
+    }
+
+}
+
+/* Small devices (landscape phones, less than 768px)*/
+@media only screen and (max-width: 768px) and (min-width: 577px) {
+  /*Navigation wrapper*/
+    #wrapperNavi {
+      margin: 0!important;
+      padding: 20px 0!important;
+      border-radius: 0!important;
+    }
+/*************************************************/
+    /**Footer wrapper*/
+    #wrapperFooter {
+      margin: 0!important;
+      padding: 20px 0!important;
+      border-radius: 0!important;
+    }
+
+}
+@media only screen and (max-width: 920px) and (min-width: 769px) {
+
+}
+@media only screen and (max-width: 1025px) and (min-width: 921px) {
+
+}
+
+/* Large devices (desktops, less than 1200px)*/
+@media only screen and (max-width: 1200px) and (min-width: 1026px) {
+
 }

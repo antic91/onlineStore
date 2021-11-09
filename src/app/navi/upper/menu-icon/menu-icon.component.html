@@ -1,0 +1,5 @@
+<span class="spanRotate" [@rotatedState]="!displayX ? 'default' : 'rotated'"></span>
+
+<span class="spanRotate" *ngIf="!displayX" [@fadeInAnimation]></span>
+
+<span class="spanRotate" [@rotatedStateSec]="displayX ? 'rotated' : 'default'"></span>

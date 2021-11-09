@@ -7,3 +7,490 @@
   justify-content: center;
   align-content: flex-start;
 }
+
+
+/*Banner section wrapper*/
+
+#bannerWrapper {
+  position: relative;
+  width: 1124px;
+  height: 600px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: flex-end;
+  margin-top: 50px;
+  border-radius: 5px;
+
+}
+/*----------------------------------------------------------------------------------*/
+/*Action under banner wrapper*/
+
+#actionsWrapper {
+  position: relative;
+  width: 1124px;
+  height: 970px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  margin: 75px 0 0 0;
+  border-radius: 5px;
+}
+/*----------------------------------------------------------------------------------*/
+
+/*Guarantee section wrapper*/
+#guaranteeSection{
+  position: relative;
+  width: 100%;
+  height: 358px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin: 85px 0 100px 0;
+  background-color: #ffffff;
+  box-shadow: 0 1px 9px 0 rgb(0 0 0 / 2%), 0 2px 6px 0 rgb(0 0 0 / 1%),
+  0 10px 34px 0 rgb(0 0 0 / 3%);
+}
+
+/*----------------------------------------------------------------------------------*/
+
+/*-------------------------Wrapper best items---------------------------------------------------------*/
+.BestItemsWrapper {
+  position: relative;
+  width: 1124px;
+  height: 422px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  overflow: visible;
+}
+
+/*----------------------------------------------------------------------------------*/
+
+/*-------------------------Wrapper Subscribe component---------------------------------------------------------*/
+#subscribe {
+  position: relative;
+  width: 1124px;
+  padding: 100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 100px 0;
+  background: rgb(255, 79, 17);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 79, 17, 1) 0%,
+    rgba(24, 0, 243, 1) 86%
+  );
+  border-radius: 10px;
+}
+
+/*----------------------------------------------------------------------------------*/
+
+/*-------------------------Wrapper Follow component---------------------------------------------------------*/
+#follow {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 75px 0;
+  background-color: #5340ff;
+  box-shadow: 0 1px 9px 0 rgb(0 0 0 / 2%), 0 2px 6px 0 rgb(0 0 0 / 1%),
+  0 10px 34px 0 rgb(0 0 0 / 3%);
+}
+
+/*----------------------------------------------------------------------------------*/
+
+
+/*RESPONSIVE MEDIA QUERIES*/
+
+@media (max-width: 320px) {
+  /*Banner section wrapper*/
+    #bannerWrapper {
+      position: relative;
+      width: 238px;
+      height: 280px;
+      margin-top: 0;
+    }
+  /*Action under banner wrapper*/
+
+    #actionsWrapper {
+      position: relative;
+      width: 238px;
+      height: 2694px;
+      margin: 50px 0 0 0;
+    }
+  /*----------------------------------------------------------------------------------*/
+  /*-------------------------Wrapper best items---------------------------------------------------------*/
+    .BestItemsWrapper {
+      width: 238px;
+      height: 1342px;
+    }
+
+  /*----------------------------------------------------------------------------------*/
+  /*Guarantee section wrapper*/
+    #guaranteeSection {
+      height: 768px;
+      margin: 55px 0 75px 0;
+    }
+
+  /*----------------------------------------------------------------------------------*/
+
+  /*-------------------------Wrapper Subscribe component---------------------------------------------------------*/
+    #subscribe {
+      width: 100%;
+      padding: 100px 10px;
+      justify-content: center;
+      border-radius: 0;
+      margin: 75px 0;
+    }
+  /*----------------------------------------------------------------------------------*/
+
+  /*-------------------------Wrapper Follow component---------------------------------------------------------*/
+    #follow {
+      margin: 30px 0 50px 0;
+    }
+
+}
+
+@media only screen and (max-width: 414px) and (min-width: 321px) {
+  /*Banner section wrapper*/
+    #bannerWrapper {
+      position: relative;
+      width: 300px;
+      height: 280px;
+      margin-top: 0;
+    }
+  /*Action under banner wrapper*/
+
+    #actionsWrapper {
+      position: relative;
+      width: 300px;
+      height: 3236px;
+      margin: 50px 0 0 0;
+    }
+  /*----------------------------------------------------------------------------------*/
+  /*-------------------------Wrapper best items---------------------------------------------------------*/
+    .BestItemsWrapper {
+      width: 300px;
+      height: 1422px;
+    }
+
+  /*----------------------------------------------------------------------------------*/
+  /*Guarantee section wrapper*/
+    #guaranteeSection {
+      height: 768px;
+      margin: 55px 0 75px 0;
+    }
+
+  /*----------------------------------------------------------------------------------*/
+
+  /*-------------------------Wrapper Subscribe component---------------------------------------------------------*/
+    #subscribe {
+      width: 100%;
+      padding: 100px 10px;
+      justify-content: center;
+      border-radius: 0;
+      margin: 75px 0;
+    }
+
+
+  /*----------------------------------------------------------------------------------*/
+  /*-------------------------Wrapper Follow component---------------------------------------------------------*/
+    #follow {
+      margin: 30px 0 50px 0;
+    }
+
+
+}
+
+/* X-Small devices (portrait phones, less than 576px)*/
+@media only screen and (max-width: 576px) and (min-width: 415px) {
+  /*Banner section wrapper*/
+    #bannerWrapper {
+      position: relative;
+      width: 380px;
+      height: 380px;
+      margin-top: 25px;
+    }
+  /*Action under banner wrapper*/
+
+    #actionsWrapper {
+      position: relative;
+      width: 380px;
+      height: 3416px;
+      margin: 75px 0 0 0;
+    }
+  /*----------------------------------------------------------------------------------*/
+  /*-------------------------Wrapper best items---------------------------------------------------------*/
+    .BestItemsWrapper {
+      width: 380px;
+      height: 1582px;
+    }
+
+  /*----------------------------------------------------------------------------------*/
+
+  /*Guarantee section wrapper*/
+    #guaranteeSection {
+      height: 786px;
+      margin: 80px 0 100px 0;
+    }
+
+  /*----------------------------------------------------------------------------------*/
+
+  /*-------------------------Wrapper Subscribe component---------------------------------------------------------*/
+    #subscribe {
+      width: 100%;
+      padding: 100px 10px;
+      justify-content: center;
+      border-radius: 0;
+    }
+
+  /*----------------------------------------------------------------------------------*/
+
+  /*-------------------------Wrapper Follow component---------------------------------------------------------*/
+    #follow {
+      margin-top: 55px;
+    }
+
+}
+
+/* Small devices (landscape phones, less than 768px)*/
+@media only screen and (max-width: 768px) and (min-width: 577px) {
+  /*Banner section wrapper*/
+    #bannerWrapper {
+      position: relative;
+      width: 538px;
+      height: 450px;
+      margin-top: 25px;
+    }
+  /*Action under banner wrapper*/
+
+    #actionsWrapper {
+      position: relative;
+      width: 538px;
+      height: 3416px;
+    }
+  /*----------------------------------------------------------------------------------*/
+
+  /*-------------------------Wrapper best items---------------------------------------------------------*/
+    .BestItemsWrapper {
+      width: 538px;
+      height: 1702px;
+    }
+
+  /*----------------------------------------------------------------------------------*/
+  /*Guarantee section wrapper*/
+    #guaranteeSection {
+      height: 770px;
+      margin: 80px 0 100px 0;
+    }
+
+  /*----------------------------------------------------------------------------------*/
+
+  /*-------------------------Wrapper Subscribe component---------------------------------------------------------*/
+    #subscribe {
+      width: 538px;
+      padding: 100px 50px;
+    }
+
+  /*----------------------------------------------------------------------------------*/
+
+  /*-------------------------Wrapper Follow component---------------------------------------------------------*/
+    #follow {
+      margin-top: 55px;
+    }
+
+
+}
+@media only screen and (max-width: 920px) and (min-width: 769px) {
+
+  /*Banner section wrapper*/
+    #bannerWrapper {
+      position: relative;
+      width: 657px;
+      height: 450px;
+      margin-top: 25px;
+    }
+  /*Action under banner wrapper*/
+
+    #actionsWrapper {
+      position: relative;
+      width: 657px;
+      height: 1589px;
+    }
+  /*----------------------------------------------------------------------------------*/
+  /*-------------------------Wrapper best items---------------------------------------------------------*/
+    .BestItemsWrapper {
+      width: 657px;
+      height: 922px;
+    }
+
+  /*----------------------------------------------------------------------------------*/
+  /*Guarantee section wrapper*/
+    #guaranteeSection {
+      height: 770px;
+      margin: 80px 0 100px 0;
+    }
+
+  /*----------------------------------------------------------------------------------*/
+
+  /*-------------------------Wrapper Subscribe component---------------------------------------------------------*/
+    #subscribe {
+      width: 657px;
+    }
+
+  /*----------------------------------------------------------------------------------*/
+
+  /*-------------------------Wrapper Follow component---------------------------------------------------------*/
+    #follow {
+      margin-top: 55px;
+    }
+
+}
+@media only screen and (max-width: 1025px) and (min-width: 921px) {
+
+  /*Banner section wrapper*/
+    #bannerWrapper {
+      position: relative;
+      width: 820px;
+      height: 500px;
+      margin-top: 25px;
+    }
+  /*Action under banner wrapper*/
+
+    #actionsWrapper {
+      position: relative;
+      width: 820px;
+      height: 1439px;
+    }
+  /*----------------------------------------------------------------------------------*/
+  /*-------------------------Wrapper best items---------------------------------------------------------*/
+    .BestItemsWrapper {
+      width: 820px;
+      height: 922px;
+    }
+
+  /*----------------------------------------------------------------------------------*/
+  /*Guarantee section wrapper*/
+    #guaranteeSection {
+      height: 384px;
+      margin: 80px 0 100px 0;
+    }
+
+  /*----------------------------------------------------------------------------------*/
+  /*-------------------------Wrapper Subscribe component---------------------------------------------------------*/
+    #subscribe {
+      width: 820px;
+    }
+
+  /*----------------------------------------------------------------------------------*/
+
+  /*-------------------------Wrapper Follow component---------------------------------------------------------*/
+    #follow {
+      margin-top: 55px;
+    }
+
+
+}
+
+/* Large devices (desktops, less than 1200px)*/
+@media only screen and (max-width: 1200px) and (min-width: 1026px) {
+
+  /*Banner section wrapper*/
+    #bannerWrapper {
+      position: relative;
+      width: 914px;
+      height: 515px;
+      margin-top: 25px;
+    }
+      /*Action under banner wrapper*/
+
+    #actionsWrapper {
+      position: relative;
+      width: 914px;
+      height: 930px;
+    }
+  /*----------------------------------------------------------------------------------*/
+
+  /*-------------------------Wrapper best items---------------------------------------------------------*/
+    .BestItemsWrapper {
+      width: 914px;
+    }
+
+  /*----------------------------------------------------------------------------------*/
+  /*Guarantee section wrapper*/
+    #guaranteeSection {
+      height: 384px;
+    }
+
+  /*----------------------------------------------------------------------------------*/
+
+  /*-------------------------Wrapper Subscribe component---------------------------------------------------------*/
+    #subscribe {
+      width: 914px;
+    }
+
+  /*----------------------------------------------------------------------------------*/
+
+
+
+}
+
+
+
+
+/* X-Large devices (large desktops, less than 1400px)*/
+@media only screen and (max-width: 1400px) and (min-width: 1201px) {
+  /*Banner section wrapper*/
+    #bannerWrapper {
+      position: relative;
+      width: 1020px;
+      height: 600px;
+    }
+
+    /*----------------------------------------------------------------------------------*/
+  /*Action under banner wrapper*/
+
+    #actionsWrapper {
+      position: relative;
+      width: 1020px;
+      height: 970px;
+    }
+  /*----------------------------------------------------------------------------------*/
+
+  /*-------------------------Wrapper best items---------------------------------------------------------*/
+    .BestItemsWrapper {
+      width: 1020px;
+    }
+
+  /*----------------------------------------------------------------------------------*/
+
+  /*Guarantee section wrapper*/
+    #guaranteeSection{
+      height: 384px;
+    }
+
+  /*----------------------------------------------------------------------------------*/
+
+  /*-------------------------Wrapper Subscribe component---------------------------------------------------------*/
+    #subscribe {
+      width: 1020px;
+    }
+
+  /*----------------------------------------------------------------------------------*/
+
+
+}
