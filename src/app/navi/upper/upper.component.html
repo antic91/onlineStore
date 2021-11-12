@@ -7,7 +7,10 @@
 <!--Search input-->
 <div id="inputWrapper">
 
-  <input type="text" placeholder="Search for your Item here!" #inp (keyup)="pressed($event)">
+  <input type="text"
+  placeholder="Search for your Item here!"
+  #inp
+  (keyup)="pressed($event)">
 
   <div class="button">
 
@@ -17,7 +20,7 @@
     </button>
   </div>
 
-  <app-search-options *ngIf="object" class="searchOptions" (setValue)="setNewValue($event)" [object]="object"></app-search-options>
+  <app-search-options *ngIf="showDrop" class="searchOptions" (setValue)="setNewValue($event)" [object]="object"></app-search-options>
 
 </div>
 

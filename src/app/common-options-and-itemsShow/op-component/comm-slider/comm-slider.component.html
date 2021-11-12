@@ -1,24 +1,43 @@
-<div class="priceHeader1">
+<!--Header of slide section-->
+<div class="Header1">
   <h4>{{headerCommon}}</h4>
 </div>
-<div class="wrapperPriceToShow1">
+
+<!--Wrapper For two span el above slider with min and max-->
+<div class="wrapperNumToShow1">
+
+  <!--span at start using rounding number pipe-->
   <span>
-    <h4>{{minToShow | roundingNumbers : headerCommon}}</h4>
-    <h4 *ngIf="headerCommon == 'Display size'"> &nbsp;'</h4>
-    <h4 *ngIf="headerCommon == 'Storage space'">&nbsp;GB</h4>
-    <h4 *ngIf="headerCommon == 'RAM size'">&nbsp;GB</h4>
+    <h4 class="h4">{{minToShow | roundingNumbers : headerCommon}}</h4>
+    <h4 class="h4" *ngIf="headerCommon == 'Display size'"> &nbsp;'</h4>
+    <h4 class="h4" *ngIf="headerCommon == 'Storage space'">&nbsp;GB</h4>
+    <h4 class="h4" *ngIf="headerCommon == 'RAM size'">&nbsp;GB</h4>
   </span>
+
+  <!--span on the end using rounding number pipe-->
   <span>
-    <h4>{{maxToShow | roundingNumbers : headerCommon}}</h4>
-    <h4 *ngIf="headerCommon == 'Display size'"> &nbsp;'</h4>
-    <h4 *ngIf="headerCommon == 'Storage space'">&nbsp;GB</h4>
-    <h4 *ngIf="headerCommon == 'RAM size'">&nbsp;GB</h4>
+    <h4 class="h4">{{maxToShow | roundingNumbers : headerCommon}}</h4>
+    <h4 class="h4" *ngIf="headerCommon == 'Display size'"> &nbsp;'</h4>
+    <h4 class="h4" *ngIf="headerCommon == 'Storage space'">&nbsp;GB</h4>
+    <h4 class="h4" *ngIf="headerCommon == 'RAM size'">&nbsp;GB</h4>
   </span>
+
 </div>
+
+<!--Slider div wrapper-->
 <div class="wrapperDiv1">
-  <div class="upperDiv1" style="width: 100%;">
+
+  <!--upper div with two  circle -->
+  <div class="upperDiv1" #upper style="width: 100%;">
+
+    <!--Using moving directives-->
     <div class="start1" (newValueMStatus)="setStartStatus($event)" [ngStyle]="{'zIndex': statusStart ? '1' : '0'}" (newValueMin)="setMIn($event)" [max]="max" [maxShow]="maxToShow" [min]="min" mousemoving></div>
+
     <div class="end1" (ValueStatusMax)="setEndStatus($event)" [ngStyle]="{'zIndex': statusEnd ? '0' : '1'}" (newValueMax)="setMax($event)" [maxx]="max" [minShow]="minToShow" [minn]="min" appmousetoleft></div>
+
   </div>
+
+  <!--div with color under-->
   <div class="underDiv1"></div>
+
 </div>

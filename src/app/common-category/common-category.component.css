@@ -1,94 +1,630 @@
-
-#commonWrapper{
+/*Wrapper all items component*/
+#allWrapper {
   position: relative;
   width: 100%;
-  margin-bottom: 75px;
+  height: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-content: flex-start;
+  align-items: flex-start;
+  overflow: visible !important;
 }
+/***********************************************************************************/
 
-.routeWrapper{
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.route{
+/*Wrapper for items and options*/
+.alloptionsItemsWrapper {
   position: relative;
   width: 1124px;
-  margin-top: 15px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-
-
-
-/*-------OPTIONS AND ITEMS WRAPPER---------*/
-
-.optionsItemsWrapper{
-  position: relative;
-  width: 1124px;
+  min-height: 1400px;
   margin-top: 75px;
-  margin-bottom: 15px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-content: flex-start;
+  overflow: visible !important;
 }
-.options{
+/***********************************************************************************/
+
+/*Wrapper filter options*/
+.alloptions {
   position: relative;
-  width: 264px;
+  width: 304px;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  background-color: #ffffff;
+  padding: 20px 20px;
+  border-radius: 10px;
+  box-shadow: 0 1px 9px 0 rgb(0 0 0 / 2%), 0 2px 6px 0 rgb(0 0 0 / 1%),
+    0 10px 34px 0 rgb(0 0 0 / 3%);
+}
+/***********************************************************************************/
+
+/*Wrapper items to show*/
+.allitems {
+  position: relative;
+  width: 785px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: flex-start;
-
+  overflow: visible !important;
 }
-.items{
+/***********************************************************************************/
+
+/*-------------------------Wrapper Follow component---------------------------------------------------------*/
+#follow {
   position: relative;
-  width: 836px;
-  min-height: 1000px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  align-content: flex-start;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 75px 0;
+  background-color: #5340ff;
+  box-shadow: 0 1px 9px 0 rgb(0 0 0 / 2%), 0 2px 6px 0 rgb(0 0 0 / 1%),
+    0 10px 34px 0 rgb(0 0 0 / 3%);
 }
 
+/*----------------------------------------------------------------------------------*/
+
+/*FILTER BUTTON WRAPPER FOR SMALLER SCREENS*/
+.filterWrapper {
+  display: none;
+}
+/*FILTER BUTTON FOR SMALLER SCREENS*/
+.filterButton {
+  display: none;
+}
+/*----------------------------------------------------------------------------------*/
+
+/*Filter options for smaller devices*/
+.alloptionsSmaller {
+  display: none;
+}
+
+/*ROUTE PARAMS WRAPPER ***************************************************/
+.routeWrapper {
+  position: relative;
+  width: 100%;
+  height: 59px;
+  margin-top: 25px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: space-between;
+}
+/**************************************************************************/
+/*Gradient border span in route section*/
+.gradientBorder {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: rgb(255, 79, 17);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 79, 17, 1) 0%,
+    rgba(24, 0, 243, 1) 86%
+  );
+}
+
+/***************************************************************/
+
+/*Wrapper for route params*/
+.routeParamsWrapper {
+  position: relative;
+  width: 1124px;
+  padding: 15px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-content: center;
+}
+/***************************************************************/
+
+/*a tag router params*/
+.routeParam {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: #001925;
+  font-weight: 600;
+}
+.LastParam {
+  font-weight: 400;
+}
+/***************************************************************/
 
 /*RESPONSIVE MEDIA QUERIES*/
 
 @media (max-width: 320px) {
+  /*Wrapper for items and options*/
+  .alloptionsItemsWrapper {
+    width: 238px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  /***********************************************************************************/
+
+  /*Wrapper filter options*/
+  .alloptions {
+    display: none;
+  }
+  /***********************************************************************************/
+
+  /*Wrapper items to show*/
+  .allitems {
+    width: 238px;
+    justify-content: flex-start;
+  }
+  /***********************************************************************************/
+  /*FILTER BUTTON WRAPPER FOR SMALLER SCREENS*/
+  .filterWrapper {
+    position: relative;
+    width: 238px;
+    height: 29px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-content: flex-start;
+    margin-top: 50px;
+    margin-bottom: 25px;
+  }
+  /*FILTER BUTTON FOR SMALLER SCREENS*/
+  .filterButton {
+    position: absolute;
+    display: inline-block;
+    padding: 5px 25px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    background-color: #5340ff;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    letter-spacing: 1.2px;
+  }
+  /*----------------------------------------------------------------------------------*/
+  /*Smaller devices filter options wrapper*/
+  .alloptionsSmaller {
+    position: absolute;
+    left: 0;
+    top: 188.5px;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    background-color: #ffffff;
+    padding: 20px 20px;
+    border-top: 2px solid #ff4f11;
+    border-bottom: 2px solid #ff4f11;
+    box-shadow: 0 1px 9px 0 rgb(0 0 0 / 2%), 0 2px 6px 0 rgb(0 0 0 / 1%),
+      0 10px 34px 0 rgb(0 0 0 / 3%);
+    z-index: 99999999;
+  }
+  /*----------------------------------------------------------------------------------*/
+
+  /*-------------------------Wrapper Follow component---------------------------------------------------------*/
+  #follow {
+    margin: 30px 0 50px 0;
+  }
+  /***********************************************************************************/
+  /*Wrapper for route params*/
+  .routeParamsWrapper {
+    width: 238px;
+  }
+  /***************************************************************/
 }
 
 @media only screen and (max-width: 414px) and (min-width: 321px) {
+  /*Wrapper for items and options*/
+  .alloptionsItemsWrapper {
+    width: 300px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  /***********************************************************************************/
+
+  /*Wrapper filter options*/
+  .alloptions {
+    display: none;
+  }
+  /***********************************************************************************/
+
+  /*Wrapper items to show*/
+  .allitems {
+    width: 300px;
+    justify-content: flex-start;
+  }
+  /***********************************************************************************/
+
+  /*FILTER BUTTON WRAPPER FOR SMALLER SCREENS*/
+  .filterWrapper {
+    position: relative;
+    width: 300px;
+    height: 29px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-content: flex-start;
+    margin-top: 50px;
+    margin-bottom: 25px;
+  }
+  /*FILTER BUTTON FOR SMALLER SCREENS*/
+  .filterButton {
+    position: absolute;
+    display: inline-block;
+    padding: 5px 25px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    background-color: #5340ff;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    letter-spacing: 1.2px;
+  }
+  /*----------------------------------------------------------------------------------*/
+  /*Smaller devices filter options wrapper*/
+  .alloptionsSmaller {
+    position: absolute;
+    left: 0;
+    top: 188.5px;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    background-color: #ffffff;
+    padding: 20px 20px;
+    border-top: 2px solid #ff4f11;
+    border-bottom: 2px solid #ff4f11;
+    box-shadow: 0 1px 9px 0 rgb(0 0 0 / 2%), 0 2px 6px 0 rgb(0 0 0 / 1%),
+      0 10px 34px 0 rgb(0 0 0 / 3%);
+    z-index: 99999999;
+  }
+  /*----------------------------------------------------------------------------------*/
+
+  /*-------------------------Wrapper Follow component---------------------------------------------------------*/
+  #follow {
+    margin: 30px 0 50px 0;
+  }
+  /***********************************************************************************/
+  /*Wrapper for route params*/
+  .routeParamsWrapper {
+    width: 300px;
+  }
+  /***************************************************************/
 }
 
 /* X-Small devices (portrait phones, less than 576px)*/
 @media only screen and (max-width: 576px) and (min-width: 415px) {
+  /*Wrapper for items and options*/
+  .alloptionsItemsWrapper {
+    width: 380px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  /***********************************************************************************/
+
+  /*Wrapper filter options*/
+  .alloptions {
+    display: none;
+  }
+  /***********************************************************************************/
+
+  /*Wrapper items to show*/
+  .allitems {
+    width: 380px;
+    justify-content: flex-start;
+  }
+  /***********************************************************************************/
+  /*FILTER BUTTON WRAPPER FOR SMALLER SCREENS*/
+  .filterWrapper {
+    position: relative;
+    width: 380px;
+    height: 29px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-content: flex-start;
+    margin-top: 50px;
+    margin-bottom: 25px;
+  }
+  /*FILTER BUTTON FOR SMALLER SCREENS*/
+  .filterButton {
+    position: absolute;
+    display: inline-block;
+    padding: 5px 25px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    background-color: #5340ff;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    letter-spacing: 1.2px;
+  }
+  /*----------------------------------------------------------------------------------*/
+
+  /*Smaller devices filter options wrapper*/
+  .alloptionsSmaller {
+    position: absolute;
+    left: 0;
+    top: 188.5px;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    background-color: #ffffff;
+    padding: 20px 20px;
+    border-top: 2px solid #ff4f11;
+    border-bottom: 2px solid #ff4f11;
+    box-shadow: 0 1px 9px 0 rgb(0 0 0 / 2%), 0 2px 6px 0 rgb(0 0 0 / 1%),
+      0 10px 34px 0 rgb(0 0 0 / 3%);
+    z-index: 99999999;
+  }
+  /*----------------------------------------------------------------------------------*/
+
+  /*-------------------------Wrapper Follow component---------------------------------------------------------*/
+  #follow {
+    margin-top: 55px;
+  }
+  /***********************************************************************************/
+  /*Wrapper for route params*/
+  .routeParamsWrapper {
+    width: 380px;
+  }
+  /***************************************************************/
 }
 
 /* Small devices (landscape phones, less than 768px)*/
 @media only screen and (max-width: 768px) and (min-width: 577px) {
+  /*Wrapper for items and options*/
+  .alloptionsItemsWrapper {
+    width: 538px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  /***********************************************************************************/
+
+  /*Wrapper filter options*/
+  .alloptions {
+    display: none;
+  }
+  /***********************************************************************************/
+
+  /*Wrapper items to show*/
+  .allitems {
+    width: 538px;
+    justify-content: space-between;
+  }
+  /***********************************************************************************/
+  /*FILTER BUTTON WRAPPER FOR SMALLER SCREENS*/
+  .filterWrapper {
+    position: relative;
+    width: 538px;
+    height: 29px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-content: flex-start;
+    margin-top: 50px;
+    margin-bottom: 25px;
+  }
+  /*FILTER BUTTON FOR SMALLER SCREENS*/
+  .filterButton {
+    position: absolute;
+    display: inline-block;
+    padding: 5px 25px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    background-color: #5340ff;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    letter-spacing: 1.2px;
+  }
+  /*----------------------------------------------------------------------------------*/
+
+  /*Smaller devices filter options wrapper*/
+  .alloptionsSmaller {
+    position: absolute;
+    left: 0;
+    top: 188.5px;
+    width: 304px;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    background-color: #ffffff;
+    padding: 20px 20px;
+    border-top: 2px solid #ff4f11;
+    border-bottom: 2px solid #ff4f11;
+    border-right: 2px solid #ff4f11;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 1px 9px 0 rgb(0 0 0 / 2%), 0 2px 6px 0 rgb(0 0 0 / 1%),
+      0 10px 34px 0 rgb(0 0 0 / 3%);
+    z-index: 99999999;
+  }
+  /*----------------------------------------------------------------------------------*/
+
+  /*-------------------------Wrapper Follow component---------------------------------------------------------*/
+  #follow {
+    margin-top: 55px;
+  }
+  /***********************************************************************************/
+  /*Wrapper for route params*/
+  .routeParamsWrapper {
+    width: 538px;
+  }
+  /***************************************************************/
 }
 @media only screen and (max-width: 920px) and (min-width: 769px) {
+  /*Wrapper for items and options*/
+  .alloptionsItemsWrapper {
+    width: 657px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  /***********************************************************************************/
+
+  /*Wrapper filter options*/
+  .alloptions {
+    display: none;
+  }
+  /***********************************************************************************/
+
+  /*Wrapper items to show*/
+  .allitems {
+    width: 657px;
+    justify-content: space-between;
+  }
+  /***********************************************************************************/
+  /*FILTER BUTTON WRAPPER FOR SMALLER SCREENS*/
+  .filterWrapper {
+    position: relative;
+    width: 657px;
+    height: 29px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-content: flex-start;
+    margin-top: 50px;
+    margin-bottom: 25px;
+  }
+  /*FILTER BUTTON FOR SMALLER SCREENS*/
+  .filterButton {
+    position: absolute;
+    display: inline-block;
+    padding: 5px 25px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    background-color: #5340ff;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    letter-spacing: 1.2px;
+  }
+  /*----------------------------------------------------------------------------------*/
+  /*Smaller devices filter options wrapper*/
+  .alloptionsSmaller {
+    position: absolute;
+    left: 0;
+    top: 188.5px;
+    width: 304px;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    background-color: #ffffff;
+    padding: 20px 20px;
+    border-top: 2px solid #ff4f11;
+    border-bottom: 2px solid #ff4f11;
+    border-right: 2px solid #ff4f11;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 1px 9px 0 rgb(0 0 0 / 2%), 0 2px 6px 0 rgb(0 0 0 / 1%),
+      0 10px 34px 0 rgb(0 0 0 / 3%);
+    z-index: 99999999;
+  }
+  /*----------------------------------------------------------------------------------*/
+
+  /*-------------------------Wrapper Follow component---------------------------------------------------------*/
+  #follow {
+    margin-top: 55px;
+  }
+  /***********************************************************************************/
+  /*Wrapper for route params*/
+  .routeParamsWrapper {
+    width: 657px;
+  }
+  /***************************************************************/
 }
 @media only screen and (max-width: 1025px) and (min-width: 921px) {
+  /*Wrapper for items and options*/
+  .alloptionsItemsWrapper {
+    width: 820px;
+    margin-bottom: 20px;
+  }
+  /***********************************************************************************/
+
+  /*Wrapper items to show*/
+  .allitems {
+    width: 481px;
+  }
+  /***********************************************************************************/
+
+  /*-------------------------Wrapper Follow component---------------------------------------------------------*/
+  #follow {
+    margin-top: 55px;
+  }
+  /***********************************************************************************/
+  /*Wrapper for route params*/
+  .routeParamsWrapper {
+    width: 820px;
+  }
+  /***************************************************************/
 }
 
 /* Large devices (desktops, less than 1200px)*/
 @media only screen and (max-width: 1200px) and (min-width: 1026px) {
+  /*Wrapper for items and options*/
+  .alloptionsItemsWrapper {
+    width: 914px;
+  }
+  /***********************************************************************************/
+
+  /*Wrapper items to show*/
+  .allitems {
+    width: 575px;
+  }
+  /***********************************************************************************/
+  /***********************************************************************************/
+  /*Wrapper for route params*/
+  .routeParamsWrapper {
+    width: 914px;
+  }
+  /***************************************************************/
 }
 
 /* X-Large devices (large desktops, less than 1400px)*/
 @media only screen and (max-width: 1400px) and (min-width: 1201px) {
+  /*Wrapper for items and options*/
+  .alloptionsItemsWrapper {
+    width: 1020px;
+  }
+  /***********************************************************************************/
+
+  /*Wrapper items to show*/
+  .allitems {
+    width: 681px;
+  }
+  /***********************************************************************************/
+  /*Wrapper for route params*/
+  .routeParamsWrapper {
+    width: 1020px;
+  }
+  /***************************************************************/
 }

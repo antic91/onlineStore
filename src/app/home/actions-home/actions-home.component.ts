@@ -1,6 +1,6 @@
 import { trigger, transition, useAnimation } from '@angular/animations';
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { fadeIn, slideAnim } from 'src/app/animations/animations';
 import { PostService } from 'src/app/services/post.service';
@@ -70,6 +70,9 @@ import { PostService } from 'src/app/services/post.service';
 })
 export class ActionsHomeComponent implements OnInit {
 
+  /*Accesnative element to get parrent width*/
+  @ViewChild('wrapper', { read: ElementRef }) wrapper!: ElementRef;
+
   details!: number;
   details1!: number;
 
@@ -84,12 +87,14 @@ export class ActionsHomeComponent implements OnInit {
       )
       .subscribe((res: any) => {
         this.saleObjects = res;
-        console.log(this.saleObjects)
       });
   }
 
   /*Change details show price or see details text*/
-  mouseOver(event:number): void{
+  mouseOver(event: number): void{
+
+    /*If wrapper width is 646px or smaller then just return and dont show see details h4*/
+    if(this.wrapper.nativeElement.parentElement.clientWidth <= 646) return
     this.details = event;
   }
   mouseLeave(event:number): void{

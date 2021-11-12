@@ -1,15 +1,40 @@
 
-<app-comm-slider id="priceWrapper1" [max]="maxPrice" [min]="minPrice" [headerCommon]="'Price'"></app-comm-slider>
+<app-comm-slider
+class="priceWrapper1"
+[max]="maxPrice"
+[min]="minPrice"
+[headerCommon]="'Price'"></app-comm-slider>
 
-<app-comm-wrapp-opt  id="commonOptions1" [options]="manufactuer" [optionsCommon]="'Manufacturer'"></app-comm-wrapp-opt>
+<app-comm-wrapp-opt
+#wrapperOpt
+class="commonOptions1"
+[options]="manufactuer"
+[optionsCommon]="'Manufacturer'"></app-comm-wrapp-opt>
 
-<app-comm-slider id="priceWrapper1" [max]="maxDisplay" [min]="minDisplay" [headerCommon]="'Display size'"></app-comm-slider>
+<app-comm-slider
+class="priceWrapper1"
+[max]="maxDisplay"
+[min]="minDisplay"
+[headerCommon]="'Display size'"></app-comm-slider>
 
-<app-comm-slider id="priceWrapper1" [max]="maxHDD" [min]="minHDD" [headerCommon]="'Storage space'"></app-comm-slider>
+<app-comm-slider
+class="priceWrapper1"
+[max]="maxHDD"
+[min]="minHDD"
+[headerCommon]="'Storage space'"></app-comm-slider>
 
-<app-comm-wrapp-opt  id="commonOptions1" [options]="color" [optionsCommon]="'Color'"></app-comm-wrapp-opt>
+<app-comm-wrapp-opt
+#wrapperOpt
+class="commonOptions1"
+[options]="color"
+[optionsCommon]="'Color'"></app-comm-wrapp-opt>
 
-<app-comm-slider id="priceWrapper1" [max]="maxRAM" [min]="minRAM" [headerCommon]="'RAM size'"></app-comm-slider>
+<app-comm-slider
+class="priceWrapper1 lastMargin"
+[max]="maxRAM"
+[min]="minRAM"
+[headerCommon]="'RAM size'"></app-comm-slider>
+
 
 <div class="btnWrapper1">
   <button class="clickedBTN" *ngIf="storage.data.length > 0" (mousedown)="buttonClicked()">Filter</button>

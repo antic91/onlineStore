@@ -18,13 +18,9 @@ import { BannerComponent } from './home/banner/banner.component';
 import { ActionsHomeComponent } from './home/actions-home/actions-home.component';
 import { GuaranteeSectionComponent } from './home/guarantee-section/guarantee-section.component';
 import { CommonCategoryComponent } from './common-category/common-category.component';
-import { OptionsComponent } from './common-category/options/options.component';
-import { ItemsComponent } from './common-category/items/items.component';
-import { sliderComponent } from './common-category/options/commonSlider/slider.component';
 import { MousePositionDirective } from './directives/mouse-position.directive';
 import { MouseToLeftDirective } from './directives/mouse-to-left.directive';
 import { RoundingNumbersPipe } from './pipes/rounding-numbers.pipe';
-import { CommonWrapperOptionsComponent } from './common-category/options/commonWrapperOptions/common-wrapper-options/common-wrapper-options.component';
 import { ItemComponentComponent } from './item-component/item-component.component';
 import { ItemPhotoHeaderComponent } from './item-component/item-photo-header/item-photo-header/item-photo-header.component';
 import { ItemOptionsComponent } from './item-component/item-options/options/options.component';
@@ -68,13 +64,9 @@ import { FolowComponent } from './home/folow/folow.component';
     ActionsHomeComponent,
     GuaranteeSectionComponent,
     CommonCategoryComponent,
-    OptionsComponent,
-    ItemsComponent,
-    sliderComponent,
     MousePositionDirective,
     MouseToLeftDirective,
     RoundingNumbersPipe,
-    CommonWrapperOptionsComponent,
     ItemComponentComponent,
     ItemPhotoHeaderComponent,
     ItemOptionsComponent,

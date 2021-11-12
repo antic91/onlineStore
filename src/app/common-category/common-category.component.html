@@ -1,12 +1,57 @@
-<div id="commonWrapper">
+<!--Wrapper -->
+<div id="allWrapper" *ngIf="ShowDataCommon" [@fadeIn]>
+
+
+  <!--Wrapper for route path display-->
   <div class="routeWrapper">
-        <div class="route">
-          <h5>Categories &nbsp;/</h5>
-          <h5> &nbsp; {{param}} </h5>
-        </div>
+
+    <!--Border wrapper div-->
+    <span class="gradientBorder"></span>
+
+    <!--Wrapper for route params-->
+    <span class="routeParamsWrapper" *ngIf="param" [@fadeIn]>
+      <a routerLink="/" class="routeParam">Home &nbsp;/</a>
+      <a class="routeParam LastParam">&nbsp;{{param}}</a>
+    </span>
+
+    <!--Border wrapper div-->
+    <span class="gradientBorder"></span>
   </div>
-  <div class="optionsItemsWrapper">
-    <app-options (filter)="getStatus($event)" class="options"></app-options>
-    <app-items [filter]="filterStatus" class="items" (changingRoute)="gettinRoute($event)"></app-items>
+
+  <!--Wrapper for button Filter to show filter on smaller screens-->
+  <div class="filterWrapper">
+    <button class="filterButton" *ngIf="!showHide" [@SlideIn] (click)="showHideFilter()">Filter</button>
+    <button class="filterButton" *ngIf="!showHide1" [@SlideInOne] (click)="showHideFilter()">Close Filter</button>
   </div>
+
+  <!--Wrapper for items and options-->
+  <div class="alloptionsItemsWrapper">
+
+    <!--Wrapper filter options -->
+    <app-op-component
+    [routeParam]="routeParam"
+    (filter)="getStatus($event)"
+    class="alloptions"></app-op-component>
+
+    <!--Wrapper items -->
+    <app-item-show
+    [clicked]="clicked"
+    class="allitems"
+    (changingRoute)="gettinRoute($event)"></app-item-show>
+  </div>
+
+
+
+    <!--Absolute Wrapper filter options for smaller devices-->
+    <app-op-component
+    [routeParam]="routeParam"
+    (filter)="getStatus($event)"
+    class="alloptionsSmaller"
+    [@slideInOptions]="showHide"
+    ></app-op-component>
+
+
+  <!--Wrapper follow bottom -->
+  <app-folow id="follow"></app-folow>
+
 </div>

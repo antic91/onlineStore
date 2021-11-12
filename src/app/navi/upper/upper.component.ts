@@ -1,6 +1,6 @@
 import { LogedInService } from './../../services/loged-in.service';
 import { PostService } from './../../services/post.service';
-import { Component, ElementRef, OnInit, Output, SimpleChanges, ViewChild, EventEmitter, Input } from '@angular/core';
+import { Component, ElementRef, OnInit, Output, ViewChild, EventEmitter, Input } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { ResultServiceService } from 'src/app/services/result-service.service';
@@ -25,9 +25,12 @@ export class UpperComponent implements OnInit {
   @Input('displayX')displayX: boolean = false;
 
   /*Login dropdown for smaller*/
-  @Input('LogInClicked')LogInClicked: boolean = false;
+  @Input('LogInClicked') LogInClicked: boolean = false;
 
-  object!: any[];
+  /*Show Drop Down boolean*/
+  showDrop: boolean = false;
+
+  object: any[] = [];
   value!: string;
   showLogIn: boolean = false;
   userLogged!: boolean;
@@ -48,56 +51,70 @@ export class UpperComponent implements OnInit {
     this.menuDrop.emit(!this.displayX)
   }
 
-
-
-/*Catching mouse event on search input */
+  /*Catching enter event on search input */
   pressed($event: any) {
+
+    if (this.inputEl.nativeElement.value.length == 0) {
+      this.showDrop = false;
+      return
+    }
+    /* if there is nothing in value return*/
+    if ($event.target.value == "" || $event.target.value.trim() == "") {
+      this.object = [];
+      this.showDrop = false;
+      return;
+    }
     /*If enter calling navigate function*/
-    if ($event.key == "Enter") {
-      this.navigate();
-      return;
+    else if ($event.key == "Enter") {
+        this.showDrop = false;
+        this.navigate();
+        return;
+
+    } else {
+      this.showDrop = true;
+      this.getSearchData($event.key);
     }
-/* if there is nothing in value return*/
-    if ($event.target.value == "") {
-      this.object = [];
-      return;
-    }
-    if ($event.target.value.trim() == "") {
-      this.object = [];
-      return;
-    }
-/*Else call server to get the data*/
-    this.service.searchItems("https://online-shop-node1.herokuapp.com/search", { letter: $event.target.value })
-      .pipe(
-        map((res:any)=>res.result)
-      )
-      .subscribe((x: any[]) => {
-        this.setObjects(x,$event.target.value);
-      })
+
   }
 
 
-/*If server is called use this fuction to set data array and value */
-  setObjects(x: any[],val: string): void{
-    this.object = x;
-    this.value = val;
+/*Function for get data for search on everynew letter*/
+  getSearchData(eventValue: string): void{
+      /* call server to get the data*/
+      this.service.searchItems("https://online-shop-node1.herokuapp.com/search", { letter: this.inputEl.nativeElement.value })
+        .pipe(
+          map((res:any)=>res.result)
+        )
+        .subscribe((x: any[]) => {
+          if (x.length > 0) {
+            this.result.setNoItems(false);
+            this.object = x;
+            this.value = this.inputEl.nativeElement.value;
+          } else {
+            this.result.setNoItems(true);
+          }
+        })
   }
 
-/*cathing clicked event on dropDown menu and resseting input value*/
+
+
+/*cathing clicked event on dropDown menu and changing input value*/
   setNewValue(event: string) {
     this.inputEl.nativeElement.value = event;
     this.object = []
   }
 
-/*on enter navigate */
+/*on enter or click navigate */
   navigate(): void{
-    this.inputEl.nativeElement.value = "";
-    this.inputEl.nativeElement.blur();
-    this.result.changeValue(this.object);
-    this.result.changeStringValue(this.value);
-    this.object = [];
-    this.router.navigate(['/result']);
-    this.object = [];
+      this.result.setSearchInputVal("");
+      this.result.setSearchInputVal(this.inputEl.nativeElement.value);
+      this.result.changeValueAll(this.object);
+      this.object = [];
+      this.inputEl.nativeElement.value = "";
+      this.inputEl.nativeElement.blur();
+      this.result.changeStringValue("result");
+      this.router.navigate(['/result']);
+      this.showDrop = false;
   }
 
 
@@ -114,10 +131,11 @@ export class UpperComponent implements OnInit {
   }
 
 
-  /*LOGIN DROPDOWN FOR SMALLER DEVICES CHANGE FUNCTION*/
+  /*LOGIN DROP DOWN FOR SMALLER DEVICES CHANGE FUNCTION*/
   changeDropDown(event: boolean): void{
     if (this.iconsWrapper.nativeElement.parentElement.clientWidth <= 820) {
       this.loginDrop.emit(event)
     }
   }
+
 }

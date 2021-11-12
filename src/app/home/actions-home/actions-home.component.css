@@ -155,7 +155,6 @@
     .itemsAction {
       width: 100%;
       padding: 20px;
-      margin-bottom: 20px;
     }
   /*Image height*/
     .image{
@@ -168,10 +167,10 @@
     .itemsDataEnd{
       width: 40%;
     }
-    /*Header margin bottom*/
-      .headerActions {
-        height: 35px;
-      }
+  /*Header margin bottom*/
+    .headerActions {
+      height: 35px;
+    }
 
 }
 
@@ -181,7 +180,6 @@
   /*items*/
     .itemsAction {
       width: 100%;
-      margin-bottom: 20px;
     }
   /*Image height*/
     .image{
@@ -194,7 +192,6 @@
   /*items*/
     .itemsAction {
       width: 100%;
-      margin-bottom: 20px;
     }
   /*Image height*/
   .image{
@@ -208,7 +205,6 @@
   /*items*/
     .itemsAction {
       width: 100%;
-      margin-bottom: 20px;
     }
   /*Image height*/
     .image{
@@ -218,9 +214,7 @@
 @media only screen and (max-width: 920px) and (min-width: 769px) {
   /*items*/
     .itemsAction {
-      width: 318.5px;
-      margin-bottom: 20px;
-
+      width: 321px;
     }
   /*Image height*/
     .image {
@@ -231,8 +225,7 @@
 @media only screen and (max-width: 1025px) and (min-width: 921px) {
   /*items*/
     .itemsAction {
-      width: 400px;
-      margin-bottom: 20px;
+      width: 402.5px;
     }
 
 }

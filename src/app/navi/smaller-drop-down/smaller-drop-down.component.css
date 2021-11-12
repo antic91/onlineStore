@@ -1,45 +1,51 @@
-/*Wrapper*/
 .wrapper{
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-content: flex-start;
+  display: none;
 }
+@media only screen and (max-width: 1025px){
 
-/*Wrapper of one link*/
-.option{
-  position: relative;
-  width: 100%;
-  padding: 10px 0 10px 0;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-content: flex-start;
+  /*Wrapper*/
+  .wrapper{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+  }
 
-}
+  /*Wrapper of one link*/
+  .option{
+    position: relative;
+    width: 100%;
+    padding: 10px 0 10px 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
 
-.option h5 a {
-  color: #fff;
-  font-weight: 700;
-  border: none;
-  text-decoration: none;
-}
-.option h5 a:hover {
-  color: #2b6777;
-}
+  }
+
+  .option h5 a {
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    text-decoration: none;
+  }
+  .option h5 a:hover {
+    color: #2b6777;
+  }
 
 
-.option h5 {
-  color: #fff;
-  font-weight: 700;
-  border: none;
-  text-decoration: none;
-}
+  .option h5 {
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    text-decoration: none;
+  }
 
 
-/*Exxtra padding subcategories*/
-.extraPadding{
-  padding-left: 20px;
+  /*Exxtra padding subcategories*/
+  .extraPadding{
+    padding-left: 20px;
+  }
 }

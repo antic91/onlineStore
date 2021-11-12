@@ -8,7 +8,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-content: center;
-  padding: 100px 0;
+  padding: 75px 0;
 }
 
 /*One section wrapper*/
@@ -33,7 +33,7 @@
   align-content: flex-start;
 }
 .imageWrapp img{
-  width: 90px;
+  width: 70px;
 }
 
 
@@ -53,6 +53,7 @@
   font-weight: 400;
   letter-spacing: 1px;
   text-align: center;
+  font-size: 1.2rem;
 }
 /*RESPONSIVE MEDIA QUERIES*/
 
@@ -70,7 +71,7 @@
     }
   /*Margin bottom for first two section*/
     .marginBottom {
-      margin-bottom: 75px;
+      margin-bottom: 50px;
     }
   /*Text wrapper margin top*/
     .textWrapp1 {
@@ -97,7 +98,7 @@
     }
   /*Margin bottom for first two section*/
     .marginBottom {
-      margin-bottom: 75px;
+      margin-bottom: 50px;
     }
   /*Text wrapper margin top*/
     .textWrapp1{
@@ -124,11 +125,15 @@
     }
   /*Margin bottom for first two section*/
     .marginBottom {
-      margin-bottom: 75px;
+      margin-bottom: 50px;
     }
     /*font size*/
     .Sizeh4{
       font-size: 1.35rem!important;
+    }
+  /*Maragin text wrapper*/
+    .textWrapp1 {
+      margin-top: 10px;
     }
 
 }
@@ -147,8 +152,13 @@
     }
   /*Margin bottom for first two section*/
     .marginBottom {
-      margin-bottom: 75px;
+      margin-bottom: 50px;
     }
+  /*Maragin text wrapper*/
+    .textWrapp1 {
+      margin-top: 10px;
+    }
+
 }
 @media only screen and (max-width: 920px) and (min-width: 769px) {
   /*smaller wrapper with width*/
@@ -163,9 +173,12 @@
     }
   /*Margin bottom for first two section*/
     .marginBottom{
-      margin-bottom: 75px;
+      margin-bottom: 50px;
     }
-
+  /*Maragin text wrapper*/
+    .textWrapp1{
+      margin-top: 10px;
+    }
 }
 @media only screen and (max-width: 1025px) and (min-width: 921px) {
   /*smaller wrapper with width*/

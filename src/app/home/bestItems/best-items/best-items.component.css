@@ -115,7 +115,7 @@
   /*Wrapper for one item*************************************************/
     .itemAct {
       width: 100%;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
   /*Image size*******************************************/
@@ -128,7 +128,7 @@
   /*Wrapper for one item*************************************************/
     .itemAct {
       width: 100%;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
   /*Image size*******************************************/
@@ -142,7 +142,7 @@
   /*Wrapper for one item*************************************************/
     .itemAct {
       width: 100%;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
   /*Image size*******************************************/
@@ -156,7 +156,7 @@
   /*Wrapper for one item*************************************************/
     .itemAct {
       width: 100%;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
   /*Image size*******************************************/
@@ -168,8 +168,8 @@
 @media only screen and (max-width: 920px) and (min-width: 769px) {
   /*Wrapper for one item*************************************************/
     .itemAct {
-      width: 318.5px;
-      margin-bottom: 20px;
+      width: 321px;
+      margin-bottom: 15px;
     }
 
   /*Image size*******************************************/
@@ -181,8 +181,8 @@
 @media only screen and (max-width: 1025px) and (min-width: 921px) {
   /*Wrapper for one item*************************************************/
     .itemAct {
-      width: 400px;
-      margin-bottom: 20px;
+      width: 402.5px;
+      margin-bottom: 15px;
     }
   /*Image size*******************************************/
     .img img {

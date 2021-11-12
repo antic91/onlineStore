@@ -17,7 +17,7 @@ export class AppComponent {
   ngOnInit(): void {
     this.loaded.statusLoaded.subscribe((x: any) => {
       setTimeout(() => {
-        this.loaded1 = x
+
       }, 2000);
     })
   }
