@@ -3,20 +3,7 @@
 
 
   <!--Wrapper for route path display-->
-  <div class="routeWrapper">
-
-    <!--Border wrapper div-->
-    <span class="gradientBorder"></span>
-
-    <!--Wrapper for route params-->
-    <span class="routeParamsWrapper" *ngIf="routeParam" [@fadeIn]>
-      <a routerLink="/" class="routeParam">Home &nbsp;/</a>
-      <a class="routeParam LastParam">&nbsp;{{routeParam}}</a>
-    </span>
-
-    <!--Border wrapper div-->
-    <span class="gradientBorder"></span>
-  </div>
+  <app-route-parameters id="routeWrapper" [routeParam]="'All Products'"></app-route-parameters>
 
   <!--Wrapper for button Filter to show filter on smaller screens-->
   <div class="filterWrapper">

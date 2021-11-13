@@ -14,20 +14,30 @@ export class ItemOptionsComponent implements OnInit {
   @Input("price") price!: string;
   @Input("quantity") quantity!: string;
   @Input("itemOBJ") itemOBJ!: any;
+  /*Default order quantity*/
   orderQuantity: number = 1;
+  /*Title for add to cart button*/
   titleAdded: string = "Add to Cart";
   constructor(private loggedUser: LogedInService,private setCart: PostService) { }
 
   ngOnInit(): void {
 
   }
+
+  /*Set order quantity to be added in cart minus and plus function*/
   minus() :void{
     if (this.orderQuantity > 0) this.orderQuantity--
   }
   plus() :void{
     this.orderQuantity++;
   }
+
+
+  /*Addto cart function*/
   addToCart() {
+    /*Checking if the user is logged, if not then set cart to local storage
+    function setLocalStorage(). If user is logged then get user id and pass it together
+    with username to setShopingCart() function to add items to database on server*/
     this.loggedUser.statusUser.subscribe((x: any) => {
       if (!x) {
         this.setLocalStorage()
@@ -40,6 +50,7 @@ export class ItemOptionsComponent implements OnInit {
     })
   }
 
+  /*Talking with server--- adding items to database*/
   setShopingCart(user:string, id:number): void{
 
     const data = {
@@ -48,7 +59,9 @@ export class ItemOptionsComponent implements OnInit {
       item: this.itemOBJ,
       quantity: this.orderQuantity,
     }
+
     this.titleAdded = "You added more items!"
+
     this.setCart.setToCart("https://online-shop-node1.herokuapp.com/setToCart", data)
       .subscribe((x: any) => {
         if (x.status == "OK") {
@@ -62,16 +75,21 @@ export class ItemOptionsComponent implements OnInit {
       })
   }
 
+  /*Set items to localserver if user is not logged...*/
   setLocalStorage(): void{
-      let item = {
-        item: this.itemOBJ,
-        orderQuantity: this.orderQuantity
-      };
+    let item = {
+      item: this.itemOBJ,
+      orderQuantity: this.orderQuantity
+    };
+
+    /*First check if the item is already there if not push new item*/
     var localSt = localStorage.getItem("itemCart");
-      if (!localSt) {
-        const arrToPushItems = [item];
-        localStorage.setItem("itemCart", JSON.stringify(arrToPushItems));
-      }
+    if (!localSt) {
+      const arrToPushItems = [item];
+      localStorage.setItem("itemCart", JSON.stringify(arrToPushItems));
+    }
+    /* if item is there then parse array from json object
+    filter array to add new quantity to item.*/
     if (localSt) {
       const localStArray = JSON.parse(localStorage.getItem('itemCart') || '{}');
       var status;
@@ -86,11 +104,15 @@ export class ItemOptionsComponent implements OnInit {
           status = false;
         }
       })
+
+      /*When finished then if there is no item then push it to array, remove products
+      from local storage and then set new array to local storage*/
       if (!status) {
         localStArray.push(item)
         localStorage.removeItem("itemCart")
         localStorage.setItem("itemCart", JSON.stringify(localStArray));
-      } else {
+      } /*Else just remove item and set new array to local storage*/
+      else {
         localStorage.removeItem("itemCart")
         localStorage.setItem("itemCart", JSON.stringify(localStArray));
       }

@@ -1,141 +1,550 @@
-#wrapperItem{
+/*Product wrapper with all content*/
+  #wrapperItem{
+    position: relative;
+    width: 100%;
+    min-height: 1400px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+/*ROUTE PARAMS WRAPPER ***************************************************/
+
+#routeWrapper {
+  position: relative;
+  width: 100%;
+  min-height: 59px!important;
+  margin-top: 25px;
+  height: max-content;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+/**************************************************************************/
+
+
+
+/*Common wrapper for top component with photos, options and buttons*/
+
+  #commonWrapperItem {
+    position: relative;
+    width: 1124px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    margin-top: 75px;
+    overflow: visible;
+  }
+
+
+/***************************************************/
+/*Photo and header top*/
+
+  .photoHeader {
+    position: relative;
+    width: 512px;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow: visible;
+    padding-top: 25px;
+  }
+
+/***************************************************/
+/*Photo and header top*/
+
+  .itemOptions {
+    position: relative;
+    width: 562px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 1px 9px 0 rgb(0 0 0 / 2%), 0 2px 6px 0 rgb(0 0 0 / 1%), 0 10px 34px 0 rgb(0 0 0 / 3%);
+  }
+
+/***************************************************/
+
+/*Wrapper for feature//More infos about products*/
+  #wrapperFeat {
+    position: relative;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 75px 0;
+    padding: 75px 0;
+    justify-content: center;
+    align-content: flex-start;
+    background-color: #ffffff;
+    box-shadow: 0 1px 9px 0 rgb(0 0 0 / 2%), 0 2px 6px 0 rgb(0 0 0 / 1%),
+    0 10px 34px 0 rgb(0 0 0 / 3%);
+  }
+
+/***************************************************/
+
+/*Wrapper description component*/
+.wrapperDescription {
+  position: relative;
+  width: 1124px;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  margin: 0 0 75px 0;
+  overflow: visible;
+}
+
+/***************************************************/
+
+/*Wrapper for products actions*/
+
+#actions {
+  position: relative;
+  width: 1124px;
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  overflow: visible;
+}
+/*----------------------------------------------------------------------------------*/
+
+/*-------------------------Wrapper Follow component---------------------------------------------------------*/
+#follow {
   position: relative;
   width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-content: flex-start;
-}
-#commonWrapperItem {
-  position: relative;
-  width: 1124px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-content: flex-start;
-}
-
-.routeWrapperItem {
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.routeItem {
-  position: relative;
-  width: 1124px;
-  margin-top: 15px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-
-/*ITEM AND DETAILS*/
-.itemDisplay{
-  position: relative;
-  width: 1124px;
-  margin-top: 75px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
   align-items: flex-start;
-}
-
-/*WRAPPER FOR OPTIONS AND ITEM PHOTO */
-.photoHeader{
-  position: relative;
-  width: 50%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-.optItem{
-  position: relative;
-  width: 50%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-/*WRAPPER FOR OPTIONS AND ITEM PHOTO END*/
-#wrapperFeat{
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-top: 75px;
-  padding: 75px 0;
-  justify-content: center;
-  align-content: flex-start;
-  background-color: #c8d8e4;
-}
-
-.wrapperDescription{
-  position: relative;
-  width: 1124px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-content: flex-start;
   margin: 75px 0;
-  border: 2px solid #F2F2F2;
-  border-radius: 5px;
-  padding: 75px;
-
+  background-color: #5340ff;
+  box-shadow: 0 1px 9px 0 rgb(0 0 0 / 2%), 0 2px 6px 0 rgb(0 0 0 / 1%),
+    0 10px 34px 0 rgb(0 0 0 / 3%);
 }
 
+/*----------------------------------------------------------------------------------*/
 
-/*ACTIONS*/
-
-#actions{
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 0 0  75px 0;
-  justify-content: center;
-  align-content: flex-start;
-  margin-bottom: 75px;
-}
 
 
 
 /*RESPONSIVE MEDIA QUERIES*/
 
 @media (max-width: 320px) {
+  /*-------------------------Wrapper Follow component---------------------------------------------------------*/
+    #follow {
+      margin: 35px 0 50px 0;
+    }
+  /***********************************************************************************/
+  /*Wrapper for products actions*/
+
+    #actions {
+      width: 238px;
+      height: 1338px;
+    }
+  /***********************************************************************************/
+  /*Common wrapper for top component with photos, options and buttons*/
+
+    #commonWrapperItem {
+      width: 238px;
+      margin-top: 50px;
+    }
+
+  /***************************************************/
+  /*Photo and header top*/
+
+    .photoHeader {
+      width: 100%;
+      padding-top: 0;
+      z-index: 99;
+    }
+
+  /***************************************************/
+  /*Photo and header top*/
+
+    .itemOptions {
+      width: 100%;
+      padding: 0px 20px 20px 20px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+  /***************************************************/
+
+  /*Wrapper for feature//More infos about products*/
+    #wrapperFeat {
+      margin: 50px 0;
+      padding: 50px 0;
+    }
+  /***************************************************/
+  /*Wrapper description component*/
+    .wrapperDescription {
+      width: 238px;
+      margin: 0 0 50px 0;
+    }
+
+  /***************************************************/
+
 }
 
 @media only screen and (max-width: 414px) and (min-width: 321px) {
+  /*-------------------------Wrapper Follow component---------------------------------------------------------*/
+    #follow {
+      margin: 35px 0 50px 0;
+    }
+  /***********************************************************************************/
+
+  /*Wrapper for products actions*/
+
+    #actions {
+      width: 300px;
+      height: 1392px;
+    }
+  /***********************************************************************************/
+  /*Common wrapper for top component with photos, options and buttons*/
+
+    #commonWrapperItem {
+      width: 300px;
+      margin-top: 50px;
+    }
+
+  /***************************************************/
+  /*Photo and header top*/
+
+    .photoHeader {
+      width: 100%;
+      padding-top: 0;
+      z-index: 99;
+    }
+
+  /***************************************************/
+  /*Photo and header top*/
+
+    .itemOptions {
+      width: 100%;
+      padding: 0px 30px 30px 30px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+  /***************************************************/
+  /*Wrapper for feature//More infos about products*/
+    #wrapperFeat {
+      margin: 50px 0;
+      padding: 50px 0;
+    }
+  /***************************************************/
+
+  /*Wrapper description component*/
+    .wrapperDescription {
+      width: 300px;
+      margin: 0 0 50px 0;
+    }
+
+  /***************************************************/
+
 }
 
 /* X-Small devices (portrait phones, less than 576px)*/
 @media only screen and (max-width: 576px) and (min-width: 415px) {
+  /*ROUTE PARAMS WRAPPER ***************************************************/
+
+  /**************************************************************************/
+
+  /*-------------------------Wrapper Follow component---------------------------------------------------------*/
+    #follow {
+      margin-top: 60px;
+    }
+  /***********************************************************************************/
+
+  /*Wrapper for products actions*/
+
+    #actions {
+      width: 380px;
+      height: 1562px;
+    }
+  /***********************************************************************************/
+  /*Common wrapper for top component with photos, options and buttons*/
+
+    #commonWrapperItem {
+      width: 380px;
+
+    }
+
+  /***************************************************/
+  /*Photo and header top*/
+
+    .photoHeader {
+      width: 100%;
+      padding-top: 0;
+      z-index: 99;
+    }
+
+  /***************************************************/
+  /*Photo and header top*/
+
+    .itemOptions {
+      width: 100%;
+      padding: 5px 30px 30px 30px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+  /***************************************************/
+
+  /*Wrapper description component*/
+    .wrapperDescription {
+      width: 380px;
+    }
+
+  /***************************************************/
+
 }
 
 /* Small devices (landscape phones, less than 768px)*/
 @media only screen and (max-width: 768px) and (min-width: 577px) {
+  /*-------------------------Wrapper Follow component---------------------------------------------------------*/
+    #follow {
+      margin-top: 60px;
+    }
+  /***********************************************************************************/
+    /*Wrapper for products actions*/
+
+    #actions {
+      width: 538px;
+      height: 1682px;
+    }
+  /***********************************************************************************/
+  /*Common wrapper for top component with photos, options and buttons*/
+
+    #commonWrapperItem {
+      width: 538px;
+    }
+
+  /***************************************************/
+  /*Photo and header top*/
+
+    .photoHeader {
+      width: 100%;
+      padding-top: 0;
+      z-index: 99;
+    }
+
+  /***************************************************/
+  /*Photo and header top*/
+
+    .itemOptions {
+      width: 100%;
+      padding: 20px 30px 30px 30px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+  /***************************************************/
+
+  /*Wrapper description component*/
+    .wrapperDescription {
+      width: 538px;
+    }
+
+  /***************************************************/
+
 }
 @media only screen and (max-width: 920px) and (min-width: 769px) {
+  /*-------------------------Wrapper Follow component---------------------------------------------------------*/
+    #follow {
+      margin-top: 60px;
+    }
+  /***********************************************************************************/
+  /*Wrapper for products actions*/
+
+    #actions {
+      width: 657px;
+      height: 912px;
+    }
+  /*********************************************************************/
+  /*Common wrapper for top component with photos, options and buttons*/
+
+    #commonWrapperItem {
+      width: 657px;
+    }
+
+  /***************************************************/
+  /*Photo and header top*/
+
+    .photoHeader {
+      width: 100%;
+      padding-top: 0;
+      z-index: 99;
+    }
+
+  /***************************************************/
+  /*Photo and header top*/
+
+    .itemOptions {
+      width: 100%;
+      padding: 20px 30px 30px 30px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+  /***************************************************/
+
+  /*Wrapper description component*/
+    .wrapperDescription {
+      width: 657px;
+    }
+
+  /***************************************************/
+
 }
 @media only screen and (max-width: 1025px) and (min-width: 921px) {
+  /*-------------------------Wrapper Follow component---------------------------------------------------------*/
+    #follow {
+      margin-top: 60px;
+    }
+  /***********************************************************************************/
+  /*Wrapper for products actions*/
+
+    #actions {
+      width: 820px;
+      height: 912px;
+    }
+  /*********************************************************************/
+  /*Common wrapper for top component with photos, options and buttons*/
+
+    #commonWrapperItem {
+      width: 820px;
+    }
+
+  /***************************************************/
+  /*Photo and header top*/
+
+    .photoHeader {
+      width: 100%;
+      padding-top:0;
+      z-index: 99;
+    }
+
+  /***************************************************/
+  /*Photo and header top*/
+
+    .itemOptions {
+      width: 100%;
+      padding: 20px 30px 30px 30px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+  /***************************************************/
+  /*Wrapper description component*/
+    .wrapperDescription {
+      width: 820px;
+    }
+
+  /***************************************************/
+
 }
 
 /* Large devices (desktops, less than 1200px)*/
 @media only screen and (max-width: 1200px) and (min-width: 1026px) {
+    /*Wrapper for products actions*/
+
+    #actions {
+      width: 914px;
+    }
+  /*********************************************************************/
+
+  /*Common wrapper for top component with photos, options and buttons*/
+
+    #commonWrapperItem {
+      width: 914px;
+    }
+
+  /***************************************************/
+  /*Photo and header top*/
+
+    .photoHeader {
+      width: 400px;
+    }
+
+  /***************************************************/
+  /*Photo and header top*/
+
+    .itemOptions {
+      width: 464px;
+    }
+
+  /***************************************************/
+
+  /*Wrapper description component*/
+    .wrapperDescription {
+      width: 914px;
+    }
+
+  /***************************************************/
+
+
 }
 
 /* X-Large devices (large desktops, less than 1400px)*/
 @media only screen and (max-width: 1400px) and (min-width: 1201px) {
+  /*Wrapper for products actions*/
+
+    #actions {
+      width: 1020px;
+    }
+  /*********************************************************************/
+
+  /*Common wrapper for top component with photos, options and buttons*/
+
+    #commonWrapperItem {
+      width: 1020px;
+    }
+
+  /***************************************************/
+  /*Photo and header top*/
+
+    .photoHeader {
+      width: 450px;
+    }
+
+  /***************************************************/
+  /*Photo and header top*/
+
+    .itemOptions {
+      width: 500px;
+    }
+
+  /***************************************************/
+
+  /*Wrapper description component*/
+    .wrapperDescription {
+      width: 1020px;
+    }
+
+  /***************************************************/
+
+
 }

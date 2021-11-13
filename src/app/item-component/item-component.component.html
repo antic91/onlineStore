@@ -1,21 +1,31 @@
+<!--Wrapper all -->
 <div id="wrapperItem">
-  <div id="commonWrapperItem">
-      <div class="routeWrapperItem">
-            <div class="routeItem">
-              <h5>Categories &nbsp;/</h5>
-              <h5> &nbsp; {{par1ToShow}} &nbsp;/</h5>
-              <h5> &nbsp; {{par2ToShow}} </h5>
-            </div>
-      </div>
-      <div class="itemDisplay">
-        <app-item-photo-header [itemHeader]="itemHeader" [itemPhotos]="itemPhotos" class="photoHeader"></app-item-photo-header>
-        <app-item-options class="optItem" [options]="options" [itemOBJ]="itemOBJ" [price]="price" [quantity]="quantity"></app-item-options>
-      </div>
+
+  <!--Wrapper for route path display-->
+  <app-route-parameters id="routeWrapper" [routeParam]="par1ToShow" [parToShow]="par2ToShow" [slug]="itemOBJ.cat_slug" *ngIf="itemOBJ.cat_slug" [@fadeIn]></app-route-parameters>
+
+
+
+  <!--Wrapper top image, buttons add to cart andbuynow...(First section after routes)-->
+  <div id="commonWrapperItem" *ngIf="itemOBJ.cat_slug" [@fadeIn]>
+
+    <app-item-photo-header [itemHeader]="itemHeader" [itemPhotos]="itemPhotos" class="photoHeader"></app-item-photo-header>
+
+    <app-item-options class="itemOptions" [options]="options" [itemOBJ]="itemOBJ" [price]="price" [quantity]="quantity"></app-item-options>
+
   </div>
 
-  <app-features id="wrapperFeat" [features]="features"></app-features>
+  <!--Wrapper for features-->
+  <app-features id="wrapperFeat" [features]="features" *ngIf="itemOBJ.cat_slug" [@fadeIn]></app-features>
 
-  <app-description class="wrapperDescription" [description]="description" [descriptionIMG]="descriptionIMG"></app-description>
+  <!--Wrapper for descriptio-->
+  <app-description class="wrapperDescription" [description]="description" [descriptionIMG]="descriptionIMG" *ngIf="itemOBJ.cat_slug" [@fadeIn]></app-description>
 
-  <app-item-actions id="actions"></app-item-actions>
+  <!--Wrapper for products action-->
+  <app-item-actions id="actions" *ngIf="itemOBJ.cat_slug" [@fadeIn]></app-item-actions>
+
+    <!--Wrapper follow bottom -->
+  <app-folow id="follow" *ngIf="itemOBJ.cat_slug" [@fadeIn]></app-folow>
+
+
 </div>

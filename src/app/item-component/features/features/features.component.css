@@ -1,63 +1,72 @@
+/*Smaller wrapper for features*/
 .wrapperFeatures {
   position: relative;
-  width: 1024px;
+  width: 1124px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: flex-start;
 }
+/***********************************************************************/
 
-
-/*HEADER*/
+/*Features header*/
 .featureHeader{
   position: relative;
   width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-content: flex-start;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
-/*ITEMS*/
+.featureHeader h2{
+  font-weight: 600;
+}
+/***********************************************************************/
+
+/*Div wrapper for every separate*/
 .features{
   position: relative;
-  width: 25%;
+  width: 537px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: flex-start;
   margin-bottom: 20px;
+  border-bottom: 2px solid #5340ff;
 }
+
+/*Span header and options wrapper for features**/
 .spanHeaderFeatures{
   position: relative;
-  width: 100%;
+  width: auto;
+  height: max-content;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
-  align-content: flex-start;
-  margin-bottom: 5px;
+  justify-content: flex-start;
+  align-content: flex-end;
+  align-items: center;
 }
 .spanHeaderFeatures h3{
-  text-align: center;
-  font-weight: 600;
+  font-size: 1.5rem;
+  text-align: start;
+  font-weight: 500;
+  margin-right: 10px;
+  margin-bottom: 5px;
+
 }
-.spanDescFeatures{
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: flex-start;
-}
-.spanDescFeatures h4{
-  text-align: center;
+/*Second h3 header*/
+.spanHeaderFeatures h5{
+  font-size: 1.3rem;
+  text-align: start;
   font-weight: 400;
+  margin-bottom: 5px;
 }
+/***********************************************************************/
 
 
 /*HIDDEN CLASS*/
@@ -70,27 +79,148 @@
 /*RESPONSIVE MEDIA QUERIES*/
 
 @media (max-width: 320px) {
+  /*Smaller wrapper for features*/
+    .wrapperFeatures {
+      width: 238px;
+    }
+  /***********************************************************************/
+  /*Features header*/
+    .featureHeader {
+      margin-bottom: 20px;
+    }
+    .featureHeader h2 {
+      font-size: 1.6rem;
+    }
+  /***********************************************************************/
+
+
+  /*Div wrapper for every separate*/
+    .features {
+      width: 100%;
+    }
+  /***********************************************************************/
+  /*First h3 header*/
+    .spanHeaderFeatures h3 {
+      font-size: 1.2rem;
+    }
+  /*Second h5 header*/
+    .spanHeaderFeatures h5 {
+      font-size: 1.2rem;
+    }
+  /***********************************************************************/
+
 }
 
 @media only screen and (max-width: 414px) and (min-width: 321px) {
+  /*Smaller wrapper for features*/
+    .wrapperFeatures {
+      width: 300px;
+    }
+  /***********************************************************************/
+  /*Features header*/
+    .featureHeader {
+      margin-bottom: 20px;
+    }
+    .featureHeader h2 {
+      font-size: 1.8rem;
+    }
+  /***********************************************************************/
+
+  /*Div wrapper for every separate*/
+    .features {
+      width: 100%;
+    }
+  /***********************************************************************/
+  /*First h3 header*/
+    .spanHeaderFeatures h3 {
+      font-size: 1.2rem;
+    }
+    /*Second h5 header*/
+    .spanHeaderFeatures h5 {
+      font-size: 1.2rem;
+    }
+/***********************************************************************/
+
 }
 
 /* X-Small devices (portrait phones, less than 576px)*/
 @media only screen and (max-width: 576px) and (min-width: 415px) {
+  /*Smaller wrapper for features*/
+    .wrapperFeatures {
+      width: 380px;
+    }
+  /***********************************************************************/
+  /*Div wrapper for every separate*/
+    .features {
+      width: 100%;
+    }
+  /***********************************************************************/
 }
 
 /* Small devices (landscape phones, less than 768px)*/
 @media only screen and (max-width: 768px) and (min-width: 577px) {
+  /*Smaller wrapper for features*/
+    .wrapperFeatures {
+      width: 538px;
+    }
+  /***********************************************************************/
+  /*Div wrapper for every separate*/
+    .features {
+      width: 100%;
+    }
+  /***********************************************************************/
 }
 @media only screen and (max-width: 920px) and (min-width: 769px) {
+  /*Smaller wrapper for features*/
+    .wrapperFeatures {
+      width: 657px;
+    }
+  /***********************************************************************/
+  /*Div wrapper for every separate*/
+    .features {
+      width: 100%;
+    }
+  /***********************************************************************/
 }
 @media only screen and (max-width: 1025px) and (min-width: 921px) {
+  /*Smaller wrapper for features*/
+    .wrapperFeatures {
+      width: 820px;
+    }
+  /***********************************************************************/
+  /*Div wrapper for every separate*/
+    .features {
+      width: 100%;
+    }
+  /***********************************************************************/
 }
 
 /* Large devices (desktops, less than 1200px)*/
 @media only screen and (max-width: 1200px) and (min-width: 1026px) {
+  /*Smaller wrapper for features*/
+    .wrapperFeatures {
+      width: 914px;
+    }
+  /***********************************************************************/
+  /*Div wrapper for every separate*/
+    .features {
+      width: 100%;
+    }
+  /***********************************************************************/
+
 }
 
 /* X-Large devices (large desktops, less than 1400px)*/
 @media only screen and (max-width: 1400px) and (min-width: 1201px) {
+  /*Smaller wrapper for features*/
+    .wrapperFeatures {
+      width: 1020px;
+    }
+  /***********************************************************************/
+
+  /*Div wrapper for every separate*/
+    .features {
+      width: 485px;
+    }
+  /***********************************************************************/
 }

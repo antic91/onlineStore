@@ -87,7 +87,8 @@ export class ItemShowComponent implements OnInit {
 
 
   ngOnInit() {
-      this.showData();
+    this.showData();
+    /*Getting status of  noItems boolean from result service*/
     this.result.statusNoItems.subscribe(x => {
       this.noItemsDisplay = x;
     });

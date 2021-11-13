@@ -1,50 +1,67 @@
-/*HEADER*/
+/*Header above photos*/
 .itemHeader{
   position: relative;
   width: 100%;
-
-  margin-bottom: 50px;
+  height: max-content;
+  margin-bottom: 25px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: center;
+  overflow: hidden;
 }
+.itemHeader h2{
+  font-weight: 500;
+}
+/**************************************************************************/
 
-/*WRAPPER PHOTOS*/
+/*All photos wrapper*/
 .wrapperPhotos{
   position: relative;
   width: 100%;
-  margin-bottom: 50px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-content: flex-start;
+  overflow: visible;
 }
-/*Openede Photo*/
+/**************************************************************************/
+
+/*One bigger Photo*/
 .onePhoto{
   position: relative;
-  width: 80%;
-  background-color: aqua;
+  width: 427px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 1px 9px 0 rgb(0 0 0 / 2%), 0 2px 6px 0 rgb(0 0 0 / 1%),
+  0 10px 34px 0 rgb(0 0 0 / 3%);
 }
 .onePhoto img{
   width: 100%;
-
+  border-radius: 10px;
+  object-fit: contain;
 }
-/*OPTIONAL PHOTOS*/
+/**************************************************************************/
+
+/*Small photos wrapper*/
 .optionPhotos{
   position: relative;
-  width: 10%;
+  width: 60px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin-right: 25.6px;
+  overflow: visible;
 }
+/**************************************************************************/
+
+/*One small photo wrapper*/
 .options{
   position: relative;
   width: 100%;
@@ -53,16 +70,17 @@
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  border:1px solid #C8D8E4;
+  background-color: #ffffff;
+  border:1px solid #5340ff;
   margin-bottom: 15px;
   border-radius: 5px;
   padding: 5px;
-
 }
 .options img{
   position: relative;
   width: 100%;
 }
+/**************************************************************************/
 
 
 
@@ -70,27 +88,185 @@
 /*RESPONSIVE MEDIA QUERIES*/
 
 @media (max-width: 320px) {
+  /*Header above photos*/
+    .itemHeader {
+      margin-bottom: 20px;
+    }
+    .itemHeader h2 {
+      font-size: 1.6rem;
+    }
+
+  /*All photos wrapper*/
+    .wrapperPhotos {
+      justify-content: space-between;
+      background-color: #ffffff;
+      padding: 20px 20px 15px 20px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+  /**************************************************************************/
+
+  /*One bigger Photo*/
+    .onePhoto {
+      width: 155px;
+      height: 135px;
+      box-shadow: none;
+    }
+  /**************************************************************************/
+  /*Small photos wrapper*/
+    .optionPhotos {
+      position: relative;
+      width: 40px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      overflow: visible;
+    }
+  /**************************************************************************/
+
 }
 
 @media only screen and (max-width: 414px) and (min-width: 321px) {
+  /*Header above photos*/
+    .itemHeader {
+      margin-bottom: 20px;
+    }
+    .itemHeader h2{
+      font-size: 1.8rem;
+    }
+
+  /*All photos wrapper*/
+    .wrapperPhotos {
+      justify-content: space-between;
+      background-color: #ffffff;
+      padding: 30px 30px 20px 30px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+  /**************************************************************************/
+
+  /*One bigger Photo*/
+    .onePhoto {
+      width: 155px;
+      height: 155px;
+      box-shadow: none;
+    }
+  /**************************************************************************/
+  /*Small photos wrapper*/
+  .optionPhotos {
+    position: relative;
+    width: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    overflow: visible;
+  }
+  /**************************************************************************/
+
+
 }
 
 /* X-Small devices (portrait phones, less than 576px)*/
 @media only screen and (max-width: 576px) and (min-width: 415px) {
+  /*All photos wrapper*/
+    .wrapperPhotos {
+      justify-content: space-between;
+      background-color: #ffffff;
+      padding: 30px 30px 20px 30px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+  /**************************************************************************/
+
+  /*One bigger Photo*/
+    .onePhoto {
+      width: 235px;
+      height: 235px;
+      box-shadow: none;
+    }
+  /**************************************************************************/
+
 }
 
 /* Small devices (landscape phones, less than 768px)*/
 @media only screen and (max-width: 768px) and (min-width: 577px) {
+  /*All photos wrapper*/
+    .wrapperPhotos {
+      justify-content: space-between;
+      background-color: #ffffff;
+      padding: 30px 30px 20px 30px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+  /**************************************************************************/
+
+    /*One bigger Photo*/
+    .onePhoto {
+      width: 393px;
+      box-shadow: none;
+    }
+  /**************************************************************************/
+
 }
 @media only screen and (max-width: 920px) and (min-width: 769px) {
+  /*All photos wrapper*/
+    .wrapperPhotos {
+      justify-content: space-between;
+      background-color: #ffffff;
+      padding: 30px 30px 20px 30px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+  /**************************************************************************/
+
+    /*One bigger Photo*/
+    .onePhoto {
+      width: 512px;
+      box-shadow: none;
+    }
+  /**************************************************************************/
+
 }
 @media only screen and (max-width: 1025px) and (min-width: 921px) {
+  /*All photos wrapper*/
+    .wrapperPhotos {
+      justify-content: flex-start;
+      background-color: #ffffff;
+      padding: 30px 30px 20px 30px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+  /**************************************************************************/
+
+  /*One bigger Photo*/
+    .onePhoto {
+      width: 430px;
+      margin-right: 25px;
+      box-shadow: none;
+    }
+  /**************************************************************************/
+
 }
 
 /* Large devices (desktops, less than 1200px)*/
 @media only screen and (max-width: 1200px) and (min-width: 1026px) {
+  /*One bigger Photo*/
+    .onePhoto {
+      width: 315px;
+    }
+  /**************************************************************************/
+
 }
 
 /* X-Large devices (large desktops, less than 1400px)*/
 @media only screen and (max-width: 1400px) and (min-width: 1201px) {
+
+    /*One bigger Photo*/
+    .onePhoto {
+      width: 365px;
+    }
+    /**************************************************************************/
+
 }

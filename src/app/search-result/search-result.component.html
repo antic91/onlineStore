@@ -2,22 +2,9 @@
 <!--Wrapper -->
 <div id="allWrapper" *ngIf="ShowDataSearch" [@fadeIn]>
 
-
   <!--Wrapper for route path display-->
-  <div class="routeWrapper">
+  <app-route-parameters id="routeWrapper" [routeParam]="routeParam"></app-route-parameters>
 
-    <!--Border wrapper div-->
-    <span class="gradientBorder"></span>
-
-    <!--Wrapper for route params-->
-    <span class="routeParamsWrapper" *ngIf="routeParam" [@fadeIn]>
-      <a routerLink="/" class="routeParam">Home &nbsp;/</a>
-      <a class="routeParam LastParam">&nbsp;{{routeParam}}</a>
-    </span>
-
-    <!--Border wrapper div-->
-    <span class="gradientBorder"></span>
-  </div>
 
   <!--Wrapper for button Filter to show filter on smaller screens-->
   <div class="filterWrapper">

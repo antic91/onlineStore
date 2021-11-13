@@ -50,6 +50,7 @@ import { MenuIconComponent } from './navi/upper/menu-icon/menu-icon.component';
 import { SmallerDropDownComponent } from './navi/smaller-drop-down/smaller-drop-down.component';
 import { SubscribeComponent } from './home/subscribe/subscribe.component';
 import { FolowComponent } from './home/folow/folow.component';
+import { RouteParametersComponent } from './route-parameters/route-parameters.component';
 
 @NgModule({
   declarations: [
@@ -91,7 +92,8 @@ import { FolowComponent } from './home/folow/folow.component';
     MenuIconComponent,
     SmallerDropDownComponent,
     SubscribeComponent,
-    FolowComponent
+    FolowComponent,
+    RouteParametersComponent
   ],
   imports: [
     BrowserModule,

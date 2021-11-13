@@ -1,53 +1,65 @@
-/*WRAPPER IMAGE AND IMAGE STYLE*/
-.descImage{
-  position: relative;
-  width: 30%;
-  padding-right: 26.1px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: flex-start;
-}
-.descImage img{
+/*HEader description wrapper*/
+  .headerDescription{
+    position: relative;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: flex-start;
+  }
+/*HEader description*/
+  .headerDescription h2{
+    padding: 5px 25px;
+    background-color: #5340ff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: #ffffff;
+  }
+/*************************************************************************************
+
+/*Div paragraph wrapper*/
+.paragraph{
   position: relative;
   width: 100%;
-  border-radius: 15px;
+  height: max-content;
+  background-color: #ffffff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 25px 20px 20px 20px;
+  box-shadow: 0 1px 9px 0 rgb(0 0 0 / 2%), 0 2px 6px 0 rgb(0 0 0 / 1%),
+  0 10px 34px 0 rgb(0 0 0 / 3%);
 }
-
-/*TEXT STYLE*/
-.descText{
-  position: relative;
-  width: 70%;
-  padding-left: 26.1px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: flex-start;
+/*Paragraph*/
+.paragraph p{
+  font-weight: 600;
 }
-.spanDesc{
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-.spanDesc p{
-  margin-top: 40px;
-}
-
-
+/*************************************************************************************
 
 /*RESPONSIVE MEDIA QUERIES*/
 
 @media (max-width: 320px) {
+  /*Div paragraph wrapper*/
+    .paragraph{
+      padding: 20px 20px 20px 20px;
+    }
+  /*HEader description*/
+  .headerDescription h2{
+    font-size: 1.6rem;
+  }
+/*************************************************************************************/
+
 }
 
 @media only screen and (max-width: 414px) and (min-width: 321px) {
+  /*Div paragraph wrapper*/
+    .paragraph{
+      padding: 20px 20px 20px 20px;
+    }
+  /*HEader description*/
+    .headerDescription h2{
+      font-size: 1.8rem;
+    }
+  /*************************************************************************************/
 }
 
 /* X-Small devices (portrait phones, less than 576px)*/

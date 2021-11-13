@@ -14,7 +14,7 @@
 }
 
 .headerActions h2{
-  text-align: center;
+  text-align: start;
   font-weight: 600;
 }
 /*------------------------------------------------------*/
@@ -169,7 +169,13 @@
     }
   /*Header margin bottom*/
     .headerActions {
-      height: 35px;
+      height: max-content;
+      margin-bottom: 20px;
+    }
+  /*Header size*/
+    .headerActions h2 {
+      font-size: 1.6rem;
+      text-align: start;
     }
 
 }
@@ -185,6 +191,17 @@
     .image{
       height: 320px;
     }
+  /*Header margin bottom*/
+    .headerActions {
+      height: max-content;
+      margin-bottom: 20px;
+    }
+
+  /*Header size*/
+    .headerActions h2 {
+      font-size: 1.8rem;
+    }
+
 }
 
 /* X-Small devices (portrait phones, less than 576px)*/

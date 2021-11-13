@@ -1,49 +1,50 @@
-/*HEADER*/
+/*On start item garantie and header*/
 .itemGarantie {
   position: relative;
   width: 100%;
-  height: 50px;
-  margin-bottom: 50px;
+  height: 40px;
+  margin-bottom: 25px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: center;
   align-items: center;
-  padding-left: 26.1px;
-
 }
 
 .itemGarantie img{
   position: relative;
-  height: 50px;
-  margin-right: 15px;
+  height: 40px;
+  margin-right: 10px;
 }
+/***************************************************************************/
 
 
-
-/*OPTIONS*/
+/*Wrapper Under guarantee*/
 .optionsItemWrapper{
   position: relative;
   width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-content: flex-start;
 }
+/***************************************************************************/
 
-/*SPECIFICATION*/
+/*Specification left side wrapper*/
 .itemSpec{
   position: relative;
-  width: 50%;
+  width: 243.5px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: flex-start;
-  padding-left: 26.1px;
 }
+/***************************************************************************/
+
+/**One options/Description div wrapper for Header and span*/
 .description{
   position: relative;
   width: 100%;
@@ -54,10 +55,18 @@
   justify-content: flex-start;
   align-content: flex-start;
 }
+/*header*/
 .description h4{
-  font-weight: 500;
-  margin-bottom: 5px;
+  font-weight: 400;
 }
+/*Margin bottom for some headers */
+.marginBottom {
+  margin-bottom: 5px;
+  font-weight: 500!important;
+}
+/**************************************************************/
+
+/*Span with description option*/
 .spanDescription{
   position: relative;
   width: 100%;
@@ -70,25 +79,31 @@
   justify-content: flex-start;
   align-content: flex-start;
 }
-.spanDescription h3{
-  font-weight: 500;
+.spanDescription h4{
+  font-weight: 400;
 }
-/*HIDE COMPONENTS ITH NULL*/
+
+/***************************************************************************/
+
+/*HIDE COMPONENTS WITH NULL VALUE*/
 .hidden{
   display: none ;
 }
 /*---------------------------------------*/
-/*BUTTON AND PRiCE SECTION*/
+
+
+/*Butoon and price wrapper*/
 .itemButton{
   position: relative;
-  width: 50%;
+  width: 243.5px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: flex-start;
-  padding-left: 26.1px;
 }
+
+/*Span wrapper of prices hipping...*/
 .priceShipping{
   position: relative;
   width: 100%;
@@ -98,96 +113,107 @@
   justify-content: flex-start;
   align-content: flex-start;
   margin-bottom: 5px;
+
 }
 .priceShipping h5{
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 1rem;
 }
 .priceShipping h1{
-  color: #2B6777;
+  color: #5340ff;
+  font-weight: 500;
 }
-
-/*BUTTONS*/
+/*************************************************************/
+/*Button add to cart*/
 
 .addToCart{
   position: relative;
   width: 100%;
-  height: 40px;
+  padding: 5px 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  font-size: 20px;
-  background-color: #e6b8b8;
+  font-size: 1.25rem;
+  background-color: #ff4f11;
   outline: none;
   border-radius: 5px;
   margin-top: 10px;
   margin-bottom: 15px;
-  border: 1px solid #c8d8e4;
+  border: none;
   font-weight: 600;
+  color: #ffffff;
 }
 .addToCart:hover{
   cursor: pointer;
 }
+
+/*Button Buy*/
 .buy{
   position: relative;
   width: 100%;
-  height: 40px;
+  padding: 5px 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  background-color: #e6b8b8;
+  background-color: #ff4f11;
   margin-bottom: 5px;
-  font-size: 20px;
+  font-size: 1.25rem;
   outline: none;
   border-radius: 5px;
-  border: 1px solid #c8d8e4;
+  border: none;
   font-weight: 600;
+  color: #ffffff;
 }
 .buy:hover{
   cursor: pointer;
 }
-/*ADDING AND Subtract order quantity*/
+/*adding and Subtracting order quantity*/
+/*Margin top for wrapper span for + and -*/
+.marginTop{
+  margin-top: 10px;
+}
 .minus{
   position: relative;
-  padding: 10px;
+  padding: 0 10px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
   margin-bottom: 5px;
-  font-size: 20px;
+  font-size: 1.35rem;
   border: none;
   outline: none;
   border-radius: 5px;
 }
 .orderQuant{
   position: relative;
-  padding: 10px;
+  padding: 0 10px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
   margin-bottom: 5px;
-  font-size: 20px;
+  font-size: 1.35rem;
   border: none;
   outline: none;
   border-radius: 5px;
 }
 .plus{
   position: relative;
-  padding: 10px;
+  padding: 0 10px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
   margin-bottom: 5px;
-  font-size: 20px;
+  font-size: 1.35rem;
   border: none;
   outline: none;
   border-radius: 5px;
@@ -197,27 +223,175 @@
 /*RESPONSIVE MEDIA QUERIES*/
 
 @media (max-width: 320px) {
+  /*Specification left side wrapper*/
+    .itemSpec {
+      width: 100%;
+    }
+  /***************************************************************************/
+  /*Butoon and price wrapper*/
+    .itemButton {
+      width: 100%;
+    }
+    /*Price h1 */
+    .itemButton h1{
+      font-size: 2rem;
+    }
+  /***************************************************************************/
+  /*On start item garantie and header*/
+    .itemGarantie {
+      margin-bottom: 20px;
+      justify-content: space-between;
+    }
+    .itemGarantie h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .itemGarantie img {
+      width: 30px;
+      margin-right: 5px;
+    }
+  /***************************************************************************/
+
+  /*header*/
+  .description h4 {
+    font-size: 1.2rem;
+  }
+  /**************************************/
+  /*Price h5 small headers*/
+  .priceShipping h5 {
+    font-size: .9rem;
+  }
+
+
+
 }
 
 @media only screen and (max-width: 414px) and (min-width: 321px) {
+  /*Specification left side wrapper*/
+    .itemSpec {
+      width: 100%;
+    }
+  /***************************************************************************/
+  /*Butoon and price wrapper*/
+    .itemButton {
+      width: 100%;
+    }
+  /***************************************************************************/
+  /*On start item garantie and header*/
+    .itemGarantie {
+      margin-bottom: 20px;
+      justify-content: space-between;
+    }
+    .itemGarantie h3{
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    .itemGarantie img {
+      width: 30px;
+      margin-right: 5px;
+    }
+  /***************************************************************************/
+  /*Price h1 */
+    .itemButton h1 {
+      font-size: 2rem;
+    }
+
+  /*header*/
+    .description h4 {
+      font-size: 1.2rem;
+    }
+  /**************************************/
+  /*Price h5 small headers*/
+    .priceShipping h5 {
+      font-size: 0.9rem;
+    }
+
 }
 
 /* X-Small devices (portrait phones, less than 576px)*/
 @media only screen and (max-width: 576px) and (min-width: 415px) {
+  /*Specification left side wrapper*/
+    .itemSpec {
+      width: 100%;
+    }
+  /***************************************************************************/
+  /*Butoon and price wrapper*/
+    .itemButton {
+      width: 100%;
+    }
+  /***************************************************************************/
+
 }
 
 /* Small devices (landscape phones, less than 768px)*/
 @media only screen and (max-width: 768px) and (min-width: 577px) {
+  /*Specification left side wrapper*/
+    .itemSpec {
+      width: 258px;
+    }
+  /***************************************************************************/
+  /*Butoon and price wrapper*/
+    .itemButton {
+      width: 200px;
+    }
+  /***************************************************************************/
+
 }
 @media only screen and (max-width: 920px) and (min-width: 769px) {
+  /*Specification left side wrapper*/
+    .itemSpec {
+      width: 320px;
+    }
+  /***************************************************************************/
+  /*Butoon and price wrapper*/
+    .itemButton {
+      width: 252px;
+    }
+  /***************************************************************************/
+
 }
 @media only screen and (max-width: 1025px) and (min-width: 921px) {
+  /*Specification left side wrapper*/
+    .itemSpec {
+      width: 430px;
+    }
+  /***************************************************************************/
+  /*Butoon and price wrapper*/
+    .itemButton {
+      width: 305px;
+    }
+  /***************************************************************************/
+
 }
 
 /* Large devices (desktops, less than 1200px)*/
 @media only screen and (max-width: 1200px) and (min-width: 1026px) {
+  /*Specification left side wrapper*/
+    .itemSpec {
+      width: 194.5px;
+    }
+  /***************************************************************************/
+  /*Butoon and price wrapper*/
+    .itemButton {
+      width: 194.5px;
+    }
+  /***************************************************************************/
+
 }
 
 /* X-Large devices (large desktops, less than 1400px)*/
 @media only screen and (max-width: 1400px) and (min-width: 1201px) {
+  /*Specification left side wrapper*/
+    .itemSpec {
+      width: 212.5px;
+    }
+  /***************************************************************************/
+  /*Butoon and price wrapper*/
+    .itemButton {
+      width: 212.5px;
+    }
+  /***************************************************************************/
+
 }

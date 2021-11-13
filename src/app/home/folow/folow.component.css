@@ -129,8 +129,12 @@
       justify-content: flex-start !important;
       align-content: center;
       width: 100%;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
+    .HeaderJustify h3 {
+      font-size: 1.6rem;
+    }
+
 }
 
 @media only screen and (max-width: 414px) and (min-width: 321px) {
@@ -149,7 +153,10 @@
       justify-content: flex-start !important;
       align-content: center;
       width: 100%;
-      margin-bottom: 25px;
+      margin-bottom: 22px;
+    }
+    .HeaderJustify h3{
+      font-size: 1.8rem;
     }
   }
 

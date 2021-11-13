@@ -37,4 +37,10 @@ export class ItemActionsComponent implements OnInit {
       this.objectToShow = this.object.splice(0, 4);
     }, 10000);
   }
+
+
+  /*Add to cart function*/
+  addToBag(): void{
+
+  }
 }

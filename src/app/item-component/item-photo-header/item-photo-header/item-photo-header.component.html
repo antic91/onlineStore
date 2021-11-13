@@ -1,16 +1,24 @@
+<!--Header above photos-->
 <div class="itemHeader">
-  <h1>{{ dataHeader }}</h1>
+  <h2>{{ dataHeader }}</h2>
 </div>
 
+<!--Photos wrapper-->
 <div class="wrapperPhotos">
 
+  <!--Big photo wrapper and image tag-->
   <div class="onePhoto">
     <img [src]="photo" alt="">
   </div>
 
+  <!--Small photos wrapper-->
   <div class="optionPhotos">
-    <div class="options" *ngFor="let item of dataPhotos; let i = index" (mouseenter)="onMouseEnter(i)" [ngStyle]="{'boxShadow': active!=i ? 'none' : '0px 0px 7px 1px rgb(82 171 152 / 73%)'}">
+
+    <!--Single small photo wrapper and image tag-->
+    <div class="options" *ngFor="let item of dataPhotos; let i = index" (mouseenter)="onMouseEnter(i)" (click)="onMouseEnter(i)" [ngStyle]="{'boxShadow': active!=i ? 'none' : '0px 0px 9px 3px rgba(83,64,255,0.69)'}">
+
       <img [src]="item" alt="">
+
     </div>
   </div>
 

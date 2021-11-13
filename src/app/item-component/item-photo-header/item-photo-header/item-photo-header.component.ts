@@ -16,21 +16,23 @@ export class ItemPhotoHeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
   }
 
+  /*On event change photo with index from ng-for*/
   onMouseEnter(i:any) {
     this.photo = this.dataPhotos[i];
     this.active = i;
   }
+
+  /*in ngOnInit dataPhotos is undefined, because of that we are watching for changes
+  and in ngOnChanges we are calling this function to set active photo.
+  Active photo is by default first photo of array*/
   setActivePhoto() {
     if(this.dataPhotos != undefined)
       this.photo = this.dataPhotos[this.active]
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-
     this.setActivePhoto()
-
   }
 }

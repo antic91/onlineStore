@@ -1,16 +1,28 @@
-<div class="actWrapper">
-  <div class="MoreProd">
+<!--We could use component for best items(home component) and pass the
+products array but i will leave it like this.-->
+
+<!--best items title-->
+  <div class="MoreProdHeader">
     <h2>More products for you:</h2>
   </div>
+
+<!--best items Every item separate-->
   <div class="itemAct animate__animated animate__backOutUp animate__fadeIn" *ngFor="let item of objectToShow" [routerLink]="['/categories', item.cat_slug, item.prod_slug, item.prod_id]">
-    <span class="img">
-      <img [src]="item.prod_images" alt="">
-    </span>
+
+      <!--best items title of item-->
     <span class="prodTitle">
       <h4>{{item.prod_title}}</h4>
     </span>
+
+    <!--best items Photo of item-->
+    <span class="img">
+      <img [src]="item.prod_images" alt="">
+    </span>
+
+    <!--best items price of item-->
     <span class="price">
+      <button class="addTo" (click)="addToBag()">Add to cart</button>
       <h4>{{item.prod_price}} €</h4>
     </span>
   </div>
-</div>
+

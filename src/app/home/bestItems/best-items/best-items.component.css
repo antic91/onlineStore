@@ -1,116 +1,120 @@
 
 /*MORE PRODUCTS HEADer*/
-.MoreProdHeader {
-  position: relative;
-  width: 100%;
-  height: 62px;
-  padding-bottom: 25px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-.MoreProdHeader h2{
-  font-weight: 600;
-}
+  .MoreProdHeader {
+    position: relative;
+    width: 100%;
+    height: max-content;
+    padding-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .MoreProdHeader h2{
+    font-weight: 600;
+  }
 
 
 /*Wrapper for one item*************************************************/
-.itemAct {
-  position: relative;
-  width: 269.75px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: flex-start;
-  background-color: #ffffff;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 1px 9px 0 rgb(0 0 0 / 2%), 0 2px 6px 0 rgb(0 0 0 / 1%),
-  0 10px 34px 0 rgb(0 0 0 / 3%);
-  overflow: visible;
-}
-.itemAct:hover {
-  cursor: pointer;
-}
+  .itemAct {
+    position: relative;
+    width: 269.75px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 1px 9px 0 rgb(0 0 0 / 2%), 0 2px 6px 0 rgb(0 0 0 / 1%),
+    0 10px 34px 0 rgb(0 0 0 / 3%);
+    overflow: visible;
+  }
+  .itemAct:hover {
+    cursor: pointer;
+  }
 
 /***********************************************************************/
 /*SPAN IMAGE*/
-.img {
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: flex-start;
-  margin-bottom: 23px;
-}
-.img img {
-  position: relative;
-  height: 200px;
-  width: 100%;
-  object-fit:contain;
-}
+  .img {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 23px;
+  }
+  .img img {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    object-fit:contain;
+  }
 /*****************************************************/
 /*PRODUCT TITLE*/
 
-.prodTitle {
-  position: relative;
-  width: 100%;
-  height: 52px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin-bottom: 5px;
-}
-.prodTitle h4 {
-  font-size: 1.4rem!important;
-  font-weight: 500;
-}
+  .prodTitle {
+    position: relative;
+    width: 100%;
+    height: 52px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 5px;
+  }
+  .prodTitle h4 {
+    font-size: 1.4rem!important;
+    font-weight: 500;
+  }
 
 /*****************************************************/
 
 /*PRODUCT PRICE*/
-.price {
-  position: relative;
-  height: 40px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-}
-.price h4{
-  font-size: 1.3rem;
-  font-weight: 400;
-}
+  .price {
+    position: relative;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .price h4{
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
 /*Button add to cart*/
 
-.addTo {
-  padding: 7.5px 10px;
-  background-color: #ff4f11;
-  color: #ffffff;
-  outline: none;
-  border: none;
-  border-radius: 10px;
-  font-size: 1.2rem;
-  font-weight: 500;
-}
+  .addTo {
+    padding: 7.5px 10px;
+    background-color: #ff4f11;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
 
 
 /*RESPONSIVE MEDIA QUERIES*/
 
 @media (max-width: 320px) {
-  .MoreProdHeader h2 {
-    font-size: 27px;
-    height: 60px;
-  }
+
+  /*MORE PRODUCTS HEADer*/
+    .MoreProdHeader {
+      padding-bottom: 20px;
+    }
+    .MoreProdHeader h2 {
+      font-size: 1.6rem;
+    }
 
   /*Wrapper for one item*************************************************/
     .itemAct {
@@ -125,6 +129,15 @@
 }
 
 @media only screen and (max-width: 414px) and (min-width: 321px) {
+  /*MORE PRODUCTS HEADer*/
+    .MoreProdHeader {
+      padding-bottom: 20px;
+    }
+    .MoreProdHeader h2 {
+      font-size: 1.8rem;
+    }
+
+
   /*Wrapper for one item*************************************************/
     .itemAct {
       width: 100%;

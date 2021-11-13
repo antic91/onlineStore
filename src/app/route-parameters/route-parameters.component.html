@@ -1,0 +1,42 @@
+<!--Wrapper for route path display for everything other-->
+  <div class="routeWrapper" *ngIf="!parToShow">
+
+    <!--Border wrapper div-->
+    <span class="gradientBorder"></span>
+
+    <!--Wrapper for route params-->
+    <span class="routeParamsWrapper">
+      <a routerLink="/" class="routeParam" *ngIf="routeParam" [@fadeIn]>Home &nbsp;/</a>
+      <a class="routeParam LastParam" *ngIf="routeParam" [@fadeIn]>&nbsp;{{routeParam}}</a>
+    </span>
+
+    <!--Border wrapper div-->
+    <span class="gradientBorder"></span>
+  </div>
+
+
+
+
+
+  <!--Wrapper for route path display for one product-->
+  <div class="routeWrapper" *ngIf="parToShow">
+
+      <!--Border wrapper div-->
+      <span class="gradientBorder"></span>
+
+      <!--Wrapper for route params-->
+      <span class="routeParamsWrapper">
+          <a routerLink="/allProducts" class="routeParam" *ngIf="cat_slug" [@fadeIn]>Categories &nbsp;/</a>
+          <a class="routeParam displayNoneFirst" [routerLink]="['/categories',cat_slug]" *ngIf="cat_slug" [@fadeIn]>&nbsp; {{routeParam}} &nbsp;/</a>
+          <a class="routeParam LastParam displayNoneSecond" *ngIf="cat_slug" [@fadeIn]>&nbsp; {{parToShow}}</a>
+
+          <!--Two routes for smaller devices......-->
+          <a class="routeParamDisplay1 routeParam " [routerLink]="['/categories',cat_slug]" *ngIf="cat_slug" [@fadeIn]>{{routeParam}} &nbsp;/</a>
+          <a class="routeParamDisplay2 routeParam LastParam " *ngIf="cat_slug" [@fadeIn]>{{parToShow}}</a>
+
+      </span>
+
+      <!--Border wrapper div-->
+      <span class="gradientBorder"></span>
+
+  </div>
