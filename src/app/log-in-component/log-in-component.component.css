@@ -1,37 +1,40 @@
+
+/*Log in form wrapper*/
 #wrapperLogIn{
   position: relative;
   width: 100%;
-  height: 600px;
   margin-top: 75px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-content: flex-start;
+  overflow: visible;
 }
 
 
 
-/*FORM STYLE*/
+/*Form log in ***************/
 #formLogIn{
   position: relative;
   width: 420px;
-  padding: 15px 15px 20px 15px;
+  padding: 25px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: flex-start;
-  border-radius: 5px;
-  box-shadow: 0px 0px 7px 1px rgb(82 171 152 / 73%);
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 9px 0 rgb(0 0 0 / 2%), 0 2px 6px 0 rgb(0 0 0 / 1%), 0 10px 34px 0 rgb(0 0 0 / 3%);
 }
-/*FORM STYLE END*/
+/***********************************************************************/
 
-/*OPTION FORM LOG IN*/
+/*Wrapper for two section password and username inputs*/
 .option {
   position: relative;
   width: 100%;
-  margin-bottom: 25px;
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -39,84 +42,217 @@
   align-content: flex-start;
 }
 
-/*INPUT STYLE*/
+
+/*Header margin*/
+.margiHeader{
+  margin-bottom: 5px;
+  margin-top: 0 !important;
+
+}
+/*Header top*/
+.margiHeader h2{
+  font-weight: 600;
+}
+
+/***********************************************************************/
+
+/*Inputs*/
 .input{
   position: relative;
   width: 100%;
-  padding: 10px 5px;
-  font-size: 18px;
-  border-radius: 5px;
+  padding: 10px;
+  font-size: 1.125rem;
+  border: none;
   outline: none;
-  border: 1px solid #C8D8E4;
+  border-bottom: 1px solid #001925;
+  color: #001925;
+  background-color: rgba(83, 64, 255, 0.05);
 }
-.input:focus{
-  box-shadow: 0px 0px 7px 1px rgb(82 171 152 / 73%);
-}
-/*BUTTON*/
+
+/***********************************************************************/
+
+
+/*Button confirm*/
 .logInBtn{
   position: relative;
   width: 100%;
-  margin-top: 30px;
-  padding: 10px 5px;
-  font-size: 18px;
-  border-radius: 5px;
-  outline: none;
+  margin-top: 35px;
+  padding: 10px 0;
+  font-size: 1.125rem;
   font-weight: 600;
-  border: 1px solid #C8D8E4;
-  background-color: #e6b8b8;
+  letter-spacing: 1.2px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  background-color: #5340ff;
 }
+/***********************************************************************/
 
-/*OPTION FORM LOG IN END*/
 
-/* Sing up and forgot password*/
+/* Sign up and forgot password span*/
 .signUpAndPassword{
   position: relative;
   width: 100%;
-  margin-top: 2px;
+  height: max-content;
+  margin-top: 5px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-end;
   align-content: flex-start;
 }
-.signUpAndPassword h6{
+.signUpAndPassword a{
+  color: #000000;
+  font-size: .9rem;
   text-decoration: underline;
+  line-height: normal;
 }
 /* Sing up and forgot password END*/
 
-/*STYLING INVALID INPUTS*/
+/*Style invalid data spans*/
 .InvalidInput{
   position: relative;
   width: 100%;
-  margin-top: 2px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-end;
   align-content: flex-start;
   color: red;
+  line-height: normal;
+  margin-top: 5px;
 }
+
+
+
+
+
+
+
+/*ROUTE PARAMS WRAPPER ***************************************************/
+
+#routeWrapper {
+  position: relative;
+  width: 100%;
+  min-height: 59px !important;
+  margin-top: 25px;
+  height: max-content;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+/**************************************************************************/
+
+/*-------------------------Wrapper Follow component---------------------------------------------------------*/
+#follow {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 75px 0;
+  background-color: #5340ff;
+  box-shadow: 0 1px 9px 0 rgb(0 0 0 / 2%), 0 2px 6px 0 rgb(0 0 0 / 1%),
+    0 10px 34px 0 rgb(0 0 0 / 3%);
+}
+
+/*----------------------------------------------------------------------------------*/
+
+
 
 
 
 /*RESPONSIVE MEDIA QUERIES*/
 
 @media (max-width: 320px) {
+  /*Log in form wrapper*/
+    #wrapperLogIn {
+      margin-top: 50px;
+    }
+
+  /*Form log in ***************/
+    #formLogIn {
+      width: 238px;
+      padding: 15px;
+    }
+  /***********************************************************************/
+  /*Header margin*/
+    .margiHeader {
+      margin-bottom: 0;
+    }
+  /*Header top*/
+    .margiHeader h2 {
+      font-weight: 600;
+      font-size: 1.6rem;
+    }
+  /*a tag sign up and password******/
+    .signUpAndPassword a {
+      color: #000000;
+      font-size: 0.7rem;
+      text-decoration: underline;
+    }
+
+  /*-------------------------Wrapper Follow component---------------------------------------------------------*/
+  #follow {
+    margin: 50px 0 50px 0;
+  }
+  /***********************************************************************************/
 }
 
 @media only screen and (max-width: 414px) and (min-width: 321px) {
+  /*Log in form wrapper*/
+    #wrapperLogIn {
+      margin-top: 50px;
+    }
+
+    /*Form log in ***************/
+    #formLogIn {
+      width: 300px;
+      padding: 20px;
+    }
+  /***********************************************************************/
+  /*Header margin*/
+    .margiHeader {
+      margin-bottom: 0;
+
+    }
+  /*Header top*/
+    .margiHeader h2 {
+      font-weight: 600;
+      font-size: 1.8rem;
+    }
+
+  /***********************************************************************/
+  /*-------------------------Wrapper Follow component---------------------------------------------------------*/
+  #follow {
+    margin: 50px 0 50px 0;
+  }
+  /***********************************************************************************/
 }
 
 /* X-Small devices (portrait phones, less than 576px)*/
 @media only screen and (max-width: 576px) and (min-width: 415px) {
+  /*Form log in ***************/
+    #formLogIn {
+      width: 380px;
+    }
+  /***********************************************************************/
+
 }
 
 /* Small devices (landscape phones, less than 768px)*/
 @media only screen and (max-width: 768px) and (min-width: 577px) {
+
 }
 @media only screen and (max-width: 920px) and (min-width: 769px) {
 }
 @media only screen and (max-width: 1025px) and (min-width: 921px) {
+
 }
 
 /* Large devices (desktops, less than 1200px)*/

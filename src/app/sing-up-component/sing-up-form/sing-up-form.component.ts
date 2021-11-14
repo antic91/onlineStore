@@ -12,10 +12,14 @@ import { ErrorError } from 'src/app/commonErrors/error-error';
   styleUrls: ['./sing-up-form.component.css']
 })
 export class SingUpFormComponent implements OnInit {
+  /*booleans for errors username and email occupated*/
   userNameOccupated!: boolean;
   emailOccupated!: boolean;
+
   form: FormGroup;
+
   constructor(private sendForm: PostService, private router: Router) {
+    /*set this.form, all validators....*/
     this.form = new FormGroup({
       firstName: new FormControl('', [Validators.required, Validators.minLength(3), signUpValidators.cannotContainSpace]),
       lastName: new FormControl('', [Validators.required, Validators.minLength(3), signUpValidators.cannotContainSpace]),
@@ -32,6 +36,7 @@ export class SingUpFormComponent implements OnInit {
       }),
       mobileNumber: new FormControl('', [Validators.required, signUpValidators.cannotContainSpace])
     })
+
   }
 
   ngOnInit(): void {
@@ -39,6 +44,7 @@ export class SingUpFormComponent implements OnInit {
     this.emailOccupated = true;
   }
 
+  /*getter methods to write less html code*/
   get firstName() {
     return this.form.get("firstName")
   }
@@ -66,11 +72,15 @@ export class SingUpFormComponent implements OnInit {
 
 
 
-
+  /*Function on Submit send data to server*/
   sendData(): void{
+    /*If username and email are free then register new user*/
     if (this.userNameOccupated && this.emailOccupated) {
       this.sendForm.signUp("https://online-shop-node1.herokuapp.com/signUp", this.form.value)
         .subscribe((x: any) => {
+
+          /*reset form and navigate to home*/
+
           this.form = new FormGroup({
             firstName: new FormControl('', [Validators.required, Validators.minLength(3), signUpValidators.cannotContainSpace]),
             lastName: new FormControl('', [Validators.required, Validators.minLength(3), signUpValidators.cannotContainSpace]),
@@ -87,9 +97,12 @@ export class SingUpFormComponent implements OnInit {
             }),
             mobileNumber: new FormControl('', [Validators.required, signUpValidators.cannotContainSpace])
           })
+
+
           this.form.markAsUntouched();
           this.form.setErrors(null);
           this.router.navigate(['/'])
+
         }, (error: AppError) => {
           if (error instanceof ErrorError) {
             console.log("ErrorError")
@@ -98,6 +111,7 @@ export class SingUpFormComponent implements OnInit {
     }
   }
 
+  /*On every input change call server to check if the username is already taken*/
   checkUsername(): void{
     if (this.username?.value.length > 0) {
       this.sendForm.checkUsername("https://online-shop-node1.herokuapp.com/checkUsername", { value: this.username?.value })
@@ -110,6 +124,7 @@ export class SingUpFormComponent implements OnInit {
     }
   }
 
+  /*On every input change call server to check if the email is already taken*/
   checkEmail(): void{
     if (this.email?.value.length > 0) {
       this.sendForm.checkEmail("https://online-shop-node1.herokuapp.com/checkEmail", { value: this.email?.value })

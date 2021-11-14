@@ -76,7 +76,6 @@ export class ItemComponentComponent implements OnInit {
   ngOnInit(): void {
     /*Setting data to send to server and calling function to talk with server*/
     this.route.params.subscribe((params: Params) => {
-      console.log(params)
         this.par1 = params.cat_name;
         this.par2 = params.prod_slug;
         this.id = parseInt(params.id);
@@ -93,7 +92,6 @@ export class ItemComponentComponent implements OnInit {
       .subscribe((x: any) => {
         /*Adding object to send it to item options component*/
         this.itemOBJ = x;
-        console.log(this.itemOBJ)
         /*Setting all necessary data here after server response*/
         this.par1ToShow = x.cat_title;
         this.par2ToShow = x.prod_title;

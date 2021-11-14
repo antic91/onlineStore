@@ -1,6 +1,21 @@
-<div id="singUpWrapper">
+
+
+<!--Wrapper for route path display-->
+  <app-route-parameters id="routeWrapper" [routeParam]="'Sign up'" *ngIf="DisplayInit" [@fadeIn]></app-route-parameters>
+
+  <!--Wrapper for forms 100%-->
+<div id="singUpWrapper" *ngIf="DisplayInit" [@fadeIn]>
+  <!--smaller wrapper forms-->
   <div class="formsWrapper">
-      <app-sing-up-form class="singUpWrapper"></app-sing-up-form>
-      <app-log-in-component class="logInWrapper"></app-log-in-component>
+
+      <app-sing-up-form class="signUpWrapper"></app-sing-up-form>
+
+      <app-log-in-component [displayHide]="displayHide" class="logInWrapper"></app-log-in-component>
+
   </div>
+
 </div>
+
+
+  <!--Wrapper follow bottom -->
+  <app-folow id="follow" *ngIf="DisplayInit" [@fadeIn]></app-folow>

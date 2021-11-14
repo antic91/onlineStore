@@ -20,10 +20,12 @@ router-outlet + * {
 
 /*INVALID INPUT FIELD*/
 .input.ng-touched.ng-invalid {
-  border: 2px solid red;
+  border-bottom: 2px solid red;
+  border-top: 2px solid red;
 }
 .inputSignUp.ng-touched.ng-invalid {
-  border: 2px solid red;
+  border-bottom: 2px solid red;
+  border-top: 2px solid red;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Urbanist:400,500');

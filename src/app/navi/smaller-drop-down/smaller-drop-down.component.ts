@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter, HostListener } from '@angular/core';
 import { LogedInService } from 'src/app/services/loged-in.service';
 
 @Component({
@@ -32,7 +32,7 @@ export class SmallerDropDownComponent implements OnInit {
     })
   }
 
-  /*Log out finction*/
+  /*Log out function*/
   logOUT(): void{
     this.loggedIn.setStatus(false);
     this.loggedIn.setUser("");
@@ -47,5 +47,13 @@ export class SmallerDropDownComponent implements OnInit {
   closeMenu(): void{
     this.showMenu = false;
     this.statusMenu.emit(false)
+  }
+
+  /*On resize close drop down menu*/
+  @HostListener('window:resize', ['$event'])
+  onResize(event:Event) {
+    this.statusMenu.emit(false)
+    this.showMenu = false;
+    this.showLogin = false;
   }
 }

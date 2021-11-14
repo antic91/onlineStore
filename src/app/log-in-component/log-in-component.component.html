@@ -1,33 +1,47 @@
-<div id="wrapperLogIn">
-    <form id="formLogIn" #loginForm="ngForm" (ngSubmit)="submit(loginForm)">
 
-      <span class="option">
+
+<!--Wrapper for route path display-->
+  <app-route-parameters id="routeWrapper" *ngIf="displayHide" [@fadeIn] [routeParam]="'Log In'"></app-route-parameters>
+
+
+<!--wrapper for log in form-->
+<div id="wrapperLogIn">
+
+  <!--Form-->
+    <form id="formLogIn" *ngIf="fadeIn" [@fadeIn] #loginForm="ngForm" (ngSubmit)="submit(loginForm)">
+      <!--Header-->
+      <span class="option margiHeader">
         <h2>Log In</h2>
       </span>
 
+      <!--wrapper for username input and other options for username-->
       <span class="option">
-        <input
-        required
-        minlength="3"
-        ngModel
-        name="username"
-        #usernameInput="ngModel"
-        (change)="changed(usernameInput)"
-        type="text"
-        class="input"
-        placeholder="Username">
 
-        <span *ngIf="url != 'sing-up'" class="signUpAndPassword">
-          <h6>You don't have account? Sign up here!</h6>
-        </span>
+          <input
+          required
+          minlength="3"
+          ngModel
+          name="username"
+          #usernameInput="ngModel"
+          (change)="changed(usernameInput)"
+          type="text"
+          class="input"
+          placeholder="Username">
 
-        <span class="InvalidInput" *ngIf="usernameInput.touched && !usernameInput.valid">
-          <h6 *ngIf="usernameInput.errors?.required">* Username is required!</h6>
-          <h6 *ngIf="usernameInput.errors?.minlength">* Minimum length s {{usernameInput.errors?.minlength.requiredLength}}!</h6>
-        </span>
+          <!--span wrapper for link to sign up-->
+          <span *ngIf="url != 'sing-up'" class="signUpAndPassword">
+            <a href="">You don't have account? Sign up here!</a>
+          </span>
+
+          <!--If not valid options-->
+          <span class="InvalidInput" *ngIf="usernameInput.touched && !usernameInput.valid">
+            <h6 *ngIf="usernameInput.errors?.required">* Username is required!</h6>
+            <h6 *ngIf="usernameInput.errors?.minlength">* Minimum length s {{usernameInput.errors?.minlength.requiredLength}}!</h6>
+          </span>
 
       </span>
 
+      <!--wrapper for Password input and other options for username-->
       <span class="option">
         <input
         ngModel
@@ -40,14 +54,18 @@
         class="input"
         placeholder="Password">
 
+        <!--span wrapper for link to reset password-->
         <span class="signUpAndPassword">
-          <h6>Forgot your password? Click here</h6>
+          <a href="">Forgot your password? Click here</a>
         </span>
 
+        <!--If not valid options-->
         <span class="InvalidInput" *ngIf="Password.touched && !Password.valid">
           <h6 *ngIf="Password.errors?.required">* Username is required!</h6>
           <h6 *ngIf="Password.errors?.minlength">* Minimum length s {{Password.errors?.minlength.requiredLength}}!</h6>
         </span>
+
+        <!--If Invalid credentials after click on log in button-->
         <span class="InvalidInput" *ngIf="InvalidLogin">
           <h6>* Invalid credentials!</h6>
         </span>
@@ -55,7 +73,15 @@
 
       </span>
 
+      <!--button to log in-->
       <button class="logInBtn" [disabled]="!loginForm.valid">Confirm</button>
 
     </form>
 </div>
+
+
+
+
+
+  <!--Wrapper follow bottom -->
+  <app-folow id="follow" *ngIf="displayHide" [@fadeIn]></app-folow>

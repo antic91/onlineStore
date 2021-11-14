@@ -1,5 +1,5 @@
 
-/*FORM STYLE*/
+/*Reactive Form wrapper*/
 #formSignUp {
   position: relative;
   width: 100%;
@@ -9,63 +9,88 @@
   justify-content: space-between;
   align-content: flex-start;
 }
-/*FORM STYLE END*/
+/*********************************************************************************/
 
-/*OPTION FORM LOG IN*/
-.optionSignUp {
+/*Header---------*/
+.optionSignUpHeader {
   position: relative;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: flex-start;
 }
+.optionSignUpHeader h2{
+  font-weight: 600;
+}
+/*********************************************************************************/
 
-/*INPUT STYLE*/
+/*Wrapper for most inputs*/
+.optionSignUp {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+/***********************************************************/
+
+/*Input style*/
 .inputSignUp {
   position: relative;
   width: 100%;
-  padding: 10px 5px;
-  font-size: 18px;
-  border-radius: 5px;
+  padding: 10px 0;
+  font-size: 1.125rem;
+  border: none;
   outline: none;
-  border: 1px solid #c8d8e4;
+  border-bottom: 1px solid #001925;
+  color: #001925;
+  background-color: rgba(83, 64, 255, .05);
 }
-.inputSignUp:focus {
-  box-shadow: 0px 0px 7px 1px rgb(82 171 152 / 73%);
-}
-
-.logInBtnSignUp {
+/***********************************************************/
+/*Button*******************/
+.BtnSignUp {
   position: relative;
   width: 100%;
-  margin-top: 45px;
-  padding: 10px 5px;
-  font-size: 18px;
-  border-radius: 5px;
-  outline: none;
+  margin-top: 20px;
+  padding: 10px 0;
+  font-size: 1.125rem;
   font-weight: 600;
-  border: 1px solid #c8d8e4;
-  background-color: #e6b8b8;
-}
+  letter-spacing: 1.2px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  background-color: #5340ff;
 
-/*OPTION FORM LOG IN END*/
+}
+/***********************************************************/
+
+
 /*LABEL WRAPPER LOG IN END*/
 .label{
   position: relative;
   width: 100%;
-  margin-bottom: 3px;
   margin-left: 2px;
+  margin-bottom: 2px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: flex-start;
 }
+.label h4 label{
+  font-size: 1.25rem;
+  font-weight: 500;
+}
 /*LABEL WRAPPER LOG IN END*/
 
-/* Sing up and forgot password*/
+/* Sign up and forgot password*//*
 .signUpERR {
   position: relative;
   width: 100%;
@@ -78,11 +103,11 @@
 }
 .signUpERR h6 {
   text-decoration: underline;
-}
+}*/
 /* Sing up and forgot password END*/
 
 
-/*SMALLER OPTION ZIPCODE --- */
+/*Wrapper for address form group --- */
 .formGroupWraper{
   position: relative;
   width: 100%;
@@ -92,9 +117,11 @@
   justify-content: space-between;
   align-content: flex-start;
 }
+/***********************************************/
+/*Wrapper zip code and street number *** smaller divs*/
 .addressOptions{
   position: relative;
-  width: 252px;
+  width: 277px;
   margin-bottom: 20px;
   display: flex;
   flex-direction: row;
@@ -102,19 +129,22 @@
   justify-content: flex-start;
   align-content: flex-start;
 }
-
-/*INVALID INPUT */
+/**************************************************/
+/*Wrapper all for errors */
 .InvalidInput {
   position: relative;
   width: 100%;
-  margin-top: 2px;
+  margin-top: 5px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-end;
   align-content: flex-start;
   color: red;
+  line-height: normal;
 }
+
+/*Wrapper for every error header separate*/
 .errorChildWrapper{
   position: relative;
   width: 100%;
@@ -124,32 +154,152 @@
   justify-content: flex-end;
   align-content: flex-start;
 }
-
-
+/*************************************************************/
+/*A link log in for smaller screens*/
+.aLink{
+  display: none;
+}
 /*RESPONSIVE MEDIA QUERIES*/
 
 @media (max-width: 320px) {
+  /*Header---------*/
+    .optionSignUpHeader {
+      margin-bottom: 20px;
+    }
+    .optionSignUpHeader h2 {
+      font-weight: 500;
+      font-size: 1.53rem;
+      letter-spacing: normal;
+    }
+  /*********************************************************************************/
+
+  /*Wrapper zip code and street number *** smaller divs*/
+    .addressOptions {
+      width: 100%;
+    }
+  /**************************************************/
+  /*A link log in for smaller screens*/
+    .aLink {
+      display: inline;
+      color: #000000;
+      font-size: 0.7rem;
+      text-decoration: underline;
+      margin-top: 5px;
+    }
+
 }
 
 @media only screen and (max-width: 414px) and (min-width: 321px) {
+  /*Header---------*/
+    .optionSignUpHeader {
+      margin-bottom: 20px;
+    }
+    .optionSignUpHeader h2 {
+      font-weight: 600;
+      font-size: 1.8rem;
+    }
+  /*********************************************************************************/
+
+  /*Wrapper zip code and street number *** smaller divs*/
+    .addressOptions {
+      width: 100%;
+    }
+  /**************************************************/
+  /*A link log in for smaller screens*/
+    .aLink {
+      display: inline;
+      color: #000000;
+      font-size: 0.9rem;
+      text-decoration: underline;
+      margin-top: 5px;
+    }
+
 }
 
 /* X-Small devices (portrait phones, less than 576px)*/
 @media only screen and (max-width: 576px) and (min-width: 415px) {
+  /*Wrapper zip code and street number *** smaller divs*/
+    .addressOptions {
+      width: 100%;
+    }
+  /**************************************************/
+  /*A link log in for smaller screens*/
+    .aLink {
+      display: inline;
+      color: #000000;
+      font-size: 0.9rem;
+      text-decoration: underline;
+      margin-top: 5px;
+    }
+
 }
 
 /* Small devices (landscape phones, less than 768px)*/
 @media only screen and (max-width: 768px) and (min-width: 577px) {
+  /*Wrapper zip code and street number *** smaller divs*/
+    .addressOptions {
+      width: 219px;
+    }
+  /**************************************************/
+  /*A link log in for smaller screens*/
+    .aLink {
+      display: inline;
+      color: #000000;
+      font-size: 0.9rem;
+      text-decoration: underline;
+      margin-top: 5px;
+    }
+
 }
 @media only screen and (max-width: 920px) and (min-width: 769px) {
+  /*Wrapper zip code and street number *** smaller divs*/
+  .addressOptions {
+    width: 278.5px;
+  }
+  /**************************************************/
+  /*A link log in for smaller screens*/
+    .aLink {
+      display: inline;
+      color: #000000;
+      font-size: 0.9rem;
+      text-decoration: underline;
+      margin-top: 5px;
+    }
+
 }
 @media only screen and (max-width: 1025px) and (min-width: 921px) {
+  /*Wrapper zip code and street number *** smaller divs*/
+    .addressOptions {
+      width: 360px;
+    }
+  /**************************************************/
+  /*A link log in for smaller screens*/
+    .aLink {
+      display: inline;
+      color: #000000;
+      font-size: 0.9rem;
+      text-decoration: underline;
+      margin-top: 5px;
+    }
+
 }
 
 /* Large devices (desktops, less than 1200px)*/
 @media only screen and (max-width: 1200px) and (min-width: 1026px) {
+  /*Wrapper zip code and street number *** smaller divs*/
+    .addressOptions {
+      width: 172px;
+    }
+  /**************************************************/
+
 }
 
 /* X-Large devices (large desktops, less than 1400px)*/
 @media only screen and (max-width: 1400px) and (min-width: 1201px) {
+  /*Wrapper zip code and street number *** smaller divs*/
+    .addressOptions {
+      width: 225px;
+    }
+  /**************************************************/
+
 }
