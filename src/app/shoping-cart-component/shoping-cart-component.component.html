@@ -1,73 +1,97 @@
+  <!--Wrapper for route path display-->
+  <app-route-parameters id="routeWrapper" *ngIf="!data.length || data.length" [@fadeIn] [routeParam]="'Shopping Cart'"></app-route-parameters>
+
 <div id="shopingCartWrapper">
-  <div class="routeItem">
-      <h5> &nbsp; {{param1}} &nbsp;/</h5>
-      <h5> &nbsp; {{param2}} </h5>
+
+  <!--header no items******************-->
+  <div class="noItems" *ngIf="noItems" [@fadeIn]>
+    <h2>You have no Products in your Shopping Cart!</h2>
   </div>
 
-  <div class="noItems" *ngIf="!data.length">
-    <h3>You have no Products in your Shopping Cart!</h3>
-  </div>
+  <!--Shoppingcart wrapper-->
+  <div class="itemShoppingCartWrapper"*ngIf="data.length" [@fadeIn]>
 
-  <div class="itemShoppingCartWrapper"*ngIf="data.length">
+      <!--Every product separate wrapper-->
+      <div class="itemShoppingCart" *ngFor="let item of data, let i = index">
 
-    <div class="itemShoppingCart" *ngFor="let item of data, let i = index">
+        <!--Image wrapper and image product tag-->
+        <div class="imgWrapper">
+          <img [src]="item.spec_photo_item" alt="">
+        </div>
 
-      <div class="imgWrapper">
-        <img [src]="item.spec_photo_item" alt="">
+        <!--wrapper with header and description/options component-->
+        <div class="desctiptionShopingCart">
+
+            <div class="title">
+              <h2 [routerLink]="['/categories', item.cat_slug, item.prod_slug, item.prod_id]">{{item.prod_title}}</h2>
+            </div>
+
+            <app-descripion-comp id="descriptions" [data]="item"></app-descripion-comp>
+
+        </div>
+
+
+        <!--wrapper fot price and buttons to add and more or remove products-->
+        <div class="buttAndPriceShopingCart">
+
+          <!--Total price-->
+          <span class="wrapperChildrens">
+            <h4 class="total">Total price: {{item.prod_price * orderQuantity[i]}} €</h4>
+          </span>
+
+          <!--span with delivery time data-->
+          <span class="wrapperChildrens">
+            <h6 class="smallDesc">Product will be sent next working day!</h6>
+          </span>
+
+          <!--Free delivery-->
+          <span class="wrapperChildrens">
+            <h6 class="smallDesc">Free delivery</h6>
+          </span>
+
+
+          <!--One item price-->
+          <span class="wrapperChildrens">
+            <h6 class="smallDesc">Price pre item: {{item.prod_price}} €</h6>
+          </span>
+
+          <!--Order quantity span-->
+          <span class="wrapperChildrensOrder">
+            <h5>Order quantity: {{orderQuantity[i]}}</h5>
+          </span>
+
+          <!--button add one item-->
+          <span class="wrapperChildrensOrder">
+            <button class="btn" (click)="addOneItem(item,i)">Add one Item</button>
+          </span>
+
+          <!--button remove one item-->
+          <span class="wrapperChildrensOrder">
+            <button class="btn" (click)="removeOneItem(item,i)">Remove one item</button>
+          </span>
+
+        </div>
+
       </div>
 
-      <div class="desctiptionShopingCart">
 
-          <div class="title">
-            <h3 [routerLink]="['/categories', item.cat_slug, item.prod_slug, item.prod_id]">{{item.prod_title}}</h3>
-          </div>
-          <app-descripion-comp id="descriptions" [data]="item"></app-descripion-comp>
-      </div>
+      <!--Total price on bottom-->
+      <div class="btnTotalWrapper">
 
-      <div class="buttAndPriceShopingCart">
-
-        <span class="wrapperChildrens">
-          <h4 class="total">Total price: {{item.prod_price * orderQuantity[i]}} €</h4>
-        </span>
-
-        <span class="wrapperChildrens">
-          <h6 class="smallDesc">Price pre item: {{item.prod_price}} €</h6>
-        </span>
-
-        <span class="wrapperChildrens">
-          <h6 class="smallDesc">Free delivery</h6>
-        </span>
-
-        <span class="wrapperChildrens">
-          <h6 class="smallDesc">Product will be sent next working day!</h6>
-        </span>
-
-        <span class="wrapperChildrensOrder">
-          <h5>Order quantity: {{orderQuantity[i]}}</h5>
-        </span>
-
-        <span class="wrapperChildrensOrder">
-          <button class="btn" (click)="addOneItem(item,i)">Add one Item</button>
-        </span>
-
-        <span class="wrapperChildrensOrder">
-          <button class="btn" (click)="removeOneItem(item,i)">Remove one item</button>
-        </span>
+        <h4 class="total">Total price: {{totalPrice}} €</h4>
 
       </div>
 
-    </div>
-    <div class="btnTotalWrapper">
+      <!--Buy button bottom-->
+      <div class="btnTotalWrapper">
 
-      <h4 class="total">Total price:{{totalPrice}}</h4>
+        <button class="btn1">Buy</button>
 
-    </div>
-    <div class="btnTotalWrapper">
-
-      <button class="btn1">Buy</button>
-
-    </div>
+      </div>
 
   </div>
 
 </div>
+
+  <!--Wrapper follow bottom -->
+  <app-folow id="follow"></app-folow>

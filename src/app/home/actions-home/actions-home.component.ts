@@ -76,6 +76,18 @@ export class ActionsHomeComponent implements OnInit {
   details!: number;
   details1!: number;
 
+  /*Product options for item options component*/
+  options: any[] = [];
+
+  /*All features to send it to features component*/
+  features: any[] = [];
+
+  /*Product price for item options component*/
+  price!: string;
+
+  /*Product quantity for item options component*/
+  quantity!: string;
+
   saleObjects: any = [];
   constructor(private service: PostService, private http: HttpClient) { }
 
@@ -101,8 +113,5 @@ export class ActionsHomeComponent implements OnInit {
     this.details = -1;
   }
 
-  /*Addto cart function*/
-  addToBag(): void{
-    console.log("add")
-  }
+
 }

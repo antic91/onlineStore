@@ -1,9 +1,8 @@
+import { PostService } from 'src/app/services/post.service';
 import { AppError } from './../commonErrors/app-error';
-import { DataService } from './../services/data.service';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
-import { getLocaleDateFormat } from '@angular/common';
 import { NotFoundError } from '../commonErrors/not-found-error';
 import { trigger, transition, useAnimation } from '@angular/animations';
 import { fadeIn } from '../animations/animations';
@@ -71,7 +70,7 @@ export class ItemComponentComponent implements OnInit {
   /*All features to send it to features component*/
   features: any[] = [];
 
-  constructor(private route: ActivatedRoute, private http: DataService) { }
+  constructor(private route: ActivatedRoute, private http: PostService) { }
 
   ngOnInit(): void {
     /*Setting data to send to server and calling function to talk with server*/
@@ -142,12 +141,12 @@ export class ItemComponentComponent implements OnInit {
             {name: "Display size", spec: x.spec_screen_size},
             {name: "Front camera", spec: x.spec_front_camera},
             {name: "Back camera", spec: x.spec_back_camera},
-            {name: "Batery", spec: x.spec_battery},
+            {name: "Battery", spec: x.spec_battery},
             {name: "Connection", spec: x.spec_connection},
             {name: "Graphic card", spec: x.spec_graphic_card_details},
             {name: "Processor", spec: x.spec_processor},
             {name: "Resolution", spec: x.spec_resolution},
-            {name: "Maesure", spec: x.spec_measure},
+            {name: "Measure", spec: x.spec_measure},
             {name: "Guarantee", spec: x.spec_guarantee}
           )
         }

@@ -158,7 +158,6 @@ export class CommonCategoryComponent implements OnInit {
   }
 
   gettinRoute(event: any) {
-    console.log(event)
     this.param = event;
   }
   getStatus(event: any) {

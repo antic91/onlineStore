@@ -41,7 +41,6 @@ export class OpComponentComponent implements OnInit {
 
   /*Set data to be shown in options*/
   settingData(): void{
-    console.log(this.routeParam)
     /*If search component or all items component*/
     if (this.routeParam === "All Products" || this.routeParam === "Search results") {
 

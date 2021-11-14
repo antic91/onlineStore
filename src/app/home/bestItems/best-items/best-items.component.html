@@ -18,7 +18,11 @@
 
     <!--best items price of item-->
     <span class="price">
-      <button class="addTo" (click)="addToBag()">Add to cart</button>
+      <button class="addTo"
+      (click)="addToBag()"
+      appAddToCart
+      [itemOBJ]="item"
+      [orderQuantity]="1">Add to cart</button>
       <h4>{{item.prod_price}} €</h4>
     </span>
   </div>

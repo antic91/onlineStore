@@ -1,26 +1,18 @@
+/*Wrapper Shopping cart*/
 #shopingCartWrapper{
   position: relative;
   width: 100%;
+  min-height: 700px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-content: flex-start;
 }
-/*ROUTE*/
-.routeItem {
-  position: relative;
-  width: 1124px;
-  margin-top: 15px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
 
-/*ROUTE ENDS*/
+/**************************************************************************/
 
-/*NO ITEMS DIV*/
+/*No items div*/
 .noItems{
   position: relative;
   width: 1124px;
@@ -28,45 +20,57 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   align-content: flex-start;
   margin-top: 75px;
 }
-/*NO ITEMS DIV ENDs*/
-/*ITEMS Wrapper*/
+.noItems h2{
+  text-align: center;
+}
+/**************************************************************************/
+
+/*Wrapper for every product*/
 .itemShoppingCartWrapper{
   position: relative;
   width: 1124px;
-  margin-top: 75px;
-  margin-bottom: 75px;
+  margin-top: 50px;
   min-height: 600px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-content: flex-start;
+  overflow: visible;
 }
+/**************************************************************************/
 
-/*ITEMS*/
+
+
+/*Every product separate wrapper*/
 .itemShoppingCart {
   position: relative;
   width: 100%;
-  padding: 20px;
-  box-shadow: 0px 0px 7px 1px rgb(82 171 152 / 73%);
-  border-radius: 15px;
+  padding: 25px 25px 15px 25px;
+  background-color: #ffffff;
+  border-radius: 10px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: flex-start;
-  margin-top: 50px;
+  margin-top: 25px;
+  box-shadow: 0 1px 9px 0 rgb(0 0 0 / 2%), 0 2px 6px 0 rgb(0 0 0 / 1%), 0 10px 34px 0 rgb(0 0 0 / 3%);
 }
+/**************************************************************************/
 
-/*IMAGE WRAPPER*/
+
+
+/*Image wrapper and image product tag*/
 .imgWrapper{
   position: relative;
   width: 200px;
-  border-radius: 15px;
+  height: 200px;
+  border-radius: 10px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -75,22 +79,27 @@
 }
 .imgWrapper img{
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
-/*IMAGE WRAPPER ENDS*/
+/**************************************************************************/
 
-/*DESCRIPTION */
+
+/*wrapper with header and description/options component*/
 .desctiptionShopingCart{
   position: relative;
-  width: 644px;
+  width: 624px;
+  height: max-content;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: flex-start;
 }
-/*TITLE WRAPPER*/
+/**************************************************************************/
+
+/*Title wrapper*/
 .title{
   position: relative;
   width: 100%;
@@ -99,33 +108,48 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: flex-start;
-  margin-bottom: 20px;
-  border-bottom: 1px solid rgba(40, 62, 73, 0.25);
+  padding-bottom: 2.5px;
+  margin-bottom: 15px;
+  border-bottom: 1.5px solid rgba(40, 62, 73, 0.35);
 }
-.title h3:hover{
+.title h2{
+  line-height: normal;
+  font-weight: 600;
+}
+.title h2:hover{
   cursor: pointer;
 }
-/*WRAPPER FOR DESCRIPTION OPTTIONS*/
+/**************************************************************************/
+
+/*Wrapper description/options*/
 #descriptions{
   position: relative;
   width: 100%;
+  height: max-content;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: flex-start;
 }
-/*DESCRIPTION END*/
-/*Buttons and price*/
+/**************************************************************************/
+
+
+/*wrapper for price and buttons to add and more or remove products*/
 .buttAndPriceShopingCart{
   position: relative;
   width: 200px;
+  height: max-content;
+  margin-bottom: 10px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: flex-start;
 }
+/**************************************************************************/
+
+/*wrapper for every section separate in price and buttons One item section*/
 .wrapperChildrens{
   position: relative;
   width: 100%;
@@ -133,50 +157,65 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: flex-end ;
   align-content: flex-start;
 }
-/*TOTAL PRICE H4*/
-.total{
-  font-weight: 700;
-}
-.smallDesc{
-  color: #2B6777;
-}
+/**************************************************************************/
 
-/*ORDER QUANTITY WRAPPER*/
+/*Total price one item h4 */
+.total{
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 6px;
+}
+/**************************************************************************/
+
+/*Small informations*/
+.smallDesc{
+  margin-bottom: 5px;
+  color: #2B6777;
+  line-height: normal;
+  text-align: end;
+  font-size: .65rem;
+}
+/**************************************************************************/
+
+/*Order quantity span wrapper*/
 
 .wrapperChildrensOrder{
   position: relative;
   width: 100%;
-  margin-top: 15px;
+  margin-top: 7px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-content: flex-start;
 }
 
-/*BUTTONS STYLE*/
+/*button remove and add one item*/
 .btn{
   position: relative;
   width: 100%;
-  height: 40px;
+  padding: 10px 0;
+  margin-top: 5px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  font-size: 18px;
-  background-color: #e6b8b8;
   outline: none;
-  border-radius: 5px;
-  border: 1px solid #c8d8e4;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  background-color: #5340ff;
   font-weight: 600;
+  font-size: 1.125rem;
+  letter-spacing: 1.1px;
 }
 
 
-/*BUTTON AND TOTAL PRICE BOTTOM*/
+/*Total price and buy button on bottom*/
 .btnTotalWrapper{
   position: relative;
   width: 100%;
@@ -185,30 +224,72 @@
   flex-wrap: wrap;
   justify-content: flex-end;
   align-content: flex-start;
-  margin-top: 20px;
 }
+/*Total price of products*/
 .btnTotalWrapper h4{
-  margin-top: 30px;
+  margin-top: 25px;
+  line-height: normal;
 }
-/*BUTTON BUY BOTTOM*/
+
+/*Buy button bottom*/
 .btn1 {
   position: relative;
-  width: 300px;
-  height: 40px;
+  width: 350px;
+  padding: 10px 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  font-size: 18px;
-  background-color: #e6b8b8;
-  outline: none;
-  border-radius: 5px;
-  margin-top: 5px;
-  border: 1px solid #c8d8e4;
+  font-size: 1.125rem;
   font-weight: 600;
+  letter-spacing: 1.1px;
+  color: #ffffff;
+  background-color: #ff4f11;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  margin-top: 11px;
 }
 
+
+
+
+
+
+
+/*ROUTE PARAMS WRAPPER ***************************************************/
+
+#routeWrapper {
+  position: relative;
+  width: 100%;
+  min-height: 59px !important;
+  margin-top: 25px;
+  height: max-content;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: flex-start;
+}
+
+/**************************************************************************/
+
+/*-------------------------Wrapper Follow component---------------------------------------------------------*/
+#follow {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 75px 0;
+  background-color: #5340ff;
+  box-shadow: 0 1px 9px 0 rgb(0 0 0 / 2%), 0 2px 6px 0 rgb(0 0 0 / 1%),
+    0 10px 34px 0 rgb(0 0 0 / 3%);
+}
+
+/*----------------------------------------------------------------------------------*/
 
 
 
@@ -216,27 +297,391 @@
 /*RESPONSIVE MEDIA QUERIES*/
 
 @media (max-width: 320px) {
+  /*No items div*/
+    .noItems {
+      width: 238px;
+      margin-top: 50px;
+    }
+  /**************************************************************************/
+  /*Wrapper for every product*/
+    .itemShoppingCartWrapper {
+      width: 238px;
+      margin-top: 35px;
+    }
+  /*Wrapper for product*/
+    .itemShoppingCart {
+      padding: 15px 15px 5px 15px;
+      margin-top: 15px;
+    }
+
+
+  /**************************************************************************/
+
+  /*-------------------------Wrapper Follow component---------------------------------------------------------*/
+  #follow {
+    margin: 50px 0 50px 0;
+  }
+  /***********************************************************************************/
+  /*Image wrapper and image product tag*/
+    .imgWrapper {
+      width: 100%;
+      height: 150px;
+    }
+    .imgWrapper img {
+      width: 150px;
+    }
+  /**************************************************************************/
+
+  /*wrapper with header and description/options component*/
+    .desctiptionShopingCart {
+      width: 100%;
+    }
+  /**************************************************************************/
+  /*wrapper for price and buttons to add and more or remove products*/
+    .buttAndPriceShopingCart {
+      width: 100%;
+      margin-top: 5px;
+    }
+  /**************************************************************************/
+
+  /*Title*/
+    .title h2 {
+      font-size: 1.6rem;
+      line-height: normal;
+      font-weight: 500;
+    }
+  /*Order quantity span wrapper*/
+    .wrapperChildrensOrder {
+      margin-top: 5px;
+    }
+  /*Total price one item h4 */
+    .total {
+      margin-top: 0px;
+    }
+
+  /*Buy button bottom and total price*/
+  .btnTotalWrapper h4{
+    margin-top: 15px;
+  }
+  .btn1 {
+      position: relative;
+      width: 100%;
+      margin-top: 10px;
+    }
+
 }
 
 @media only screen and (max-width: 414px) and (min-width: 321px) {
+  /*No items div*/
+    .noItems {
+      width: 300px;
+      margin-top: 50px;
+    }
+    .noItems h2 {
+      font-size: 1.6rem;
+    }
+
+  /**************************************************************************/
+  /*Wrapper for every product*/
+    .itemShoppingCartWrapper {
+      width: 300px;
+      margin-top: 35px;
+    }
+
+    .itemShoppingCart {
+      padding: 15px 15px 5px 15px;
+      margin-top: 15px;
+    }
+  /**************************************************************************/
+  /*-------------------------Wrapper Follow component---------------------------------------------------------*/
+  #follow {
+    margin: 50px 0 50px 0;
+  }
+  /***********************************************************************************/
+  /*Image wrapper and image product tag*/
+    .imgWrapper {
+      width: 100%;
+      height: 150px;
+    }
+    .imgWrapper img {
+      width: 150px;
+    }
+  /**************************************************************************/
+
+  /*wrapper with header and description/options component*/
+    .desctiptionShopingCart {
+      width: 100%;
+    }
+  /**************************************************************************/
+  /*wrapper for price and buttons to add and more or remove products*/
+    .buttAndPriceShopingCart {
+      width: 100%;
+      margin-top: 5px;
+    }
+  /**************************************************************************/
+
+  /*Title*/
+    .title h2 {
+      font-size: 1.8rem;
+      line-height: normal;
+      font-weight: 500;
+    }
+
+  /*Order quantity span wrapper*/
+    .wrapperChildrensOrder {
+      margin-top: 5px;
+    }
+    /*Total price one item h4 */
+    .total {
+      margin-top: 0px;
+    }
+
+  /*Buy button bottom and total price*/
+    .btnTotalWrapper h4 {
+      margin-top: 20px;
+    }
+    .btn1 {
+      width: 100%;
+    }
+
 }
 
 /* X-Small devices (portrait phones, less than 576px)*/
 @media only screen and (max-width: 576px) and (min-width: 415px) {
+  /*No items div*/
+    .noItems {
+      width: 380px;
+    }
+    .noItems h2 {
+      font-size: 1.8rem;
+    }
+
+  /**************************************************************************/
+    /*Wrapper for every product*/
+    .itemShoppingCartWrapper {
+      width: 380px;
+    }
+  /**************************************************************************/
+  /*Image wrapper and image product tag*/
+    .imgWrapper {
+      width: 100%;
+      height: 150px;
+    }
+    .imgWrapper img{
+      width: 150px;
+    }
+  /**************************************************************************/
+
+  /*wrapper with header and description/options component*/
+    .desctiptionShopingCart {
+      width: 100%;
+    }
+  /**************************************************************************/
+  /*wrapper for price and buttons to add and more or remove products*/
+    .buttAndPriceShopingCart {
+      width: 100%;
+      margin-top: 5px;
+    }
+  /**************************************************************************/
+  /*Buy button bottom and total price*/
+    .btn1 {
+      width: 100%;
+    }
+
 }
 
 /* Small devices (landscape phones, less than 768px)*/
 @media only screen and (max-width: 768px) and (min-width: 577px) {
+  /*No items div*/
+    .noItems {
+      width: 538px;
+    }
+  /**************************************************************************/
+    /*Wrapper for every product*/
+    .itemShoppingCartWrapper {
+      width: 538px;
+    }
+  /**************************************************************************/
+  /*Image wrapper and image product tag*/
+    .imgWrapper{
+      width: 150px;
+      height: 150px;
+    }
+  /**************************************************************************/
+
+  /*wrapper with header and description/options component*/
+    .desctiptionShopingCart {
+      width: 313px;
+    }
+  /**************************************************************************/
+  /*wrapper for price and buttons to add and more or remove products*/
+    .buttAndPriceShopingCart {
+      width: 100%;
+      margin-top: 5px;
+    }
+  /**************************************************************************/
+  .btn1 {
+    width: 100%;
+  }
+
 }
 @media only screen and (max-width: 920px) and (min-width: 769px) {
+  /*No items div*/
+    .noItems {
+      width: 657px;
+    }
+  /**************************************************************************/
+    /*Wrapper for every product*/
+    .itemShoppingCartWrapper {
+      width: 657px;
+    }
+    /*Wrapper for every product*/
+    .itemShoppingCart {
+      padding-bottom: 15px;
+    }
+  /**************************************************************************/
+  /*Image wrapper and image product tag*/
+    .imgWrapper{
+      width: 140px;
+      height: 140px;
+    }
+  /**************************************************************************/
+
+  /*wrapper with header and description/options component*/
+    .desctiptionShopingCart {
+      width: 230px;
+    }
+  /**************************************************************************/
+  /*Wrapper description/options*/
+    #descriptions {
+      width: 100%;
+    }
+    /**************************************************************************/
+  /*wrapper for price and buttons to add and more or remove products*/
+    .buttAndPriceShopingCart {
+      width: 187px;
+      margin-bottom: 10px;
+    }
+  /**************************************************************************/
+
 }
 @media only screen and (max-width: 1025px) and (min-width: 921px) {
+  /*No items div*/
+    .noItems {
+      width: 820px;
+    }
+  /**************************************************************************/
+    /*Wrapper for every product*/
+    .itemShoppingCartWrapper {
+      width: 820px;
+    }
+    .itemShoppingCart {
+      width: 820px;
+      padding-bottom: 15px;
+    }
+  /**************************************************************************/
+
+  /*Image wrapper and image product tag*/
+    .imgWrapper{
+      width: 140px;
+      height: 140px;
+    }
+  /**************************************************************************/
+
+  /*wrapper with header and description/options component*/
+    .desctiptionShopingCart {
+      position: relative;
+      width: 393px;
+    }
+  /**************************************************************************/
+  /*Wrapper description/options*/
+    #descriptions {
+      width: 100%;
+    }
+  /**************************************************************************/
+  /*wrapper for price and buttons to add and more or remove products*/
+    .buttAndPriceShopingCart {
+      width: 187px;
+      margin-bottom: 10px;
+    }
+  /**************************************************************************/
+
 }
 
 /* Large devices (desktops, less than 1200px)*/
 @media only screen and (max-width: 1200px) and (min-width: 1026px) {
+  /*No items div*/
+    .noItems {
+      width: 914px;
+    }
+  /**************************************************************************/
+    /*Wrapper for every product*/
+    .itemShoppingCartWrapper {
+      width: 914px;
+    }
+    .itemShoppingCart {
+      width: 914px;
+      padding-bottom: 15px;
+    }
+  /**************************************************************************/
+  /*Image wrapper and image product tag*/
+    .imgWrapper{
+      width: 150px;
+      height: 150px;
+    }
+  /**************************************************************************/
+
+  /*wrapper with header and description/options component*/
+    .desctiptionShopingCart {
+      position: relative;
+      width: 477px;
+    }
+/**************************************************************************/
+/*Wrapper description/options*/
+    #descriptions {
+      width: 100%;
+    }
+  /**************************************************************************/
+  /*wrapper for price and buttons to add and more or remove products*/
+    .buttAndPriceShopingCart {
+      width: 187px;
+      margin-bottom: 10px;
+    }
+  /**************************************************************************/
+
 }
 
 /* X-Large devices (large desktops, less than 1400px)*/
 @media only screen and (max-width: 1400px) and (min-width: 1201px) {
+  /*No items div*/
+    .noItems {
+      width: 1020px;
+    }
+  /**************************************************************************/
+  /*Wrapper for every product*/
+    .itemShoppingCartWrapper {
+      width: 1020px;
+    }
+  /**************************************************************************/
+
+
+  /*Image wrapper and image product tag*/
+    .imgWrapper{
+      width: 170px;
+      height: 170px;
+    }
+  /**************************************************************************/
+
+  /*wrapper with header and description/options component*/
+    .desctiptionShopingCart {
+      position: relative;
+      width: 550px;
+    }
+  /**************************************************************************/
+  /*Wrapper description/options*/
+    #descriptions {
+      width: 100%;
+    }
+  /**************************************************************************/
+
 }

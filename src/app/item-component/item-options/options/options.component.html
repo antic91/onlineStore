@@ -49,7 +49,12 @@
         <span class="plus" (click)="plus()">+</span>
       </span>
 
-      <button class="addToCart" (click)="addToCart()" [disabled]="titleAdded!='Add to Cart'">{{titleAdded}}</button>
+      <!--add tocart button with directive addToCart-->
+      <button class="addToCart"
+      appAddToCart
+      [itemOBJ]="itemOBJ"
+      [orderQuantity]="orderQuantity"
+      [disabled]="titleAdded!='Add to Cart'">{{titleAdded}}</button>
 
       <button class="buy"> Buy now</button>
 

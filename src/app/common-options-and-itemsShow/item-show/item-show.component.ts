@@ -6,6 +6,8 @@ import { StorageServiceService } from 'src/app/services/storage-service.service'
 import { finalize, map, take } from 'rxjs/operators';
 import { trigger, transition, useAnimation, animate, state, style } from '@angular/animations';
 import { fadeIn } from 'src/app/animations/animations';
+import { Subscription } from 'rxjs';
+
 
 @Component({
   selector: 'app-item-show',
@@ -80,6 +82,10 @@ export class ItemShowComponent implements OnInit {
   /*route param to speak with server*/
   routeParam!: string;
 
+  /*subscription to observable,so we can onDestroy unsubscribe*/
+  private subscription!: Subscription;
+  private subscription1!: Subscription;
+
   constructor(private PostService: PostService, private route: ActivatedRoute, private result: ResultServiceService, private router: Router, private storage: StorageServiceService) {
 
   }
@@ -89,7 +95,7 @@ export class ItemShowComponent implements OnInit {
   ngOnInit() {
     this.showData();
     /*Getting status of  noItems boolean from result service*/
-    this.result.statusNoItems.subscribe(x => {
+    this.subscription = this.result.statusNoItems.subscribe(x => {
       this.noItemsDisplay = x;
     });
   }
@@ -104,12 +110,12 @@ export class ItemShowComponent implements OnInit {
       this.numToAdd = 8;
     }
     //if (this.value == "allProducts") {
-    this.result.statusResultAll
+    this.subscription1 = this.result.statusResultAll
       .subscribe((x: any[]) => {
-        /*Setting object and calling a function */
-        this.objects = x;
-        this.setDataToShow()
-      })
+          /*Setting object and calling a function */
+          this.objects = x;
+          this.setDataToShow()
+        })
   }
 
 
@@ -135,6 +141,15 @@ export class ItemShowComponent implements OnInit {
     }
 
   }
+
+
+  ngOnDestroy(): void {
+    //Called once, before the instance is destroyed.
+    //Add 'implements OnDestroy' to the class.
+    this.subscription.unsubscribe();
+    this.subscription1.unsubscribe();
+  }
+
 
   /*Detecting filter changes */
   ngOnChanges(changes: SimpleChanges): void {

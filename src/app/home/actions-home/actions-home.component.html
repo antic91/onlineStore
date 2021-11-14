@@ -33,7 +33,10 @@
 
     <!--add to cart button-->
     <section class="itemsData">
-        <button class="addTo" (click)="addToBag()">Add to cart</button>
+        <button class="addTo"
+          appAddToCart
+          [itemOBJ]="item"
+          [orderQuantity]="1">Add to cart</button>
     </section>
 
     <!--Price and button go to item data actions home-->

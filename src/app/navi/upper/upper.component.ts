@@ -4,6 +4,7 @@ import { Component, ElementRef, OnInit, Output, ViewChild, EventEmitter, Input }
 import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { ResultServiceService } from 'src/app/services/result-service.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-upper',
@@ -35,6 +36,10 @@ export class UpperComponent implements OnInit {
   showLogIn: boolean = false;
   userLogged!: boolean;
 
+
+    /*subscription to observable,so we can onDestroy unsubscribe*/
+  private subscription!: Subscription;
+  private subscription1!: Subscription;
 
   constructor(private loggedIn: LogedInService, private service: PostService, private router: Router, private result: ResultServiceService) {
     this.router.events.subscribe((event) => {
@@ -121,16 +126,20 @@ export class UpperComponent implements OnInit {
 
   /*SHOWING LogIN absolute div*/
   onMouseOver() {
-    this.loggedIn.statusLogged.subscribe((x: any) => this.userLogged = x);
+    this.subscription = this.loggedIn.statusLogged.subscribe((x: any) => this.userLogged = x);
     this.showLogIn = true;
   }
   /*Hidding LogIN absolute div*/
   onMouseLeave() {
-    this.loggedIn.statusLogged.subscribe((x: any) => this.userLogged = x);
+    this.subscription1 = this.loggedIn.statusLogged.subscribe((x: any) => this.userLogged = x);
     this.showLogIn = false;
   }
 
 
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
+    this.subscription1.unsubscribe();
+  }
   /*LOGIN DROP DOWN FOR SMALLER DEVICES CHANGE FUNCTION*/
   changeDropDown(event: boolean): void{
     if (this.iconsWrapper.nativeElement.parentElement.clientWidth <= 820) {

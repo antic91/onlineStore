@@ -51,6 +51,7 @@ import { SmallerDropDownComponent } from './navi/smaller-drop-down/smaller-drop-
 import { SubscribeComponent } from './home/subscribe/subscribe.component';
 import { FolowComponent } from './home/folow/folow.component';
 import { RouteParametersComponent } from './route-parameters/route-parameters.component';
+import { AddToCartDirective } from './directives/add-to-cart.directive';
 
 @NgModule({
   declarations: [
@@ -93,7 +94,8 @@ import { RouteParametersComponent } from './route-parameters/route-parameters.co
     SmallerDropDownComponent,
     SubscribeComponent,
     FolowComponent,
-    RouteParametersComponent
+    RouteParametersComponent,
+    AddToCartDirective
   ],
   imports: [
     BrowserModule,
