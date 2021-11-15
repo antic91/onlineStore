@@ -35,6 +35,8 @@
   height: 100%;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
   outline: none;
   border: none;
   padding-left: .75rem;
@@ -498,12 +500,12 @@
     }
 
   /*INPUT*/
-      #inputWrapper {
+    #inputWrapper {
         width: 268px;
-      }
-      #inputWrapper input {
+    }
+    #inputWrapper input {
         width: 273px;
-      }
+    }
   /*Icons menu*/
     .iconsMenu {
       position: relative;
