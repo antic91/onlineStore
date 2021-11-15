@@ -2,6 +2,7 @@ import { trigger, transition, useAnimation, state, style, animate } from '@angul
 import { ThrowStmt } from '@angular/compiler';
 import { Component, HostListener, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, NavigationStart, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
 import { fadeIn, slideAnim } from '../animations/animations';
 import { ResultServiceService } from '../services/result-service.service';
@@ -124,6 +125,8 @@ export class SearchResultComponent implements OnInit {
 
   clicked: boolean = false;
 
+  Subscription!: Subscription;
+
   objectData!: any[];
   objectCat!: any[];
 
@@ -138,10 +141,10 @@ export class SearchResultComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.result.statusResultAll.subscribe((x: any) => {
+    this.Subscription = this.result.statusResultAll.subscribe((x: any) => {
       this.objectData = x;
-      this.result.categoriesResult.subscribe((x: any) => this.objectCat = x)
-      this.ShowDataSearch = true
+      this.result.categoriesResult.subscribe((x: any) => this.objectCat = x);
+      this.ShowDataSearch = true;
     })
   }
 
@@ -162,7 +165,11 @@ export class SearchResultComponent implements OnInit {
       this.showHide = !this.showHide
       this.showHide1 = !this.showHide1
 
-    }
+  }
+
+  ngOnDestroy(): void {
+    if(this.Subscription != undefined) this.Subscription.unsubscribe()
+  }
 
   /*on resize close smaller filter options*/
     @HostListener('window:resize', ['$event'])

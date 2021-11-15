@@ -7,7 +7,7 @@
   </span>
 
   <span class="option">
-    <h5 (click)="closeLoginMenu()"><a [routerLink]="['/sing-up']" href="">Sign Up</a></h5>
+    <h5 (click)="closeLoginMenu()"><a [routerLink]="['/sign-up']" href="">Sign Up</a></h5>
   </span>
 
 </div>
@@ -45,34 +45,34 @@
 <div class="wrapper" *ngIf="showMenu">
 
   <span class="option">
-    <h5 (click)="closeMenu()" [routerLink]="['/allProducts']"><a href="">All Products</a></h5>
+    <h5 (click)="closeMenu()"><a [routerLink]="['/allProducts']">All Products</a></h5>
   </span>
 
   <span class="option extraPadding">
-    <h5 (click)="closeMenu()" [routerLink]="['/categories', 'usedLaptops']"><a href="">Used Laptops</a></h5>
+    <h5 (click)="closeMenu()"><a [routerLink]="['/categories', 'usedLaptops']">Used Laptops</a></h5>
   </span>
 
   <span class="option extraPadding">
-    <h5 (click)="closeMenu()" [routerLink]="['/categories', 'usedDesktops']"><a href="">Used Desktops</a></h5>
+    <h5 (click)="closeMenu()"><a [routerLink]="['/categories', 'usedDesktops']">Used Desktops</a></h5>
   </span>
 
   <span class="option extraPadding">
-    <h5 (click)="closeMenu()" [routerLink]="['/categories', 'newLaptops']"><a href="">New Laptops</a></h5>
+    <h5 (click)="closeMenu()"><a [routerLink]="['/categories', 'newLaptops']">New Laptops</a></h5>
   </span>
 
   <span class="option extraPadding">
-    <h5 (click)="closeMenu()" [routerLink]="['/categories', 'tablets']"><a href="">Tablets</a></h5>
+    <h5 (click)="closeMenu()"><a [routerLink]="['/categories', 'tablets']">Tablets</a></h5>
   </span>
 
   <span class="option extraPadding">
-    <h5 (click)="closeMenu()" [routerLink]="['/categories', 'smartphones']"><a href="">Smartphones</a></h5>
+    <h5 (click)="closeMenu()"><a [routerLink]="['/categories', 'smartphones']">Smartphones</a></h5>
   </span>
 
   <span class="option">
-    <h5 (click)="closeMenu()"><a href="">About</a></h5>
+    <h5 (click)="closeMenu()"><a [routerLink]="['/about']">About</a></h5>
   </span>
 
   <span class="option">
-    <h5 (click)="closeMenu()"><a href="">Contact</a></h5>
+    <h5 (click)="closeMenu()"><a [routerLink]="['/contact']">Contact</a></h5>
   </span>
 </div>

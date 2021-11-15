@@ -20,7 +20,7 @@
     </button>
   </div>
 
-  <app-search-options *ngIf="showDrop" class="searchOptions" (setValue)="setNewValue($event)" [object]="object"></app-search-options>
+  <app-search-options *ngIf="showDrop && object" class="searchOptions" (setValue)="setNewValue($event)" [object]="object"></app-search-options>
 
 </div>
 

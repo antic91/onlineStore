@@ -70,12 +70,7 @@ export class UpperComponent implements OnInit {
       return;
     }
     /*If enter calling navigate function*/
-    else if ($event.key == "Enter") {
-        this.showDrop = false;
-        this.navigate();
-        return;
-
-    } else {
+    else {
       this.showDrop = true;
       this.getSearchData($event.key);
     }
@@ -90,36 +85,78 @@ export class UpperComponent implements OnInit {
         .pipe(
           map((res:any)=>res.result)
         )
-        .subscribe((x: any[]) => {
-          if (x.length > 0) {
-            this.result.setNoItems(false);
-            this.object = x;
-            this.value = this.inputEl.nativeElement.value;
-          } else {
-            this.result.setNoItems(true);
+        .subscribe(async (x: any[]) => {
+
+          this.object = await x;
+          /*check if there is response and then set noItem boolean
+          to false and navigate to route if enter clicked*/
+
+          if (await x.length > 0 && eventValue == "Enter") {
+            this.navigate();
+
           }
+          /*If there is nothing in response and enter is pressed
+          set noItems boolean to false, reset everything and navigate to route*/
+          else if (await x.length <= 0 && eventValue == "Enter") {
+            this.result.setNoItems(true);
+            this.result.setSearchInputVal("");
+            this.result.changeValueAll([]);
+            this.object = [];
+            this.showDrop = false;
+            this.result.changeStringValue("result");
+            this.router.navigate(['/result']);
+          }
+          /*And if there is no response and enter is not pressed just reset.*/
+          else if(await x.length <= 0 && eventValue != "Enter") {
+            this.result.setNoItems(true);
+            this.result.setSearchInputVal("");
+            this.result.changeValueAll([]);
+            this.object = [];
+            this.showDrop = false;
+          }
+
         })
   }
 
 
 
-/*cathing clicked event on dropDown menu and changing input value*/
+  /*catching clicked event on dropDown menu and changing input value
+  resetting object and show drop down, setting no items to true.....*/
   setNewValue(event: string) {
     this.inputEl.nativeElement.value = event;
     this.object = []
+    this.result.setNoItems(true);
+    this.result.setSearchInputVal("");
+    this.result.changeValueAll([]);
+    this.showDrop = false;
   }
 
-/*on enter or click navigate */
+  
+/*on icon click navigate */
   navigate(): void{
-      this.result.setSearchInputVal("");
-      this.result.setSearchInputVal(this.inputEl.nativeElement.value);
-      this.result.changeValueAll(this.object);
-      this.object = [];
-      this.inputEl.nativeElement.value = "";
-      this.inputEl.nativeElement.blur();
-      this.result.changeStringValue("result");
-      this.router.navigate(['/result']);
-      this.showDrop = false;
+    /*if there is products*/
+    if (this.object.length > 0) {
+        this.value = this.inputEl.nativeElement.value;
+        this.result.setNoItems(false);
+        this.result.setSearchInputVal("");
+        this.result.setSearchInputVal(this.inputEl.nativeElement.value);
+        this.result.changeValueAll(this.object);
+        this.object = [];
+        this.inputEl.nativeElement.value = "";
+        this.inputEl.nativeElement.blur();
+        this.result.changeStringValue("result");
+        this.router.navigate(['/result']);
+        this.showDrop = false;
+
+    } else {
+        this.result.setNoItems(true);
+        this.result.setSearchInputVal("");
+        this.result.changeValueAll([]);
+        this.object = [];
+        this.showDrop = false;
+        this.result.changeStringValue("result");
+        this.router.navigate(['/result']);
+    }
   }
 
 

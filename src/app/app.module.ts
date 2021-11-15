@@ -52,6 +52,8 @@ import { SubscribeComponent } from './home/subscribe/subscribe.component';
 import { FolowComponent } from './home/folow/folow.component';
 import { RouteParametersComponent } from './route-parameters/route-parameters.component';
 import { AddToCartDirective } from './directives/add-to-cart.directive';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -95,7 +97,9 @@ import { AddToCartDirective } from './directives/add-to-cart.directive';
     SubscribeComponent,
     FolowComponent,
     RouteParametersComponent,
-    AddToCartDirective
+    AddToCartDirective,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

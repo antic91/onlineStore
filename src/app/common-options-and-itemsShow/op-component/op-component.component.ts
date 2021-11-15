@@ -6,6 +6,7 @@ import { ResultServiceService } from 'src/app/services/result-service.service';
 import { StorageServiceService } from 'src/app/services/storage-service.service';
 import { map } from 'rxjs/operators';
 import { NotFoundError } from 'src/app/commonErrors/not-found-error';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-op-component',
@@ -30,6 +31,8 @@ export class OpComponentComponent implements OnInit {
 
   /*Value from input*/
   value!: string;
+
+  Subscription!: Subscription;
 
   constructor(private result: ResultServiceService,private getDataService: PostService, private route: ActivatedRoute, private router: Router, public storage: StorageServiceService, private valueService:ResultServiceService) {
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
@@ -92,7 +95,7 @@ export class OpComponentComponent implements OnInit {
   /*When Filter button is clicked call the function to get new data*/
   buttonClicked() {
     /*Getting input value and setting it to send it as a parameter to server*/
-    this.valueService.statusSearchInputVal.subscribe((x: any) => {
+    this.Subscription = this.valueService.statusSearchInputVal.subscribe((x: any) => {
       this.value = x;
       this.valueService.changeValueAll([]);
       this.getData();
@@ -183,6 +186,12 @@ export class OpComponentComponent implements OnInit {
         })
 
     }
+  }
+
+  ngOnDestroy(): void {
+    //Called once, before the instance is destroyed.
+    //Add 'implements OnDestroy' to the class.
+    if(this.Subscription != undefined) this.Subscription.unsubscribe()
   }
 
     /*on resize ***************************/

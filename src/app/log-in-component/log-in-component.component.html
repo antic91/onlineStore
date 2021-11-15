@@ -29,8 +29,8 @@
           placeholder="Username">
 
           <!--span wrapper for link to sign up-->
-          <span *ngIf="url != 'sing-up'" class="signUpAndPassword">
-            <a href="">You don't have account? Sign up here!</a>
+          <span class="signUpAndPassword">
+            <a *ngIf="url != 'sign-up'" href="" [routerLink]="['/sign-up']">You don't have account? Sign up here!</a>
           </span>
 
           <!--If not valid options-->

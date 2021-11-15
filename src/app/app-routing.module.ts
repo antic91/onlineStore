@@ -9,6 +9,8 @@ import { AllComponent } from './all/all.component';
 import { LogInComponentComponent } from './log-in-component/log-in-component.component';
 import { SingUpComponentComponent } from './sing-up-component/sing-up-component.component';
 import { ShopingCartComponentComponent } from './shoping-cart-component/shoping-cart-component.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -23,8 +25,10 @@ const routes: Routes = [
   { path: "allProducts", component: AllComponent },
   { path: "notFinished", component: NotFinishedComponent },
   { path: "log-in", component: LogInComponentComponent },
-  { path: "sing-up", component: SingUpComponentComponent },
+  { path: "sign-up", component: SingUpComponentComponent },
   { path: "shoping-cart", component: ShopingCartComponentComponent },
+  { path: "about", component: AboutComponent },
+  { path: "contact", component: ContactComponent }
 ];
 
 @NgModule({
