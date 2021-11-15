@@ -11,6 +11,9 @@
   align-content: flex-start;
   overflow: visible;
 }
+#wrapperContact h1 {
+  text-align: center;
+}
 
 /*ROUTE PARAMS WRAPPER ***************************************************/
 

@@ -12,6 +12,9 @@
   overflow: visible;
 }
 
+#wrapperAbout h1{
+  text-align: center;
+}
 /*ROUTE PARAMS WRAPPER ***************************************************/
 
 #routeWrapper {
