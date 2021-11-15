@@ -54,6 +54,7 @@ import { RouteParametersComponent } from './route-parameters/route-parameters.co
 import { AddToCartDirective } from './directives/add-to-cart.directive';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { ScrollPrevDefDirective } from './directives/scroll-prev-def.directive';
 
 @NgModule({
   declarations: [
@@ -99,7 +100,8 @@ import { ContactComponent } from './contact/contact.component';
     RouteParametersComponent,
     AddToCartDirective,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    ScrollPrevDefDirective
   ],
   imports: [
     BrowserModule,

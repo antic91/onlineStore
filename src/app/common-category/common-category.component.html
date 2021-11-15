@@ -8,8 +8,8 @@
 
   <!--Wrapper for button Filter to show filter on smaller screens-->
   <div class="filterWrapper">
-    <button class="filterButton" *ngIf="!showHide" [@SlideIn] (click)="showHideFilter()">Filter</button>
-    <button class="filterButton" *ngIf="!showHide1" [@SlideInOne] (click)="showHideFilter()">Close Filter</button>
+    <button class="filterButton" *ngIf="!showHide" [@SlideIn] (click)="showHideFilter()" appScrollPrevDef>Filter</button>
+    <button class="filterButton" *ngIf="!showHide1" [@SlideInOne] (click)="showHideFilter()" appScrollPrevDef>Close Filter</button>
   </div>
 
   <!--Wrapper for items and options-->

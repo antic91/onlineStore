@@ -204,8 +204,9 @@ export class AllComponent implements OnInit {
   /*on resize close smaller filter options*/
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
-    
+
     this.showHide = false;
     this.showHide1 = true;
   }
+
 }
