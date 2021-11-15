@@ -131,7 +131,7 @@ export class UpperComponent implements OnInit {
     this.showDrop = false;
   }
 
-  
+
 /*on icon click navigate */
   navigate(): void{
     /*if there is products*/
@@ -177,6 +177,7 @@ export class UpperComponent implements OnInit {
     this.subscription.unsubscribe();
     this.subscription1.unsubscribe();
   }
+
   /*LOGIN DROP DOWN FOR SMALLER DEVICES CHANGE FUNCTION*/
   changeDropDown(event: boolean): void{
     if (this.iconsWrapper.nativeElement.parentElement.clientWidth <= 820) {

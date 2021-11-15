@@ -1,6 +1,6 @@
 import { trigger, transition, useAnimation, state, style, animate } from '@angular/animations';
 import { ThrowStmt } from '@angular/compiler';
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
@@ -112,6 +112,9 @@ export class SearchResultComponent implements OnInit {
   result component together with common categories component . The Style(css) and HTML
   are the same right now but its possible to change it !*/
 
+    /*watch width of element*/
+  @ViewChild('searchWrapper', { read: ElementRef }) searchWrapper!: ElementRef;
+
   /*Opacity fade in on start*/
   ShowDataSearch: boolean = false;
 
@@ -161,10 +164,6 @@ export class SearchResultComponent implements OnInit {
 
   /*Function for showing or hiding filter option for smaller devices and setting animations trigger*/
   showHideFilter($event: any): void {
-
-      $event.stopPropagation();
-    $event.stopImmediatePropagation();
-
       this.showHide = !this.showHide;
       this.showHide1 = !this.showHide1;
   }
@@ -176,7 +175,9 @@ export class SearchResultComponent implements OnInit {
   /*on resize close smaller filter options*/
     @HostListener('window:resize', ['$event'])
     onResize(event:any) {
-      this.showHide = false;
-      this.showHide1 = true;
+      if (this.searchWrapper.nativeElement.clientWidth >= 820) {
+        this.showHide = false;
+        this.showHide1 = true;
+      }
     }
 }

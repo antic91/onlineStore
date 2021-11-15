@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output, EventEmitter, HostListener } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter, HostListener, ElementRef, ViewChild } from '@angular/core';
 import { LogedInService } from 'src/app/services/loged-in.service';
 
 @Component({
@@ -7,6 +7,10 @@ import { LogedInService } from 'src/app/services/loged-in.service';
   styleUrls: ['./smaller-drop-down.component.css']
 })
 export class SmallerDropDownComponent implements OnInit {
+
+    /*watch width of element*/
+  @ViewChild('smaller', { read: ElementRef }) smaller!: ElementRef;
+
 
   @Input('showLogin') showLogin: boolean = false;
   @Input('showMenu') showMenu: boolean = false;
@@ -51,9 +55,12 @@ export class SmallerDropDownComponent implements OnInit {
 
   /*On resize close drop down menu*/
   @HostListener('window:resize', ['$event'])
-  onResize(event:Event) {
-    this.statusMenu.emit(false)
-    this.showMenu = false;
-    this.showLogin = false;
+  onResize(event: Event) {
+    if (window.innerWidth >= 1026) {
+      this.statusMenu.emit(false)
+      this.showMenu = false;
+      this.showLogin = false;
+    }
+
   }
 }

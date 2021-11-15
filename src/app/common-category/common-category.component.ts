@@ -1,6 +1,6 @@
 import { ResultServiceService } from 'src/app/services/result-service.service';
 import { PostService } from './../services/post.service';
-import { Component, Input, OnInit, Output, EventEmitter, HostListener } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter, HostListener, ElementRef, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { StorageServiceService } from '../services/storage-service.service';
 import { map } from 'rxjs/operators';
@@ -107,6 +107,9 @@ import { fadeIn, slideAnim } from '../animations/animations';
 
 export class CommonCategoryComponent implements OnInit {
 
+  /*watch width of element*/
+  @ViewChild('allOptionsWrapper', { read: ElementRef }) allOptionsWrapper!: ElementRef;
+
   /*Opacity fade in on start*/
   ShowDataCommon: boolean = false;
 
@@ -171,19 +174,19 @@ export class CommonCategoryComponent implements OnInit {
 
   /*Function for showing or hiding filter option for smaller devices and setting animations trigger*/
   showHideFilter($event: any): void {
-
-    $event.stopPropagation();
-    $event.stopImmediatePropagation();
-
     this.showHide = !this.showHide;
     this.showHide1 = !this.showHide1;
   }
 
-  /*on resize close smaller filter options*/
+  /*on resize if element width is >= 820px close smaller filter options*/
   @HostListener('window:resize', ['$event'])
-  onResize(event:any) {
-    this.showHide = false;
-    this.showHide1 = true;
+  onResize(event: any) {
+
+    if (this.allOptionsWrapper.nativeElement.clientWidth >= 820) {
+      this.showHide = false;
+      this.showHide1 = true;
+    }
+
   }
 
 }

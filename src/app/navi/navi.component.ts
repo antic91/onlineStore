@@ -109,8 +109,6 @@ export class NaviComponent implements OnInit {
     } else {
       this.showLogin = $event;
     }
-    console.log(this.showMenu)
-    console.log(this.showLogin)
   }
 
   /*Show or hide Menu dropDown for smaller screens*/

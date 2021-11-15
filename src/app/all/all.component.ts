@@ -1,6 +1,6 @@
 import { trigger, transition, useAnimation, animate, state, style } from '@angular/animations';
 import { PostService } from './../services/post.service';
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ResultServiceService } from '../services/result-service.service';
 import { map } from 'rxjs/operators';
@@ -119,6 +119,8 @@ export class AllComponent implements OnInit {
   result component together with common categories component . The Style(css) and HTML
   are the same right now but its possible to change it !*/
 
+  /*watch width of element*/
+  @ViewChild('allItems', { read: ElementRef }) allItems!: ElementRef;
 
   /*Opacity fade in on start*/
   ShowData: boolean = false;
@@ -197,20 +199,18 @@ export class AllComponent implements OnInit {
   /*Function for showing or hiding filter option for smaller devices and setting animations trigger*/
   showHideFilter($event: any): void {
 
-    $event.stopPropagation();
-    $event.stopImmediatePropagation();
-
     this.showHide = !this.showHide;
     this.showHide1 = !this.showHide1;
 
   }
 
-  /*on resize close smaller filter options*/
+  /*on resize if element width is >= 820px close smaller filter options*/
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
-
-    this.showHide = false;
-    this.showHide1 = true;
+    if (this.allItems.nativeElement.clientWidth >= 820) {
+      this.showHide = false;
+      this.showHide1 = true;
+    }
   }
 
 }
