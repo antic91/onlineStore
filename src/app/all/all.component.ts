@@ -197,15 +197,14 @@ export class AllComponent implements OnInit {
 
   /*Function for showing or hiding filter option for smaller devices and setting animations trigger*/
   showHideFilter(): void {
-
     this.showHide = !this.showHide
     this.showHide1 = !this.showHide1
-
   }
 
   /*on resize close smaller filter options*/
   @HostListener('window:resize', ['$event'])
-  onResize(event:any) {
+  onResize(event: any) {
+    
     this.showHide = false;
     this.showHide1 = true;
   }

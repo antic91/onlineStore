@@ -47,6 +47,8 @@ body {
   max-width: 100%;
   background-color: #f7f7f7;
   overflow-y: visible!important;
+  -webkit-overflow-scrolling: touch;
+
 }
 
 p {
