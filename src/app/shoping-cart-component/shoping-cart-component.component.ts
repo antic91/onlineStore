@@ -18,16 +18,36 @@ import { Subscription } from 'rxjs';
           params: {
             opacity1: 0,
             opacity2: 1,
-            time:'500ms ease-in'
+            time:'300ms 350ms ease-in'
           }
         })
       ]),
       transition(':leave', [
         useAnimation(fadeIn, {
           params: {
+            opacity1: 1,
+            opacity2: 0,
+            time:'300ms ease-in'
+          }
+        })
+      ])
+    ]),
+    trigger('fadeInDelay',[
+      transition(':enter', [
+        useAnimation(fadeIn, {
+          params: {
             opacity1: 0,
             opacity2: 1,
-            time:'500ms ease-in'
+            time:'300ms 700ms ease-in'
+          }
+        })
+      ]),
+      transition(':leave', [
+        useAnimation(fadeIn, {
+          params: {
+            opacity1: 1,
+            opacity2: 0,
+            time:'300ms ease-in'
           }
         })
       ])

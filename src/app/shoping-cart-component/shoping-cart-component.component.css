@@ -14,8 +14,10 @@
 
 /*No items div*/
 .noItems{
-  position: relative;
-  width: 1124px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
   height: 600px;
   display: flex;
   flex-direction: row;
@@ -25,6 +27,7 @@
   margin-top: 75px;
 }
 .noItems h2{
+  width: 1124px;
   text-align: center;
 }
 /**************************************************************************/
@@ -299,8 +302,10 @@
 @media (max-width: 320px) {
   /*No items div*/
     .noItems {
-      width: 238px;
       margin-top: 50px;
+    }
+    .noItems h2{
+      width: 238px;
     }
   /**************************************************************************/
   /*Wrapper for every product*/
@@ -373,11 +378,11 @@
 
 @media only screen and (max-width: 414px) and (min-width: 321px) {
   /*No items div*/
-    .noItems {
-      width: 300px;
+    .noItems{
       margin-top: 50px;
     }
     .noItems h2 {
+      width: 300px;
       font-size: 1.6rem;
     }
 
@@ -449,11 +454,9 @@
 /* X-Small devices (portrait phones, less than 576px)*/
 @media only screen and (max-width: 576px) and (min-width: 415px) {
   /*No items div*/
-    .noItems {
-      width: 380px;
-    }
     .noItems h2 {
       font-size: 1.8rem;
+      width: 380px;
     }
 
   /**************************************************************************/
@@ -493,7 +496,7 @@
 /* Small devices (landscape phones, less than 768px)*/
 @media only screen and (max-width: 768px) and (min-width: 577px) {
   /*No items div*/
-    .noItems {
+    .noItems h2{
       width: 538px;
     }
   /**************************************************************************/
@@ -527,7 +530,7 @@
 }
 @media only screen and (max-width: 920px) and (min-width: 769px) {
   /*No items div*/
-    .noItems {
+    .noItems h2{
       width: 657px;
     }
   /**************************************************************************/
@@ -567,7 +570,7 @@
 }
 @media only screen and (max-width: 1025px) and (min-width: 921px) {
   /*No items div*/
-    .noItems {
+    .noItems h2{
       width: 820px;
     }
   /**************************************************************************/
@@ -611,7 +614,7 @@
 /* Large devices (desktops, less than 1200px)*/
 @media only screen and (max-width: 1200px) and (min-width: 1026px) {
   /*No items div*/
-    .noItems {
+    .noItems h2{
       width: 914px;
     }
   /**************************************************************************/
@@ -653,10 +656,13 @@
 
 /* X-Large devices (large desktops, less than 1400px)*/
 @media only screen and (max-width: 1400px) and (min-width: 1201px) {
+
   /*No items div*/
-    .noItems {
+
+    .noItems h2{
       width: 1020px;
     }
+
   /**************************************************************************/
   /*Wrapper for every product*/
     .itemShoppingCartWrapper {

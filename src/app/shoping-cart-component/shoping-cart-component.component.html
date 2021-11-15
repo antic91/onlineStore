@@ -4,12 +4,12 @@
 <div id="shopingCartWrapper">
 
   <!--header no items******************-->
-  <div class="noItems" *ngIf="noItems" [@fadeIn]>
+  <div class="noItems" *ngIf="noItems" [@fadeInDelay]>
     <h2>You have no Products in your Shopping Cart!</h2>
   </div>
 
   <!--Shoppingcart wrapper-->
-  <div class="itemShoppingCartWrapper"*ngIf="data.length" [@fadeIn]>
+  <div class="itemShoppingCartWrapper"*ngIf="data.length && !noItems" [@fadeIn]>
 
       <!--Every product separate wrapper-->
       <div class="itemShoppingCart" *ngFor="let item of data, let i = index">
