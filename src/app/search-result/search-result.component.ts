@@ -160,11 +160,13 @@ export class SearchResultComponent implements OnInit {
   }
 
   /*Function for showing or hiding filter option for smaller devices and setting animations trigger*/
-    showHideFilter($event:any): void {
-      $event.preventDefault();
+  showHideFilter($event: any): void {
+
+      $event.stopPropagation();
+    $event.stopImmediatePropagation();
+
       this.showHide = !this.showHide;
       this.showHide1 = !this.showHide1;
-      $event.stopPropagation();
   }
 
   ngOnDestroy(): void {

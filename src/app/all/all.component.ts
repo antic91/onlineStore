@@ -186,7 +186,6 @@ export class AllComponent implements OnInit {
 
   /*Catching filter button click event*/
   filterClicked(event: any) {
-    console.log(event)
     if (event == "clicked") this.clicked = true;
     this.showHide = false;
     this.showHide1 = true;
@@ -197,10 +196,13 @@ export class AllComponent implements OnInit {
 
   /*Function for showing or hiding filter option for smaller devices and setting animations trigger*/
   showHideFilter($event: any): void {
-    $event.preventDefault()
-    this.showHide = !this.showHide
-    this.showHide1 = !this.showHide1
+
     $event.stopPropagation();
+    $event.stopImmediatePropagation();
+
+    this.showHide = !this.showHide;
+    this.showHide1 = !this.showHide1;
+
   }
 
   /*on resize close smaller filter options*/
