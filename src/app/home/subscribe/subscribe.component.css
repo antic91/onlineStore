@@ -103,9 +103,9 @@
       padding: 10px 10px;
     }
   /*Last header width*/
-    .h5Header {
+    h5.h5Header {
       width: 238px;
-      font-size: 14px;
+      font-size: .7rem;
     }
 
 }
@@ -135,9 +135,9 @@
       padding: 12.5px 15px;
     }
   /*Last header width*/
-    .h5Header {
+    h5.h5Header {
       width: 300px;
-      font-size: 14px;
+      font-size: .78rem;
     }
 
 }
@@ -168,9 +168,9 @@
       padding: 12.5px 20px;
     }
   /*Last header width*/
-    .h5Header{
+    h5.h5Header{
       width: 380px;
-      font-size: 16px;
+      font-size: 	1rem;
     }
 
 }
