@@ -29,4 +29,5 @@ export class StorageServiceService {
   routeChangeDetection() {
     this.data = [];
   }
+
 }

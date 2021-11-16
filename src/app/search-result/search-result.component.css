@@ -38,7 +38,7 @@
   justify-content: center;
   align-content: flex-start;
   background-color: #ffffff;
-  padding: 20px 20px;
+  padding: 15px 15px;
   border-radius: 10px;
   box-shadow: 0 1px 9px 0 rgb(0 0 0 / 2%), 0 2px 6px 0 rgb(0 0 0 / 1%),
     0 10px 34px 0 rgb(0 0 0 / 3%);
@@ -89,14 +89,13 @@
 .alloptionsSmaller {
   display: none;
 }
-/*----------------------------------------------------------------------------------*/
 
 /*ROUTE PARAMS WRAPPER ***************************************************/
 
-#routeWrapper{
+#routeWrapper {
   position: relative;
   width: 100%;
-  min-height: 59px!important;
+  min-height: 59px !important;
   margin-top: 25px;
   height: max-content;
   display: flex;
@@ -105,6 +104,7 @@
   align-content: flex-start;
 }
 
+/**************************************************************************/
 
 /*RESPONSIVE MEDIA QUERIES*/
 
@@ -169,7 +169,7 @@
     justify-content: center;
     align-content: flex-start;
     background-color: #ffffff;
-    padding: 20px 20px;
+    padding: 15px;
     border-top: 2px solid #ff4f11;
     border-bottom: 2px solid #ff4f11;
     box-shadow: 0 1px 9px 0 rgb(0 0 0 / 2%), 0 2px 6px 0 rgb(0 0 0 / 1%),
@@ -247,7 +247,7 @@
     justify-content: center;
     align-content: flex-start;
     background-color: #ffffff;
-    padding: 20px 20px;
+    padding: 15px;
     border-top: 2px solid #ff4f11;
     border-bottom: 2px solid #ff4f11;
     box-shadow: 0 1px 9px 0 rgb(0 0 0 / 2%), 0 2px 6px 0 rgb(0 0 0 / 1%),
@@ -261,7 +261,6 @@
     margin: 35px 0 50px 0;
   }
   /***********************************************************************************/
-
 }
 
 /* X-Small devices (portrait phones, less than 576px)*/
@@ -327,7 +326,7 @@
     justify-content: center;
     align-content: flex-start;
     background-color: #ffffff;
-    padding: 20px 20px;
+    padding: 15px;
     border-top: 2px solid #ff4f11;
     border-bottom: 2px solid #ff4f11;
     box-shadow: 0 1px 9px 0 rgb(0 0 0 / 2%), 0 2px 6px 0 rgb(0 0 0 / 1%),
@@ -406,7 +405,7 @@
     justify-content: center;
     align-content: flex-start;
     background-color: #ffffff;
-    padding: 20px 20px;
+    padding: 15px;
     border-top: 2px solid #ff4f11;
     border-bottom: 2px solid #ff4f11;
     border-right: 2px solid #ff4f11;
@@ -485,7 +484,7 @@
     justify-content: center;
     align-content: flex-start;
     background-color: #ffffff;
-    padding: 20px 20px;
+    padding: 15px;
     border-top: 2px solid #ff4f11;
     border-bottom: 2px solid #ff4f11;
     border-right: 2px solid #ff4f11;
@@ -552,5 +551,4 @@
     width: 681px;
   }
   /***********************************************************************************/
-
 }
